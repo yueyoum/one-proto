@@ -1,0 +1,43 @@
+package sangou;
+
+// 快速登录
+message AnonymousLoginRequest {
+    required string device_token = 1;
+}
+
+// 已有帐号登录
+message RegularLoginRequest {
+    required string email = 1;
+    required string password = 2;
+}
+
+// 绑定帐号 （注册）
+message BindAccountRequest {
+    required string email = 1;
+    required string password = 2;
+    required string device_token = 3;
+}
+
+
+// 服务器列表
+message Server {
+    enum ServerStatus {
+        GOOD = 1;
+        BUSY = 2;
+        MAINTAIN = 3;
+    }
+
+    required int32 id = 1;
+    required string name = 2;
+    required ServerStatus status = 3;
+}
+
+// 登录/绑定帐号返回
+message AccountResponse {
+    required int32 ret = 1;
+    optional string session = 2;
+    optional Server recommend = 3;
+    repeated Server servers = 4;
+}
+
+
