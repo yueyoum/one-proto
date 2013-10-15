@@ -1,15 +1,39 @@
 package sangou;
 
-// 快速登录
-message AnonymousLoginRequest {
+// 游客登录
+message AnonymousLogin {
     required string device_token = 1;
 }
 
 // 已有帐号登录
-message RegularLoginRequest {
+message RegularLogin {
     required string email = 1;
     required string password = 2;
 }
+
+// 进入游戏
+message StartGameRequest {
+    optional AnonymousLogin anonymous = 1;
+    optional RegularLogin regular = 2;
+    optional int32 server_id = 3;
+    // 如果有server_id，则为手动选服
+    // 没有，就是快速开始
+}
+
+// 进入游戏返回
+message StartGameResponse {
+    required int32 ret = 1;
+    optional string session = 2;
+    // 进入游戏后的session，以后每个请求都需要带上此session
+    // TODO
+}
+
+// 获取服务器列表
+message GetServerListRequest {
+    optional AnonymousLogin anonymous = 1;
+    optional RegularLogin regular = 2;
+}
+
 
 // 绑定帐号 （注册）
 message BindAccountRequest {
@@ -24,20 +48,22 @@ message Server {
     enum ServerStatus {
         GOOD = 1;
         BUSY = 2;
-        MAINTAIN = 3;
+        FULL = 3;
+        MAINTAIN = 4;
     }
 
     required int32 id = 1;
     required string name = 2;
     required ServerStatus status = 3;
+    required bool have_char = 4;  // 请求服务器列表的用户是否在此服中有角色
 }
 
-// 登录/绑定帐号返回
+
+
+// 获取服务器列表/绑定帐号返回
 message AccountResponse {
     required int32 ret = 1;
-    optional string session = 2;
-    optional Server recommend = 3;
-    repeated Server servers = 4;
+    optional Server top = 2;    // 显示在列表最上面的上次登录或者推荐服
+    repeated Server servers = 3;
 }
-
 
