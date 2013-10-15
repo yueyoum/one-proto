@@ -1,0 +1,59 @@
+﻿<application>
+
+
+  <!--type字段的int值分为4个字节
+    高两字节表示分类（1-内建ATOM，2-内建类，3-内建序列集合(list)，4-内建关联集合(map)，5-自定义）
+    低两字节表示分类中的序号 
+    -->
+  <!--
+  <support>
+    <defaulttype type="0" name="unknown" value="unknown"/>
+    <defaulttype type="0100" name="byte" value="SByte"/>
+    <defaulttype type="0100" name="char" value="SChar"/>
+    <defaulttype type="0102" name="int" value="SInt"/>
+    <defaulttype type="0103" name="long" value="SLong"/>
+    <defaulttype type="0104" name="float" value="SFloat"/>
+    <defaulttype type="0105" name="enum" value="enum"/>
+    <defaulttype type="0200" name="String" value="SString"/>
+    <defaulttype type="0300" name="vector" value="List"/>
+    <defaulttype type="0301" name="list" value="LinkedList"/>
+    <defaulttype type="0302" name="set" value="HashSet"/>
+    <defaulttype type="0400" name="map" value="Dictionary"/>
+  </support>
+  -->
+  
+  <param>
+    <begintag tag="//generate code begin"/>
+    <endtag tag="//generate code end"/>
+    <protocol template="template/p/ProtocolTemplate.txt" path="D:\UnityProject\Sanguo\Assets\MyProject\" postfix=".cs"/>
+    <!--<bean template="template/p/BeanTemplate.txt" path="D:\U3DProject\Lcj\Assets\MyProject\" postfix=".cs"/>-->
+    <export name="ProtocolExport" template="template/p/ExportTemplate.txt" path="D:\UnityProject\Sanguo\Assets\MyProject\Protocol\" postfix=".cs"/>
+  </param>
+  <fix>
+    <item key="${separation}" prefix="." postfix=""/>
+    <item key="${scoperef}" prefix="." postfix=""/>
+    <item key="${importref}" prefix="." postfix=""/>
+  </fix>
+  <namespace name="protocol">
+    <namespace name="login">
+      <protocol name="ReqServerList" type="4000" command="serverList" maxsize="256" prior="1" debug="0" />
+      <protocol name="ResServerList" type="4001" command="serverList" maxsize="256" prior="1" debug="0" />
+      
+      <protocol name="ReqQuickRegistration" type="4002" command="quickReg" maxsize="256" prior="1" debug="0" />
+      <protocol name="ResQuickRegistration" type="4003" command="quickReg" maxsize="256" prior="1" debug="0" />
+      
+      <protocol name="ReqNewAccount" type="4004" command="quickReg" maxsize="256" prior="1" debug="0" />
+      <protocol name="ResNewAccount" type="4005" command="quickReg" maxsize="256" prior="1" debug="0" />
+
+      <protocol name="ReqBindAccount" type="4006" command="quickReg" maxsize="256" prior="1" debug="0" />
+      <protocol name="ResBindAccount" type="4006" command="quickReg" maxsize="256" prior="1" debug="0" />
+      
+      <protocol name="ReqLogin" type="4008" command="log" maxsize="256" prior="1" debug="0"/>
+      <protocol name="ResLogin" type="4008" command="log" maxsize="256" prior="1" debug="0"/>
+      
+      <protocol name="ReqRegist" type="4010" command="reg" maxsize="256" prior="1" debug="0"/>
+      <protocol name="ResRegist" type="4010" command="reg" maxsize="256" prior="1" debug="0"/>
+    </namespace>
+  </namespace>
+
+</application>
