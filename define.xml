@@ -36,23 +36,8 @@
   </fix>
   <namespace name="protocol">
     <namespace name="login">
-      <protocol name="ReqServerList" type="4000" command="serverList" maxsize="256" prior="1" debug="0" />
-      <protocol name="ResServerList" type="4001" command="serverList" maxsize="256" prior="1" debug="0" />
-      
-      <protocol name="ReqQuickRegistration" type="4002" command="quickReg" maxsize="256" prior="1" debug="0" />
-      <protocol name="ResQuickRegistration" type="4003" command="quickReg" maxsize="256" prior="1" debug="0" />
-      
-      <protocol name="ReqNewAccount" type="4004" command="quickReg" maxsize="256" prior="1" debug="0" />
-      <protocol name="ResNewAccount" type="4005" command="quickReg" maxsize="256" prior="1" debug="0" />
-
-      <protocol name="ReqBindAccount" type="4006" command="quickReg" maxsize="256" prior="1" debug="0" />
-      <protocol name="ResBindAccount" type="4006" command="quickReg" maxsize="256" prior="1" debug="0" />
-      
-      <protocol name="ReqLogin" type="4008" command="log" maxsize="256" prior="1" debug="0"/>
-      <protocol name="ResLogin" type="4008" command="log" maxsize="256" prior="1" debug="0"/>
-      
-      <protocol name="ReqRegist" type="4010" command="reg" maxsize="256" prior="1" debug="0"/>
-      <protocol name="ResRegist" type="4010" command="reg" maxsize="256" prior="1" debug="0"/>
+      <protocol name="StartGameRequest" type="1000" command="/player/login" method="1" maxsize="256" prior="1" debug="0" />
+      <protocol name="StartGameResponse" type="1001" command="" method="" maxsize="256" prior="1" debug="0" />
     </namespace>
   </namespace>
 
