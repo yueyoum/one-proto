@@ -1,4 +1,6 @@
-package sangou;
+package Sanguo.protocol.login;
+
+import "world.proto";
 
 // 游客登录
 message AnonymousLogin {
@@ -48,21 +50,5 @@ message BindAccountRequest {
     required string email = 1;
     required string password = 2;
     required string device_token = 3;
-}
-
-
-// 服务器列表
-message Server {
-    enum ServerStatus {
-        GOOD = 1;
-        BUSY = 2;
-        FULL = 3;
-        MAINTAIN = 4;
-    }
-
-    required int32 id = 1;
-    required string name = 2;
-    required ServerStatus status = 3;
-    required bool have_char = 4;  // 请求服务器列表的用户是否在此服中有角色
 }
 
