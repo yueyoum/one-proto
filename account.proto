@@ -35,6 +35,14 @@ message GetServerListRequest {
 }
 
 
+// 获取服务器列表返回
+message GetServerListResponse {
+    required int32 ret = 1;
+    optional Server top = 2;    // 显示在列表最上面的上次登录或者推荐服
+    repeated Server servers = 3;
+}
+
+
 // 绑定帐号 （注册）
 message BindAccountRequest {
     required string email = 1;
@@ -56,14 +64,5 @@ message Server {
     required string name = 2;
     required ServerStatus status = 3;
     required bool have_char = 4;  // 请求服务器列表的用户是否在此服中有角色
-}
-
-
-
-// 获取服务器列表/绑定帐号返回
-message AccountResponse {
-    required int32 ret = 1;
-    optional Server top = 2;    // 显示在列表最上面的上次登录或者推荐服
-    repeated Server servers = 3;
 }
 
