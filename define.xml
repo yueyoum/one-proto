@@ -35,7 +35,7 @@
     <item key="${importref}" prefix="." postfix=""/>
   </fix>
   <namespace name="protocol">
-    <namespace name="login">
+    <namespace name="account">
       <protocol name="StartGameRequest" type="100" command="/player/login" method="1" maxsize="256" prior="1" debug="0" />
       <protocol name="StartGameResponse" type="101" command="" method="" maxsize="256" prior="1" debug="0" />
 

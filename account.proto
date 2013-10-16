@@ -1,4 +1,4 @@
-package sangou;
+package Sanguo.protocol.account;
 
 // 游客登录
 message AnonymousLogin {
