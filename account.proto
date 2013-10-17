@@ -17,9 +17,7 @@ message RegularLogin {
 message StartGameRequest {
     optional AnonymousLogin anonymous = 1;
     optional RegularLogin regular = 2;
-    optional int32 server_id = 3;
-    // 如果有server_id，则为手动选服
-    // 没有，就是快速开始
+    required int32 server_id = 3;
 }
 
 // 进入游戏返回
