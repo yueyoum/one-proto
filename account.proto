@@ -44,9 +44,18 @@ message GetServerListResponse {
 
 
 // 绑定帐号 （注册）
-message BindAccountRequest {
+message RegisterRequest {
     required string email = 1;
     required string password = 2;
     required string device_token = 3;
+}
+
+message RegisterResponse {
+    required int32 ret = 1;
+    optional string email = 2;
+    optional string password = 3;
+
+    optional Sanguo.protocol.world.Server top = 4;    // 显示在列表最上面的上次登录或者推荐服
+    repeated Sanguo.protocol.world.Server servers = 5;
 }
 
