@@ -21,19 +21,23 @@ message Hero {
 
 
 message HeroNotify {
-    repeated Hero heros = 1;   
+    required string session = 1;
+    repeated Hero heros = 2;   
 }
 
 message AddHeroNotify {
-    repeated Hero heros = 1;
+    required string session = 1;
+    repeated Hero heros = 2;   
 }
 
 message RemoveHeroNotify {
-    repeated int32 ids = 1;
+    required string session = 1;
+    repeated int32 ids = 2;
 }
 
 message UpdateHeroNotify {
-    repeated Hero heros = 1;
+    required string session = 1;
+    repeated Hero heros = 2;   
 }
 
 

@@ -50,7 +50,6 @@
 
     <namespace name="character">
         <protocol name="CreateCharacterRequest" type="200" command="/char/create/" method="1" />
-        <protocol name="CreateCharacterResponse" type="201" />
         <protocol name="CharacterNotify" type="202" />
     </namespace>
 
