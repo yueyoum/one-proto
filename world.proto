@@ -15,3 +15,10 @@ message Server {
     required bool have_char = 4;  // 请求服务器列表的用户是否在此服中有角色
 }
 
+
+
+message CommandResponse {
+    required int32 ret = 1;
+    required string session = 2;
+}
+

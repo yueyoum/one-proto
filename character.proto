@@ -1,0 +1,27 @@
+package Sanguo.protocol.character;
+
+message Character {
+    required int32 id = 1;
+    required string name = 2;
+    required int32 gold = 3;
+    required int32 gem = 4;
+    required int32 level = 5;
+    required int32 exp = 6;
+}
+
+
+message CharacterNotify {
+    required Character char = 1;    
+}
+
+
+message CreateCharacterRequest {
+    required string session = 1;
+    required string name = 2;
+}
+
+message CreateCharacterResponse {
+    required int32 ret = 1;
+    // 创建成功后会返回一个新的session，以后的请求带此新session
+    optional string session = 2;
+}

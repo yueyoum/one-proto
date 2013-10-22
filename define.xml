@@ -34,6 +34,7 @@
   </fix>
   <namespace name="protocol" command_default="/player/login/" method_default="0" maxsize_default="256" prior_default="1" debug_default="0">
     <namespace name="world">
+      <protocol name="CommandResponse" type="50" />
     </namespace>
 
     <namespace name="account">
@@ -45,6 +46,19 @@
 
       <protocol name="RegisterRequest" type="105" command="/player/register/" method="1" />
       <protocol name="RegisterResponse" type="106" />
+    </namespace>
+
+    <namespace name="character">
+        <protocol name="CreateCharacterRequest" type="200" command="/char/create/" method="1" />
+        <protocol name="CreateCharacterResponse" type="201" />
+        <protocol name="CharacterNotify" type="202" />
+    </namespace>
+
+    <namespace name="hero">
+        <protocol name="HeroNotify" type="300" />
+        <protocol name="AddHeroNotify" type="301" />
+        <protocol name="RemoveHeroNotify" type="303" />
+        <protocol name="UpdateHeroNotify" type="304" />
     </namespace>
   </namespace>
 

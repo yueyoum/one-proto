@@ -24,9 +24,9 @@ message StartGameRequest {
 // 进入游戏返回
 message StartGameResponse {
     required int32 ret = 1;
-    optional string session = 2;
     // 进入游戏后的session，以后每个请求都需要带上此session
-    // TODO
+    optional string session = 2;
+    optional bool need_create_new_char = 3;
 }
 
 // 获取服务器列表
