@@ -15,9 +15,10 @@ message RegularLogin {
 
 // 进入游戏
 message StartGameRequest {
-    optional AnonymousLogin anonymous = 1;
-    optional RegularLogin regular = 2;
-    required int32 server_id = 3;
+    required string session = 1;                // 填充为空字符串
+    optional AnonymousLogin anonymous = 2;
+    optional RegularLogin regular = 3;
+    required int32 server_id = 4;
 }
 
 // 进入游戏返回
@@ -30,8 +31,9 @@ message StartGameResponse {
 
 // 获取服务器列表
 message GetServerListRequest {
-    optional AnonymousLogin anonymous = 1;
-    optional RegularLogin regular = 2;
+    required string session = 1;                // 填充为空字符串
+    optional AnonymousLogin anonymous = 2;
+    optional RegularLogin regular = 3;
 }
 
 
@@ -40,14 +42,16 @@ message GetServerListResponse {
     required int32 ret = 1;
     optional Sanguo.protocol.world.Server top = 2;    // 显示在列表最上面的上次登录或者推荐服
     repeated Sanguo.protocol.world.Server servers = 3;
+    required string session = 4;
 }
 
 
 // 绑定帐号 （注册）
 message RegisterRequest {
-    required string email = 1;
-    required string password = 2;
-    required string device_token = 3;
+    required string session = 1;                // 填充为空字符串
+    required string email = 2;
+    required string password = 3;
+    required string device_token = 4;
 }
 
 message RegisterResponse {
@@ -57,5 +61,7 @@ message RegisterResponse {
 
     optional Sanguo.protocol.world.Server top = 4;    // 显示在列表最上面的上次登录或者推荐服
     repeated Sanguo.protocol.world.Server servers = 5;
+
+    required string session = 6;
 }
 
