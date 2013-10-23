@@ -6,7 +6,7 @@ message Character {
     required int32 gold = 3;
     required int32 gem = 4;
     required int32 level = 5;
-    required int32 exp = 6;
+    required int32 honor = 6;
 }
 
 
