@@ -22,3 +22,8 @@ message CreateCharacterRequest {
     required string name = 2;
 }
 
+message CreateCharacterResponse {
+    required int32 ret = 1;
+    required string session = 2;
+}
+
