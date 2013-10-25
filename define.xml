@@ -68,6 +68,13 @@
         <protocol name="MergeHeroRequest" type="322" command="/hero/merge/" />
         <protocol name="MergeHeroResponse" type="323" />
     </namespace>
+
+    <namespace name="formation">
+        <protocol name="SetFormationRequest" type="400" command="/formation/set/" />
+        <protocol name="SetFormationResponse" type="401" />
+
+        <protocol name="FormationNotify" type="402" />
+    </namespace>
   </namespace>
 
 </application>
