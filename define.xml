@@ -59,6 +59,14 @@
         <protocol name="AddHeroNotify" type="301" />
         <protocol name="RemoveHeroNotify" type="303" />
         <protocol name="UpdateHeroNotify" type="304" />
+
+        <protocol name="GetHeroPanelNotify" type="305" />
+
+        <protocol name="GetHeroRequest" type="320" command="/char/hero/get/" />
+        <protocol name="GetHeroResponse" type="321" />
+
+        <protocol name="MergeHeroRequest" type="322" command="/char/hero/merge/" />
+        <protocol name="MergeHeroResponse" type="323" />
     </namespace>
   </namespace>
 

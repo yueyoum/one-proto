@@ -41,3 +41,38 @@ message UpdateHeroNotify {
 }
 
 
+message GetHeroPanelNotify {
+    message GetHero {
+        required int32 mode = 1;               // 1 - 金, 2 - 银, 3 - 铜
+        required int32 cost = 3;               // 消费数量的元宝
+        required int32 free_times = 4;         // 当前剩余免费次数
+        required int32 max_free_times = 5;     // 最大免费次数
+    }
+
+    required string session = 1;
+    repeated GetHero get_heros = 2;            // 抽将信息
+}
+
+message GetHeroRequest {
+    required string session = 1;
+    required int32 mode = 2;      // 1 - 金, 2 - 银, 3 - 铜
+    required bool ten = 3;        // 是否连续点将10次
+}
+
+message GetHeroResponse {
+    required int32 ret = 1;
+    required string session = 2;
+    optional int32 mode = 3;           // 本次抽将的模式
+    optional int32 free_times = 4;     // 剩下的免费次数
+}
+
+message MergeHeroRequest {
+    required string session = 1;
+    repeated int32 using_hero_ids = 2;       // 选择的卡牌ID
+}
+
+message MergeHeroResponse {
+    required int32 ret = 1;
+    required string session = 2;
+}
+
