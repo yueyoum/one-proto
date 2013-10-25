@@ -62,10 +62,10 @@
 
         <protocol name="GetHeroPanelNotify" type="305" />
 
-        <protocol name="GetHeroRequest" type="320" command="/char/hero/get/" />
+        <protocol name="GetHeroRequest" type="320" command="/hero/get/" />
         <protocol name="GetHeroResponse" type="321" />
 
-        <protocol name="MergeHeroRequest" type="322" command="/char/hero/merge/" />
+        <protocol name="MergeHeroRequest" type="322" command="/hero/merge/" />
         <protocol name="MergeHeroResponse" type="323" />
     </namespace>
   </namespace>
