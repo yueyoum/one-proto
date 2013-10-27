@@ -19,6 +19,6 @@ message Server {
 
 message CommandResponse {
     required int32 ret = 1;
-    required string session = 2;
+    required bytes session = 2;
 }
 

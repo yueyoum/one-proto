@@ -17,18 +17,18 @@ message Formation {
 
 
 message SetFormationRequest {
-    required string session = 1;
+    required bytes session = 1;
     repeated Position positions = 2;
 }
 
 message SetFormationResponse {
     required int32 ret = 1;
-    required string session = 2;
+    required bytes session = 2;
 }
 
 
 message FormationNotify {
-    required string session = 1;
+    required bytes session = 1;
     required Formation formation = 2;
 }
 

@@ -12,18 +12,18 @@ message Character {
 
 
 message CharacterNotify {
-    required string session = 1;
+    required bytes session = 1;
     required Character char = 2;
 }
 
 
 message CreateCharacterRequest {
-    required string session = 1;
+    required bytes session = 1;
     required string name = 2;
 }
 
 message CreateCharacterResponse {
     required int32 ret = 1;
-    required string session = 2;
+    required bytes session = 2;
 }
 
