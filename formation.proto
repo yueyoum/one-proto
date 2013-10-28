@@ -5,8 +5,8 @@ package Sanguo.protocol.formation;
 // 6 7 8  后军
 
 message Formation {
-    required int32 account = 1;     // 当前可上阵的人数
-    repeated int32 hero_ids = 2;    // [0..8] 按顺序排好的英雄ID，0表示此位置没英雄
+    required int32 count = 1;     // 当前可上阵的人数
+    repeated int32 hero_ids = 2;  // [0..8] 按顺序排好的英雄ID，0表示此位置没英雄
 }
 
 
