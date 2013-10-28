@@ -1,24 +1,18 @@
 package Sanguo.protocol.formation;
 
-// 阵型位置用一维数组表示， [0..8]
-// 0 1 2    前军
-// 3 4 5    中军
-// 6 7 8    后军
-
-message Position {
-    required int32 pos = 1;     // 位置
-    optional bool enable = 2;   // 是否开启
-    optional int32 hero_id = 3; // 如果有人在此位置，这里就填充此武将的id
-}
+// 0 1 2  前军
+// 3 4 5  中军
+// 6 7 8  后军
 
 message Formation {
-    repeated Position positions = 1;
+    required int32 account = 1;     // 当前可上阵的人数
+    repeated int32 hero_ids = 2;    // [0..8] 按顺序排好的英雄ID，0表示此位置没英雄
 }
 
 
 message SetFormationRequest {
     required bytes session = 1;
-    repeated Position positions = 2;
+    repeated int32 hero_ids = 2;
 }
 
 message SetFormationResponse {
