@@ -2,19 +2,21 @@ package Sanguo.protocol.hero;
 
 message Hero {
     required int32 id = 1;
-    required int32 original_id = 2;
+    required string original_id = 2;
+
     required int32 level = 3;
-    required int32 exp = 4;
+    required int32 exp = 4;                 // 当前经验
+    required int32 next_level_exp = 5;      // 当前等级到一下级一共需要的经验
 
-    required int32 attack = 5;
-    required int32 defense = 6;
-    required int32 hp = 7;
-    required int32 attack_grow = 8;
-    required int32 defense_grow = 9;
-    required int32 hp_grow = 10;
+    required int32 attack = 6;
+    required int32 defense = 7;
+    required int32 hp = 8;
+    required int32 attack_grow = 9;
+    required int32 defense_grow = 10;
+    required int32 hp_grow = 11;
 
-    required int32 cirt = 11;       // 暴击
-    required int32 dodge = 12;      // 闪避
+    required int32 cirt = 12;       // 暴击
+    required int32 dodge = 13;      // 闪避
 
     //TODO 技能 装备
 }
