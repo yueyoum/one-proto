@@ -22,3 +22,13 @@ message CommandResponse {
     required bytes session = 2;
 }
 
+message VersionCheckRequest {
+    required string session = 1;
+    required int32 version = 2;
+}
+
+message VersionCheckResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+

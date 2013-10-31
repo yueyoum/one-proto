@@ -35,6 +35,9 @@
   <namespace name="protocol" command_default="/player/login/" method_default="0" maxsize_default="256" prior_default="1" debug_default="0">
     <namespace name="world">
       <protocol name="CommandResponse" type="50" />
+
+      <protocol name="VersionCheckRequest" type="51" />
+      <protocol name="VersionCheckResponse" type="52" />
     </namespace>
 
     <namespace name="account">
