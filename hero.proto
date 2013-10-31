@@ -2,7 +2,7 @@ package Sanguo.protocol.hero;
 
 message Hero {
     required int32 id = 1;
-    required string original_id = 2;
+    required int32 original_id = 2;
 
     required int32 level = 3;
     required int32 exp = 4;                 // 当前经验
