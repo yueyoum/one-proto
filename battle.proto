@@ -1,0 +1,23 @@
+package Sanguo.protocol.battle;
+
+message Stage {
+    required int32 id = 1;
+    required bool star = 2;
+}
+
+message AlreadyStageNotify {
+    required bytes session = 1;
+    repeated Stage stages = 2;
+}
+
+message CurrentStageNotify {
+    required bytes session = 1;
+    required Stage stage = 2;
+}
+
+message NewStageNotify {
+    required bytes session = 1;
+    required Stage stage = 2;
+}
+
+

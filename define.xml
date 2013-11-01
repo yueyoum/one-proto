@@ -78,6 +78,13 @@
 
         <protocol name="FormationNotify" type="402" />
     </namespace>
+
+    <namespace name="battle">
+        <protocol name="AlreadyStageNotify" type="500" />
+        <protocol name="CurrentStageNotify" type="501" />
+        <protocol name="NewStageNotify" type="502" />
+    </namespace>
+
   </namespace>
 
 </application>
