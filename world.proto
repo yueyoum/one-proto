@@ -23,7 +23,7 @@ message CommandResponse {
 }
 
 message VersionCheckRequest {
-    required string session = 1;
+    required bytes session = 1;
     required int32 version = 2;
 }
 
