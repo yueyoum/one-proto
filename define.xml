@@ -83,6 +83,9 @@
         <protocol name="AlreadyStageNotify" type="500" />
         <protocol name="CurrentStageNotify" type="501" />
         <protocol name="NewStageNotify" type="502" />
+
+        <protocol name="PVERequest" type="600" command="/pve/" />
+        <protocol name="PVEResponse" type="601" />
     </namespace>
 
   </namespace>
