@@ -95,6 +95,8 @@ message PVERequest {
 message PVEResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    required Battle battle = 3;
+    required int32 stage_id = 3;
+    required Battle battle = 4;
 }
+
 
