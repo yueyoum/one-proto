@@ -21,3 +21,69 @@ message NewStageNotify {
 }
 
 
+message BattleHero {
+    enum HeroType {
+        HERO = 1;
+        MONSTER = 2;
+        }
+
+    required int32 id = 1;
+    required int32 original_id = 2;
+    required int32 hp = 3;
+    required HeroType ht = 4;       // 是玩家的英雄还是关卡的怪物
+}
+
+
+message Effect {
+    enum EffectType {
+        DAMAGE = 1;                         // 伤害
+        CHANGE_ATTACK = 2;                  // 改变攻击
+        CHANGE_DEFENSE = 3;                 // 改变防御
+        CHANGE_DODGE = 4;                   // 改变闪避
+        CHANGE_CRIT = 5;                    // 改变暴击
+        DIZZY = 6;                          // 击晕
+        DAMAGE_RETURN = 7;                  // 反伤
+    }
+
+    required EffectType et = 1;
+    required bool is_buff = 2;              // 是否是buff，False为debuff
+}
+
+
+message Action {
+    // 一次行动
+    message ActionTarget {
+        required int32 target_id = 1;
+        required bool is_crit = 2;
+        required bool is_dodge = 3;
+        required int32 hp = 4;
+        repeated Effect add_effs = 5;
+        repeated Effect rm_effs = 6;
+    }
+
+
+    required int32 from_id = 1;             // 发起行动的英雄ID
+    optional int32 skill_id = 2;
+    repeated ActionTarget targets = 3;
+}
+
+
+message Ground {
+    // 一军
+    repeated BattleHero self_heros = 1;     //
+    repeated BattleHero rival_heros = 2;    //
+    required bool self_win = 3;             //
+
+    repeated Action actions = 4;            // 每次行动
+}
+
+message Battle {
+    required int32 self_power = 1;          // 已方总战力
+    required int32 rival_power = 2;         // 对方总战力
+    required Ground first_ground = 3;       // 前军
+    required Ground second_ground = 4;      // 中军
+    required Ground third_ground = 5;       // 后军
+    required bool self_win = 6;             // 自己是否胜利
+}
+
+
