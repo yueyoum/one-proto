@@ -34,31 +34,16 @@ message BattleHero {
 }
 
 
-message Effect {
-    enum EffectType {
-        DAMAGE = 1;                         // 伤害
-        CHANGE_ATTACK = 2;                  // 改变攻击
-        CHANGE_DEFENSE = 3;                 // 改变防御
-        CHANGE_DODGE = 4;                   // 改变闪避
-        CHANGE_CRIT = 5;                    // 改变暴击
-        DIZZY = 6;                          // 击晕
-        DAMAGE_RETURN = 7;                  // 反伤
-    }
-
-    required EffectType et = 1;
-    required bool is_buff = 2;              // 是否是buff，False为debuff
-}
-
 
 message Action {
     // 一次行动
     message ActionTarget {
         required int32 target_id = 1;
-        required bool is_crit = 2;
-        required bool is_dodge = 3;
+        optional bool is_crit = 2;
+        optional bool is_dodge = 3;
         required int32 hp = 4;
-        repeated Effect add_effs = 5;
-        repeated Effect rm_effs = 6;
+        repeated int32 add_effs = 5;
+        repeated int32 rm_effs = 6;
     }
 
 
