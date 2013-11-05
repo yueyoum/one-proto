@@ -65,10 +65,12 @@ message Ground {
 message Battle {
     required int32 self_power = 1;          // 已方总战力
     required int32 rival_power = 2;         // 对方总战力
-    required Ground first_ground = 3;       // 前军
-    required Ground second_ground = 4;      // 中军
-    required Ground third_ground = 5;       // 后军
-    required bool self_win = 6;             // 自己是否胜利
+    required string self_name = 3;
+    required string rival_name = 4;
+    required Ground first_ground = 5;       // 前军
+    required Ground second_ground = 6;      // 中军
+    required Ground third_ground = 7;       // 后军
+    required bool self_win = 8;             // 自己是否胜利
 }
 
 
