@@ -42,10 +42,10 @@ message Action {
         optional bool is_crit = 2;
         optional bool is_dodge = 3;
         required int32 hp = 4;
-        repeated int32 add_effs = 5;
-        repeated int32 rm_effs = 6;
+        repeated int32 effs = 5;
+        repeated int32 buffs = 6;
+		optional Action passiveaction = 7;
     }
-
 
     required int32 from_id = 1;             // 发起行动的英雄ID
     optional int32 skill_id = 2;
