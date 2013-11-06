@@ -44,7 +44,8 @@ message Action {
         required int32 hp = 4;
         repeated int32 effs = 5;
         repeated int32 buffs = 6;
-		optional Action passiveaction = 7;
+        optional int32 value =7;
+        optional Action passiveaction = 8;
     }
 
     required int32 from_id = 1;             // 发起行动的英雄ID
