@@ -36,21 +36,27 @@ message BattleHero {
 
 
 message Action {
-    // 一次行动
-    message ActionTarget {
+    message SkillTarget {
         required int32 target_id = 1;
-        optional bool is_crit = 2;
-        optional bool is_dodge = 3;
-        required int32 hp = 4;
-        repeated int32 effs = 5;
-        repeated int32 buffs = 6;
-        optional int32 value =7;
-        optional Action passiveaction = 8;
+        required bool is_crit = 2;
+        required bool is_dodge = 3;
     }
+
+    message HeroNotify {
+        required int32 target_id = 1;
+        required int32 hp = 2;
+        required int32 effs = 3;
+        required int32 buffs = 4;
+        required int32 value = 5;
+    }
+
 
     required int32 from_id = 1;             // 发起行动的英雄ID
     optional int32 skill_id = 2;
-    repeated ActionTarget targets = 3;
+    repeated SkillTarget skill_targets = 3;
+    repeated HeroNotify hero_notify = 4;
+
+    repeated Action passiveaction = 5;
 }
 
 
