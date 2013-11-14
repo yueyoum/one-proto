@@ -26,7 +26,9 @@ message StartGameResponse {
     required int32 ret = 1;
     // 进入游戏后的session，以后每个请求都需要带上此session
     optional bytes session = 2;
-    optional bool need_create_new_char = 3;
+    optional AnonymousLogin anonymous = 3;
+    optional RegularLogin regular = 4;
+    optional bool need_create_new_char = 5;
 }
 
 // 获取服务器列表
