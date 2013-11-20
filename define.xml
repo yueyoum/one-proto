@@ -88,6 +88,19 @@
         <protocol name="PVEResponse" type="601" />
     </namespace>
 
+    <namespace name="item">
+        <protocol name="EquipNotify" type="700" />
+        <protocol name="AddEquipNotify" type="701" />
+        <protocol name="RemoveEquipNotify" type="702" />
+        <protocol name="UpdateEquipNotify" type="703" />
+
+        <protocol name="StrengthEquipRequest" type="704" command="/equip/strength/" />
+        <protocol name="StrengthEquipResponse" type="705" />
+
+        <protocol name="SellEquipRequest" type="706" command="/equip/sell/" />
+        <protocol name="SellEquipResponse" type="707" />
+    </namespace>
+
   </namespace>
 
 </application>
