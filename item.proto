@@ -29,7 +29,7 @@ message AddEquipNotify {
 
 message RemoveEquipNotify {
     required bytes session = 1;
-    repeated Equip equips = 2;
+    repeated int32 ids = 2;
 }
 
 message UpdateEquipNotify {
@@ -51,7 +51,7 @@ message StrengthEquipResponse {
 
 message SellEquipRequest {
     required bytes session = 1;
-    required int32 id = 2;
+    repeated int32 ids = 2;
 }
 
 
