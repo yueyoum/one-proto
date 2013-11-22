@@ -4,15 +4,39 @@ package Sanguo.protocol.formation;
 // 3 4 5  中军
 // 6 7 8  后军
 
-message Formation {
-    required int32 count = 1;     // 当前可上阵的人数
-    repeated int32 hero_ids = 2;  // [0..8] 按顺序排好的英雄ID，0表示此位置没英雄
+message Socket {
+    required int32 id = 1;
+    required int32 hero_id = 2;
+    required int32 weapon_id = 3;
+    required int32 armor_id = 4;
+    required int32 jewelry_id = 5;
 }
 
 
+message Sockets {
+    repeated Socket sockets = 1;
+}
+
+message Formation {
+    repeated int32 socket_ids = 1;
+}
+
+message AddSocketNotify {
+    required bytes session = 1;
+}
+
+message SetSocketRequest {
+    required Socket socket = 1;
+}
+
+message SetSocketResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
 message SetFormationRequest {
     required bytes session = 1;
-    repeated int32 hero_ids = 2;
+    repeated int32 socket_ids = 2;
 }
 
 message SetFormationResponse {
@@ -20,9 +44,13 @@ message SetFormationResponse {
     required bytes session = 2;
 }
 
+message SocketNotify {
+    required bytes session = 1;
+    required Socket socket = 2;
+}
 
 message FormationNotify {
     required bytes session = 1;
-    required Formation formation = 2;
+    repeated int32 socket_ids = 2;
 }
 
