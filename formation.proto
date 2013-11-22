@@ -13,25 +13,20 @@ message Socket {
 }
 
 
-message Sockets {
-    repeated Socket sockets = 1;
-}
-
-message Formation {
-    repeated int32 socket_ids = 1;
-}
 
 message AddSocketNotify {
     required bytes session = 1;
 }
 
 message SetSocketRequest {
-    required Socket socket = 1;
+    required bytes session = 1;
+    required Socket socket = 2;
 }
 
 message SetSocketResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Socket socket = 3;
 }
 
 message SetFormationRequest {
@@ -46,8 +41,9 @@ message SetFormationResponse {
 
 message SocketNotify {
     required bytes session = 1;
-    required Socket socket = 2;
+    repeated Socket sockets = 2;
 }
+
 
 message FormationNotify {
     required bytes session = 1;
