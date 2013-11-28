@@ -15,9 +15,8 @@ message Equip {
     
     required int32 value = 6;
     required int32 whole_hole = 7;      // 总孔数
-    required int32 opened_hole = 8;     // 已开孔数
-    repeated int32 gem_ids = 9; // 宝石id列表，对应孔位没有，用0表示
-    repeated ExtraAttr attrs = 10;
+    repeated int32 gem_ids = 8; // 宝石id列表，对应孔位没有，用0表示
+    repeated ExtraAttr attrs = 9;
 }
 
 
