@@ -4,7 +4,7 @@ package Sanguo.protocol.item;
 message Equip {
     message ExtraAttr {
         required int32 id = 1;
-        required float value = 2;
+        required int32 value = 2;
     }
 
     required int32 id = 1;
@@ -14,7 +14,10 @@ message Equip {
     required int32 exp = 5;     // 累计总经验
     
     required int32 value = 6;
-    repeated ExtraAttr attrs = 7;
+    required int32 whole_hole = 7;      // 总孔数
+    required int32 opened_hole = 8;     // 已开孔数
+    repeated int32 gem_ids = 9; // 宝石id列表，对应孔位没有，用0表示
+    repeated ExtraAttr attrs = 10;
 }
 
 
