@@ -1,6 +1,6 @@
 package Sanguo.protocol.item;
 
-// 装备， 武器，饰品，防具
+// 装备: 武器，饰品，防具
 message Equip {
     message ExtraAttr {
         required int32 id = 1;
@@ -8,9 +8,10 @@ message Equip {
     }
 
     required int32 id = 1;
-    required int32 oid = 2;     // original id
-    required int32 level = 3;
-    required int32 exp = 4;
+    required int32 oid = 2;     // 装备模板ID
+    required string name = 3;
+    required int32 level = 4;
+    required int32 exp = 5;     // 累计总经验
     
     required int32 value = 5;
     repeated ExtraAttr attrs = 6;

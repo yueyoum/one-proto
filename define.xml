@@ -99,7 +99,7 @@
         <protocol name="RemoveEquipNotify" type="702" />
         <protocol name="UpdateEquipNotify" type="703" />
 
-        <protocol name="StrengthEquipRequest" type="704" command="/equip/strength/" />
+        <protocol name="StrengthEquipRequest" type="704" command="/equip/strengthen/" />
         <protocol name="StrengthEquipResponse" type="705" />
 
         <protocol name="SellEquipRequest" type="706" command="/equip/sell/" />
