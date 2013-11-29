@@ -91,6 +91,15 @@ message PVEResponse {
     required bytes session = 2;
     required int32 stage_id = 3;
     required Battle battle = 4;
+    required Drop drop = 5;
+}
+
+
+message Drop {
+    required int32 gold = 1;
+    required int32 exp = 2;
+    repeated int32 equips = 3;
+    repeated int32 gems = 4;
 }
 
 
