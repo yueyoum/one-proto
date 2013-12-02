@@ -104,6 +104,18 @@
 
         <protocol name="SellEquipRequest" type="706" command="/equip/sell/" />
         <protocol name="SellEquipResponse" type="707" />
+        
+        <protocol name="GemNotify" type="750" />
+        <protocol name="AddGemNotify" type="751" />
+        <protocol name="UpdateGemNotify" type="752" />
+        <protocol name="RemoveGemNotify" type="753" />
+        
+        <protocol name="MergeGemRequest" type="754" command="/gem/merge/" />
+        <protocol name="MergeGemResponse" type="755" />
+        <protocol name="EmbedGemRequest" type="756" command="/equip/embed/" />
+        <protocol name="EmbedGemResponse" type="757" />
+        <protocol name="UnEmbedGemRequest" type="758" command="/equip/unembed/" />
+        <protocol name="UnEmbedGemResponse" type="759" />
     </namespace>
 
   </namespace>

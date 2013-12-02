@@ -20,6 +20,69 @@ message Equip {
 }
 
 
+
+// 宝石
+message Gem {
+    required int32 id = 1;
+    required int32 amount = 2;
+}
+
+message GemNotify {
+    required bytes session = 1;
+    repeated Gem gems = 2;
+}
+
+message AddGemNotify {
+    required bytes session = 1;
+    repeated Gem gems = 2;
+}
+
+message UpdateGemNotify {
+    required bytes session = 1;
+    repeated Gem gems = 2;
+}
+
+message RemoveGemNotify {
+    required bytes session = 1;
+    repeated int32 ids = 2;
+}
+
+
+message MergeGemRequest {
+    required bytes session = 1;
+    required int32 id = 2;          // 要合成的宝石ID
+    required int32 amount = 3;      // 合成数量
+    required bool using_gem = 4;    // 是否使用元宝
+}
+
+message MergeGemResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message EmbedGemRequest {
+    required bytes session = 1;
+    required int32 equip_id = 2;
+    required int32 hole_id = 3;
+    required int32 gem_id = 4;
+}
+
+message EmbedGemResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message UnEmbedGemRequest {
+    required bytes session = 1;
+    required int32 equip_id = 2;
+    required int32 hole_id = 3;
+}
+
+message UnEmbedGemResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
 message EquipNotify {
     required bytes session = 1;
     repeated Equip equips = 2;
