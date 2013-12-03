@@ -1,4 +1,4 @@
-package Sanguo.protocol.cmd
+package Sanguo.protocol.cmd;
 
 message TestRequest {
     required int32 action = 1;
