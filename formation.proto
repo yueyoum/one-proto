@@ -45,6 +45,12 @@ message SocketNotify {
 }
 
 
+message UpdateSocketNotify {
+    required bytes session = 1;
+    repeated Socket sockets = 2;
+}
+
+
 message FormationNotify {
     required bytes session = 1;
     repeated int32 socket_ids = 2;
