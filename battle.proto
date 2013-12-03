@@ -1,5 +1,22 @@
 package Sanguo.protocol.battle;
 
+
+message HangNotify {
+    message HangInfo {
+        required int32 stage_id = 1;
+        required int32 whole_hours = 2;
+        required int32 start_time = 3;      // UTC 秒
+    }
+
+    required bytes session = 1;
+    required int32 hours = 2;       // 当天剩余小时数
+    
+    optional HangInfo hang = 3;
+    
+    optional Drop drop = 4;
+}
+
+
 message Stage {
     required int32 id = 1;
     required bool star = 2;
@@ -102,4 +119,24 @@ message Drop {
     repeated int32 gems = 4;
 }
 
+
+message HangRequest {
+    required bytes session = 1;
+    required int32 stage_id = 2;
+    required int32 hours = 3;
+}
+
+message HangResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message HangCancelReqeust {
+    required bytes session = 1;
+}
+
+message HangCancelResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
 
