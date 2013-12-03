@@ -1,0 +1,20 @@
+package Sanguo.protocol.cmd
+
+message TestRequest {
+    required int32 action = 1;
+    required int32 tp = 2;
+    required int32 param = 3;
+}
+
+// action
+// 1 add
+// 2 rmv
+
+// tp
+// 1 exp
+// 2 honor
+// 3 gold
+// 4 sycee
+// 5 equip
+// 6 gem
+

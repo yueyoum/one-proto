@@ -33,6 +33,10 @@
     <item key="${importref}" prefix="." postfix=""/>
   </fix>
   <namespace name="protocol" command_default="/player/login/" method_default="0" maxsize_default="256" prior_default="1" debug_default="0">
+    <namespace name="cmd">
+        <protocol name="TestRequest" type="1" command="/test/" />
+    </namespace>
+
     <namespace name="world">
       <protocol name="CommandResponse" type="50" />
 
