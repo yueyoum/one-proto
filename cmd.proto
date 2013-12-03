@@ -1,9 +1,10 @@
 package Sanguo.protocol.cmd;
 
 message TestRequest {
-    required int32 action = 1;
-    required int32 tp = 2;
-    required int32 param = 3;
+    required bytes session = 1;
+    required int32 action = 2;
+    required int32 tp = 3;
+    required int32 param = 4;
 }
 
 // action
