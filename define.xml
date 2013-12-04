@@ -128,6 +128,12 @@
         <protocol name="UnEmbedGemResponse" type="759" />
     </namespace>
 
+    <namespace name="prize">
+        <protocol name="PrizeNotify" type="800" />
+        <protocol name="PrizeRequest" type="801" command="/prize/" />
+        <protocol name="PrizeResponse" type="802" />
+    </namespace>
+
   </namespace>
 
 </application>

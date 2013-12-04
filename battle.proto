@@ -6,14 +6,13 @@ message HangNotify {
         required int32 stage_id = 1;
         required int32 whole_hours = 2;
         required int32 start_time = 3;      // UTC 秒
+        required bool finished = 4;         
     }
 
     required bytes session = 1;
     required int32 hours = 2;       // 当天剩余小时数
     
     optional HangInfo hang = 3;
-    
-    optional Drop drop = 4;
 }
 
 
@@ -108,16 +107,9 @@ message PVEResponse {
     required bytes session = 2;
     required int32 stage_id = 3;
     required Battle battle = 4;
-    required Drop drop = 5;
+    required Sanguo.protocol.world.Drop drop = 5;
 }
 
-
-message Drop {
-    required int32 gold = 1;
-    required int32 exp = 2;
-    repeated int32 equips = 3;
-    repeated int32 gems = 4;
-}
 
 
 message HangRequest {

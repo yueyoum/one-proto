@@ -1,0 +1,26 @@
+package Sanguo.protocol.prize;
+
+// prize id
+// 1 - 挂机奖励
+
+
+message PrizeNotify {
+    required bytes session = 1;
+    repeated int32 prize_ids = 2;
+}
+
+
+message PrizeRequest {
+    required bytes session = 1;
+    required int32 prize_id = 2;
+}
+
+
+message PrizeResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    required int32 prize_id = 3;
+    required Sanguo.protocol.world.Drop drop = 4;
+}
+
+

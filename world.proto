@@ -32,3 +32,11 @@ message VersionCheckResponse {
     required bytes session = 2;
 }
 
+
+message Drop {
+    required int32 gold = 1;
+    required int32 exp = 2;
+    repeated int32 equips = 3;
+    repeated int32 gems = 4;
+}
+
