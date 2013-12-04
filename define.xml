@@ -93,7 +93,7 @@
         <protocol name="CurrentStageNotify" type="501" />
         <protocol name="NewStageNotify" type="502" />
         
-        <protocol name="HangHotify" type="510" />
+        <protocol name="HangNotify" type="510" />
         <protocol name="HangRequest" type="511" command="/hang/" />
         <protocol name="HangResponse" type="512" />
         <protocol name="HangCancelRequest" type="513" command="/hang/cancel/" />
