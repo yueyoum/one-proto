@@ -131,7 +131,7 @@ message HangResponse {
     required bytes session = 2;
 }
 
-message HangCancelReqeust {
+message HangCancelRequest {
     required bytes session = 1;
 }
 
