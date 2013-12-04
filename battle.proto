@@ -1,5 +1,6 @@
 package Sanguo.protocol.battle;
 
+import "world.proto";
 
 message HangNotify {
     message HangInfo {

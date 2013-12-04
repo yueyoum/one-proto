@@ -1,5 +1,7 @@
 package Sanguo.protocol.prize;
 
+import "world.proto";
+
 // prize id
 // 1 - 挂机奖励
 
