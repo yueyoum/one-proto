@@ -38,5 +38,6 @@ message Drop {
     required int32 exp = 2;
     repeated int32 equips = 3;
     repeated int32 gems = 4;
+    repeated int32 heros = 5;
 }
 

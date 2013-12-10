@@ -133,3 +133,112 @@ message HangCancelResponse {
     required bytes session = 2;
 }
 
+
+
+# 掠夺
+message PlunderNotify {
+    required bytes session = 1;
+    required int32 amount = 2;  // 今日掠夺次数
+}
+
+message Plunder {
+    required int32 id = 1;
+    required bool npc = 2;     // 是否是NPC
+    required string name = 3;
+    required int32 gold = 4;   // 掠夺收益
+    required int32 power = 5;  // 战力
+}
+
+
+message PlunderListRequest {
+    required bytes session = 1;
+}
+
+message PlunderListResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    repeated Plunder plunders = 3;
+}
+
+
+message PlunderRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+    required bool npc = 3;
+}
+
+message PlunderResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    required Battle battle = 3;
+}
+
+
+# 战俘
+message Prisoner {
+    enum TrainStatus {
+        NOT = 1;                // 可以养成，但还没养成
+        IN = 2;                 // 正在养成中
+        OUT = 3;                // 无法养成
+        FINISH = 4;             // 已完成
+    }
+    required int32 id = 1;
+    required int32 oid = 2;     // 原始ID
+    required int32 start_time = 3;
+    required TrainStatus train = 4;
+    optional int32 value = 5;   // 根据养成状态不同，value的含义不同
+}
+
+
+message PrisonerListNotify {
+    required bytes session = 1;
+    repeated Prisoner prisoner = 2;
+}
+
+message UpdatePrisonerNotify {
+    required bytes session = 1;
+    repeated Prisoner prisoner = 2;
+}
+
+message NewPrisonerNotify {
+    required bytes session = 1;
+    required Prisoner prisoner = 2;
+}
+
+message RemovePrisonerNotify {
+    required bytes session = 1;
+    repeated int32 ids = 2;
+}
+
+
+# 监狱
+message PrisonSocket {
+    required bool opened = 2;   // 是否开启
+    required int32 hero = 2;    // 0 表示此位置没有英雄
+}
+
+message PrisonNotify {
+    required bytes session = 1;
+    repeated PrisonSocket socket = 2;
+}
+
+
+message TrainRequest {
+    required bytes session = 1;
+    required int32 hero = 2;
+}
+
+message TrainResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message GetPrisonerRequest {
+    required bytes session = 1;
+    required int32 hero = 2;
+}
+
+message GetPrisonerResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}

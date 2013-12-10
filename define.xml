@@ -101,37 +101,54 @@
 
         <protocol name="PVERequest" type="600" command="/pve/" />
         <protocol name="PVEResponse" type="601" />
+        
+        <protocol name="PlunderNotify" type="700" />
+        <protocol name="PlunderListRequest" type="701" command="/plunder/list/" />
+        <protocol name="PlunderListResponse" type="702" />
+        <protocol name="PlunderRequest" type="703" command="/plunder/" />
+        <protocol name="PlunderResponse" type="704" />
+        
+        <protocol name="PrisonerListNotify" type="705" />
+        <protocol name="UpdatePrisonerNotify" type="706" />
+        <protocol name="NewPrisonerNotify" type="707" />
+        <protocol name="RemovePrisonerNotify" type="708" />
+        
+        <protocol name="PrisonNotify" type="709" />
+        <protocol name="TrainRequest" type="710" command="/prisoner/train/" />
+        <protocol name="TrainResponse" type="711" />
+        <protocol name="GetPrisonerRequest" type="712" command="/prisoner/get/" />
+        <protocol name="GetPrisonerResponse" type="713" />
     </namespace>
 
     <namespace name="item">
-        <protocol name="EquipNotify" type="700" />
-        <protocol name="AddEquipNotify" type="701" />
-        <protocol name="RemoveEquipNotify" type="702" />
-        <protocol name="UpdateEquipNotify" type="703" />
+        <protocol name="EquipNotify" type="1700" />
+        <protocol name="AddEquipNotify" type="1701" />
+        <protocol name="RemoveEquipNotify" type="1702" />
+        <protocol name="UpdateEquipNotify" type="1703" />
 
-        <protocol name="StrengthEquipRequest" type="704" command="/equip/strengthen/" />
-        <protocol name="StrengthEquipResponse" type="705" />
+        <protocol name="StrengthEquipRequest" type="1704" command="/equip/strengthen/" />
+        <protocol name="StrengthEquipResponse" type="1705" />
 
-        <protocol name="SellEquipRequest" type="706" command="/equip/sell/" />
-        <protocol name="SellEquipResponse" type="707" />
+        <protocol name="SellEquipRequest" type="1706" command="/equip/sell/" />
+        <protocol name="SellEquipResponse" type="1707" />
         
-        <protocol name="GemNotify" type="750" />
-        <protocol name="AddGemNotify" type="751" />
-        <protocol name="UpdateGemNotify" type="752" />
-        <protocol name="RemoveGemNotify" type="753" />
+        <protocol name="GemNotify" type="1750" />
+        <protocol name="AddGemNotify" type="1751" />
+        <protocol name="UpdateGemNotify" type="1752" />
+        <protocol name="RemoveGemNotify" type="1753" />
         
-        <protocol name="MergeGemRequest" type="754" command="/gem/merge/" />
-        <protocol name="MergeGemResponse" type="755" />
-        <protocol name="EmbedGemRequest" type="756" command="/equip/embed/" />
-        <protocol name="EmbedGemResponse" type="757" />
-        <protocol name="UnEmbedGemRequest" type="758" command="/equip/unembed/" />
-        <protocol name="UnEmbedGemResponse" type="759" />
+        <protocol name="MergeGemRequest" type="1754" command="/gem/merge/" />
+        <protocol name="MergeGemResponse" type="1755" />
+        <protocol name="EmbedGemRequest" type="1756" command="/equip/embed/" />
+        <protocol name="EmbedGemResponse" type="1757" />
+        <protocol name="UnEmbedGemRequest" type="1758" command="/equip/unembed/" />
+        <protocol name="UnEmbedGemResponse" type="1759" />
     </namespace>
 
     <namespace name="prize">
-        <protocol name="PrizeNotify" type="800" />
-        <protocol name="PrizeRequest" type="801" command="/prize/" />
-        <protocol name="PrizeResponse" type="802" />
+        <protocol name="PrizeNotify" type="1800" />
+        <protocol name="PrizeRequest" type="1801" command="/prize/" />
+        <protocol name="PrizeResponse" type="1802" />
     </namespace>
 
   </namespace>
