@@ -203,7 +203,7 @@ message UpdatePrisonerNotify {
 
 message NewPrisonerNotify {
     required bytes session = 1;
-    required Prisoner prisoner = 2;
+    repeated Prisoner prisoner = 2;
 }
 
 message RemovePrisonerNotify {
