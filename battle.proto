@@ -212,16 +212,10 @@ message RemovePrisonerNotify {
 
 
 // 监狱
-message PrisonSocket {
-    required bool opened = 1;   // 是否开启
-    required int32 hero = 2;    // 0 表示此位置没有英雄
-}
-
 message PrisonNotify {
     required bytes session = 1;
-    repeated PrisonSocket socket = 2;
+    required int32 slots = 2;
 }
-
 
 message TrainRequest {
     required bytes session = 1;
