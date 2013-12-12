@@ -188,6 +188,12 @@ message Prisoner {
     required int32 start_time = 3;
     required TrainStatus status = 4;
     optional int32 value = 5;   // 根据养成状态不同，value的含义不同
+    
+    required int32 attach = 6;
+    required int32 defense = 7;
+    required int32 hp = 8;
+    required int32 crit = 9;
+    required int32 dodge = 10;
 }
 
 
