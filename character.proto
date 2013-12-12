@@ -9,6 +9,8 @@ message Character {
     required int32 current_exp = 6;         // 当前exp
     required int32 next_level_exp = 7;      // 当前等级到下一等级一共需要的经验
     required int32 official = 8;            // 官职
+    
+    required int32 power = 9;               // 战斗力
 }
 
 
