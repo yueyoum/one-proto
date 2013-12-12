@@ -36,8 +36,9 @@ message VersionCheckResponse {
 message Drop {
     required int32 gold = 1;
     required int32 exp = 2;
-    repeated int32 equips = 3;
-    repeated int32 gems = 4;
-    repeated int32 heros = 5;
+    optional int32 honor = 3;
+    repeated int32 equips = 4;
+    repeated int32 gems = 5;
+    repeated int32 heros = 6;
 }
 

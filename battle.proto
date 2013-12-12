@@ -243,3 +243,26 @@ message GetPrisonerResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
+
+
+
+message ArenaNotify {
+    required int32 week_rank = 1;
+    required int32 day_rank = 2;
+    required int32 week_score = 3;
+    required int32 day_score = 4;
+    required int32 remained_amount = 5;  // 每日剩余次数
+}
+
+
+message ArenaRequest {
+    required bytes session = 1;
+}
+
+
+message ArenaResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    required Battle battle = 3;
+    required int32 score = 4;
+}

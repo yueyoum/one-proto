@@ -4,7 +4,8 @@ import "world.proto";
 
 // prize id
 // 1 - 挂机奖励
-
+// 2 - 比武日奖励
+// 3 - 比武周奖励
 
 message PrizeNotify {
     required bytes session = 1;
