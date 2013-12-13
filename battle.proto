@@ -247,11 +247,19 @@ message GetPrisonerResponse {
 
 
 message ArenaNotify {
+    message NBCharacter {
+        required int32 rank = 1;
+        required int32 id = 2;
+        required string name = 3;
+    }
+    
     required int32 week_rank = 1;
     required int32 day_rank = 2;
     required int32 week_score = 3;
     required int32 day_score = 4;
     required int32 remained_amount = 5;  // 每日剩余次数
+    
+    repeated NBCharacter chars = 6;
 }
 
 
