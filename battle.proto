@@ -253,13 +253,14 @@ message ArenaNotify {
         required string name = 3;
     }
     
-    required int32 week_rank = 1;
-    required int32 day_rank = 2;
-    required int32 week_score = 3;
-    required int32 day_score = 4;
-    required int32 remained_amount = 5;  // 每日剩余次数
+    required bytes session = 1;
+    required int32 week_rank = 2;
+    required int32 day_rank = 3;
+    required int32 week_score = 4;
+    required int32 day_score = 5;
+    required int32 remained_amount = 6;  // 每日剩余次数
     
-    repeated NBCharacter chars = 6;
+    repeated NBCharacter chars = 7;
 }
 
 
