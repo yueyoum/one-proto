@@ -12,8 +12,9 @@ message HangNotify {
 
     required bytes session = 1;
     required int32 hours = 2;       // 当天剩余小时数
+    required int32 max_hours = 3;   // 当天最大小时数
     
-    optional HangInfo hang = 3;
+    optional HangInfo hang = 4;
 }
 
 

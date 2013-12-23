@@ -42,13 +42,13 @@ message GetServerListRequest {
 // 获取服务器列表返回
 message GetServerListResponse {
     required int32 ret = 1;
-    optional Sanguo.protocol.world.Server top = 2;    // 显示在列表最上面的上次登录或者推荐服
-    repeated Sanguo.protocol.world.Server servers = 3;
-    required bytes session = 4;
+    required bytes session = 2;
+    required Sanguo.protocol.world.Server top = 3;  // 上次登录或者推荐服
+    repeated Sanguo.protocol.world.Server servers = 4;
 }
 
 
-// 绑定帐号 （注册）
+// 注册
 message RegisterRequest {
     required bytes session = 1;                // 填充为空字符串
     required string email = 2;
@@ -58,12 +58,12 @@ message RegisterRequest {
 
 message RegisterResponse {
     required int32 ret = 1;
-    optional string email = 2;
-    optional string password = 3;
+    required bytes session = 2;
+    optional string email = 3;
+    optional string password = 4;
 
-    optional Sanguo.protocol.world.Server top = 4;    // 显示在列表最上面的上次登录或者推荐服
-    repeated Sanguo.protocol.world.Server servers = 5;
-
-    required bytes session = 6;
+    required Sanguo.protocol.world.Server top = 5;  // 上次登录或者推荐服
+    repeated Sanguo.protocol.world.Server servers = 6;
 }
+
 

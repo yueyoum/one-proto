@@ -8,15 +8,16 @@ message Equip {
     }
 
     required int32 id = 1;
-    required int32 oid = 2;     // 装备模板ID
-    required string name = 3;
-    required int32 level = 4;
-    required int32 exp = 5;     // 累计总经验
+    required int32 tp = 2;     // 装备类型 1 武器， 2 饰品， 3 防具
+    required int32 quality = 3; // 品质 1 白, 2 绿, 3 蓝, 4 紫
+    required string name = 4;
+    required int32 level = 5;
+    required int32 exp = 6;     // 累计总经验
     
-    required int32 value = 6;
-    required int32 whole_hole = 7;      // 总孔数
-    repeated int32 gem_ids = 8; // 宝石id列表，对应孔位没有，用0表示
-    repeated ExtraAttr attrs = 9;
+    required int32 value = 7;
+    required int32 whole_hole = 8;      // 总孔数
+    repeated int32 gem_ids = 9; // 宝石id列表，对应孔位没有，用0表示
+    repeated ExtraAttr attrs = 10;
 }
 
 
