@@ -107,9 +107,9 @@ message PVERequest {
 message PVEResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    required int32 stage_id = 3;
-    required Battle battle = 4;
-    required Sanguo.protocol.world.Drop drop = 5;
+    optional int32 stage_id = 3;
+    optional Battle battle = 4;
+    optional Sanguo.protocol.world.Drop drop = 5;
 }
 
 
@@ -144,10 +144,9 @@ message PlunderNotify {
 
 message Plunder {
     required int32 id = 1;
-    required bool npc = 2;     // 是否是NPC
-    required string name = 3;
-    required int32 gold = 4;   // 掠夺收益
-    required int32 power = 5;  // 战力
+    required string name = 2;
+    required int32 gold = 3;   // 掠夺收益
+    required int32 power = 4;  // 战力
 }
 
 
@@ -165,14 +164,13 @@ message PlunderListResponse {
 message PlunderRequest {
     required bytes session = 1;
     required int32 id = 2;
-    required bool npc = 3;
 }
 
 message PlunderResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    required Battle battle = 3;
-    required Sanguo.protocol.world.Drop drop = 4;
+    optional Battle battle = 3;
+    optional Sanguo.protocol.world.Drop drop = 4;
 }
 
 
@@ -269,10 +267,9 @@ message ArenaRequest {
     required bytes session = 1;
 }
 
-
 message ArenaResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    required Battle battle = 3;
-    required int32 score = 4;
+    optional Battle battle = 3;
+    optional int32 score = 4;
 }
