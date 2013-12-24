@@ -62,7 +62,7 @@ message RegisterResponse {
     optional string email = 3;
     optional string password = 4;
 
-    required Sanguo.protocol.world.Server top = 5;  // 上次登录或者推荐服
+    optional Sanguo.protocol.world.Server top = 5;  // 上次登录或者推荐服
     repeated Sanguo.protocol.world.Server servers = 6;
 }
 
