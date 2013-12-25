@@ -118,6 +118,9 @@
         <protocol name="TrainResponse" type="711" />
         <protocol name="GetPrisonerRequest" type="712" command="/prisoner/get/" />
         <protocol name="GetPrisonerResponse" type="713" />
+
+        <protocol name="OpenTrainSlotRequest" type="720" command="/prison/open/" />
+        <protocol name="OpenTrainSlotResponse" type="721" />
         
         <protocol name="ArenaNotify" type="800" />
         <protocol name="ArenaRequest" type="801" command="/pvp/" />
