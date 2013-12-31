@@ -158,6 +158,25 @@
         <protocol name="PrizeResponse" type="1802" />
     </namespace>
 
+    <namespace name="friend">
+        <protocol name="FriendsNotify" type="2000" />
+        <protocol name="NewFriendNotify" type="2001" />
+        <protocol name="RemoveFriendNotify" type="2002" />
+        <protocol name="FriendsAmountNotify" type="2003" />
+
+        <protocol name="PlayerListRequest" type="2004" command="/friend/player-list/" />
+        <protocol name="PlayerListResponse" type="2005" />
+
+        <protocol name="AddFriendRequest" type="2006" command="/friend/add/" />
+        <protocol name="AddFriendResponse" type="2007" />
+
+        <protocol name="FriendCancelRequest" type="2008" command="/friend/cancel/" />
+        <protocol name="FriendCancelResponse" type="2009" />
+
+        <protocol name="AcceptFriendRequest" type="2010" command="/friend/accept/" />
+        <protocol name="AcceptFriendResponse" type="2011" />
+    </namespace>
+
   </namespace>
 
 </application>

@@ -1,0 +1,94 @@
+package Sanguo.protocol.friend;
+
+enum FriendStatus {
+    FRIEND_NOT = 1;     // 不是好友
+    FRIEND_OK = 2;      // 已经是好友了
+    FRIEND_ACK = 3;     // 等待对方确认
+    FRIEND_APPLY = 4;   // 别人加自己好友，自己需要确认
+}
+
+message Friend {
+    required int32 id = 1;
+    required string name = 2;
+    required int32 level = 3;
+    required int32 official = 4;
+    required int32 power = 5;
+
+    required FriendStatus status = 6; 
+    repeated int32 formation = 7;   // [1, 2, 3 ... 7, 8, 9] 对应位置是英雄的原始ID
+                                    // 只要status不是 FRIEND_OK， 这里就不填充
+}
+
+// 好友列表/申请列表
+message FriendsNotify {
+    required bytes session = 1;
+    repeated Friend friends = 2;
+}
+
+// 新好友通知，包括自己加别人，别人加自己
+message NewFriendNotify {
+    required bytes session = 1;
+    required Friend friend = 2;
+}
+
+message RemoveFriendNotify {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+
+message FriendsAmountNotify {
+    required bytes session = 1;
+    required int32 max_amount = 2;
+    required int32 cur_amount = 3;
+}
+
+
+// 玩家列表请求
+message PlayerListRequest {
+    required bytes session = 1;
+}
+
+message PlayerListResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    repeated Friend players = 3;
+}
+
+// 添加好友
+message AddFriendRequest {
+    required bytes session = 1;
+    optional int32 id = 2;
+    optional string name = 3;
+}
+
+message AddFriendResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+// 终止好友/取消好友申请
+message FriendCancelRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message FriendCancelResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+
+// 确认别人加自己的请求
+message AcceptFriendRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+
+message AcceptFriendResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
