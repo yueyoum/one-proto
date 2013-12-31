@@ -162,6 +162,7 @@
         <protocol name="FriendsNotify" type="2000" />
         <protocol name="NewFriendNotify" type="2001" />
         <protocol name="RemoveFriendNotify" type="2002" />
+        <protocol name="UpdateFriendNotify" type="2020" />
         <protocol name="FriendsAmountNotify" type="2003" />
 
         <protocol name="PlayerListRequest" type="2004" command="/friend/player-list/" />
