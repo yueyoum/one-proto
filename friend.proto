@@ -12,7 +12,8 @@ message Friend {
     required string name = 2;
     required int32 level = 3;
     required int32 official = 4;
-    required int32 power = 5;
+
+    optional int32 power = 5;       // 只有好友和添加好友列表才填充
 
     required FriendStatus status = 6; 
     repeated int32 formation = 7;   // [1, 2, 3 ... 7, 8, 9] 对应位置是英雄的原始ID
@@ -36,6 +37,11 @@ message RemoveFriendNotify {
     required int32 id = 2;
 }
 
+message UpdateFriendNotify {
+    required bytes session = 1;
+    required Friend friend = 2;
+}
+
 
 message FriendsAmountNotify {
     required bytes session = 1;
@@ -56,18 +62,29 @@ message PlayerListResponse {
 }
 
 // 添加好友
-message AddFriendRequest {
+message FriendAddRequest {
     required bytes session = 1;
     optional int32 id = 2;
     optional string name = 3;
 }
 
-message AddFriendResponse {
+message FriendAddResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
 
-// 终止好友/取消好友申请
+// 终止好友
+message FriendTerminateRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message FriendTerminalResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+// 取消好友申请
 message FriendCancelRequest {
     required bytes session = 1;
     required int32 id = 2;
@@ -79,15 +96,24 @@ message FriendCancelResponse {
 }
 
 
-
 // 确认别人加自己的请求
-message AcceptFriendRequest {
+message FriendAcceptRequest {
     required bytes session = 1;
     required int32 id = 2;
 }
 
+message FriendAcceptResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
 
-message AcceptFriendResponse {
+// 拒绝别人加自己的请求
+message FriendRefuseRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message FriendRefuseResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }

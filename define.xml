@@ -167,14 +167,20 @@
         <protocol name="PlayerListRequest" type="2004" command="/friend/player-list/" />
         <protocol name="PlayerListResponse" type="2005" />
 
-        <protocol name="AddFriendRequest" type="2006" command="/friend/add/" />
-        <protocol name="AddFriendResponse" type="2007" />
+        <protocol name="FriendAddRequest" type="2006" command="/friend/add/" />
+        <protocol name="FriendAddResponse" type="2007" />
 
-        <protocol name="FriendCancelRequest" type="2008" command="/friend/cancel/" />
-        <protocol name="FriendCancelResponse" type="2009" />
+        <protocol name="FriendTerminateRequest" type="2008" command="/friend/terminate/" />
+        <protocol name="FriendTerminateResponse" type="2009" />
 
-        <protocol name="AcceptFriendRequest" type="2010" command="/friend/accept/" />
-        <protocol name="AcceptFriendResponse" type="2011" />
+        <protocol name="FriendCancelRequest" type="2010" command="/friend/cancel/" />
+        <protocol name="FriendCancelResponse" type="2011" />
+
+        <protocol name="FriendAcceptRequest" type="2012" command="/friend/accept/" />
+        <protocol name="FriendAcceptResponse" type="2013" />
+
+        <protocol name="FriendRefuseRequest" type="2014" command="/friend/refuse/" />
+        <protocol name="FriendRefuseResponse" type="2015" />
     </namespace>
 
   </namespace>
