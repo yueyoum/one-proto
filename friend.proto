@@ -79,7 +79,7 @@ message FriendTerminateRequest {
     required int32 id = 2;
 }
 
-message FriendTerminalResponse {
+message FriendTerminateResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
