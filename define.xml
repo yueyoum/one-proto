@@ -184,6 +184,16 @@
         <protocol name="FriendRefuseResponse" type="2015" />
     </namespace>
 
+    <namespace name="mail">
+        <protocol name="MailNotify" type="2100" />
+        <protocol name="OpenMailRequest" type="2101" command="/mail/open/" />
+        <protocol name="OpenMailResponse" type="2102" />
+        <protocol name="DeleteMailRequest" type="2103" command="/mail/delete/" />
+        <protocol name="DeleteMailResponse" type="2104" />
+        <protocol name="GetAttachmentRequest" type="2105" command="/mail/getattachment/" />
+        <protocol name="GetAttachmentResponse" type="2106" />
+    </namespace>
+
   </namespace>
 
 </application>

@@ -1,0 +1,54 @@
+package Sanguo.protocol.mail;
+
+import "world.proto";
+
+message Mail {
+    required int32 id = 1;
+    required string name = 2;
+    required string content = 3;
+    required bool has_read = 4;
+    required int32 delete_after = 5;    // 多少天后自动删除
+
+    optional Sanguo.protocol.world.Drop attachment = 6;
+}
+
+
+message MailNotify {
+    required bytes session = 1;
+    repeated Mail mails = 2;
+}
+
+
+message OpenMailRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message OpenMailResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+message DeleteMailRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message DeleteMailResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+message GetAttachmentRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message GetAttachmentResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
