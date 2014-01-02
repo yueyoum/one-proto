@@ -7,9 +7,10 @@ message Mail {
     required string name = 2;
     required string content = 3;
     required bool has_read = 4;
-    required int32 delete_after = 5;    // 多少天后自动删除
+    required int32 start_at = 5;    // 什么时候创建的 utc timestamp
+    required int32 max_days = 6;    // 最多保存多少天
 
-    optional Sanguo.protocol.world.Drop attachment = 6;
+    optional Sanguo.protocol.world.Drop attachment = 7;
 }
 
 
