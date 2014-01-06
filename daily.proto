@@ -12,7 +12,6 @@ message CheckInNotify {
     required bytes session = 1;
     repeated CheckInType tp = 2;
     repeated int32 checkin_days = 3;    // 签到日期列表
-    required int32 whole_days = 4;      // 累计签到次数
 }
 
 
