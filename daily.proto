@@ -1,0 +1,40 @@
+package Sanguo.protocol.daily;
+
+
+message CheckInNotify {
+    message CheckInType {
+        required int32 tp = 1;          // 签到几次
+        required bool complete = 2;     // 是否达到
+        required bool finished = 3;     // 是否领取
+
+    }
+
+    required bytes session = 1;
+    repeated CheckInType tp = 2;
+    repeated int32 checkin_days = 3;    // 签到日期列表
+    required int32 whole_days = 4;      // 累计签到次数
+}
+
+
+message CheckInRequest {
+    required bytes session = 1;
+}
+
+message CheckInResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message GetCheckInRewardRequest {
+    required bytes session = 1;
+    required int32 tp = 2;
+}
+
+message GetCheckInRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+
+

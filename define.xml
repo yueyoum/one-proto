@@ -194,6 +194,14 @@
         <protocol name="GetAttachmentResponse" type="2106" />
     </namespace>
 
+    <namespace name="daily">
+        <protocol name="CheckInNotify" type="3000" />
+        <protocol name="CheckInRequest" type="3001" command="/daily/checkin/" />
+        <protocol name="CheckInResponse" type="3002" />
+        <protocol name="GetCheckInRewardRequest" type="3003" command="/daily/checkin/get-reward" />
+        <protocol name="GetCheckInRewardResponse" type="3004" />
+    </namespace>
+
   </namespace>
 
 </application>
