@@ -46,9 +46,7 @@ message RemoveGemNotify {
 
 message MergeGemRequest {
     required bytes session = 1;
-    required int32 id = 2;          // 要合成的宝石ID
-    required int32 amount = 3;      // 合成数量
-    required bool using_sycee = 4;    // 是否使用元宝
+    required int32 id = 2;          // 要使用的宝石ID
 }
 
 message MergeGemResponse {
