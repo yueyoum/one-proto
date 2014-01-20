@@ -42,3 +42,38 @@ message Drop {
     repeated int32 heros = 6;
 }
 
+
+
+message Attachment {
+    // 装备
+    message Equipment {
+        required int32 id = 1;
+        required int32 level = 2;       // 强化等级
+        required int32 step = 3;        // 升阶阶数
+        required int32 amount = 4;
+    }
+
+    // 宝石
+    message Gem {
+        required int32 id = 1;
+        required int32 amount = 2;
+    }
+
+    // 材料
+    message Stuff {
+        required int32 id = 1;
+        required int32 amount = 2;
+    }
+
+    optional int32 gold = 1;            // 金币
+    optional int32 sycee = 2;           // 元宝
+    optional int32 exp = 3;             // 等级经验
+    optional int32 official_exp = 4;    // 官职经验
+    optional int32 renown = 5;          // 声望
+
+    repeated Equipment equipments = 6;
+    repeated Gem gems = 7;
+    repeated Stuff stuffs = 8;
+}
+
+
