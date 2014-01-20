@@ -123,7 +123,7 @@ message StepUpEquipResponse {
 
 message SellEquipRequest {
     required bytes session = 1;
-    required int32 id = 2;
+    repeated int32 ids = 2;
 }
 
 
