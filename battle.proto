@@ -54,10 +54,9 @@ message BattleHero {
 
 
 message Action {
-    message SkillTarget {
+    message Target {
         required int32 target_id = 1;
         required bool is_crit = 2;
-        required bool is_dodge = 3;
     }
 
     message HeroNotify {
@@ -71,10 +70,9 @@ message Action {
 
     required int32 from_id = 1;             // 发起行动的英雄ID
     optional int32 skill_id = 2;
-    repeated SkillTarget skill_targets = 3;
+    repeated Target targets = 3;
     repeated HeroNotify hero_notify = 4;
 
-    repeated Action passiveaction = 5;
 }
 
 
