@@ -59,7 +59,7 @@ message Attachment {
     optional int32 exp = 3;             // 等级经验
     optional int32 official_exp = 4;    // 官职经验
     optional int32 renown = 5;          // 声望
-    optional int32 heros = 6;           // 武将
+    repeated int32 heros = 6;           // 武将
 
     repeated Equipment equipments = 7;
     repeated Gem gems = 8;
