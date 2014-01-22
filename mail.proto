@@ -10,7 +10,7 @@ message Mail {
     required int32 start_at = 5;    // 什么时候创建的 utc timestamp
     required int32 max_days = 6;    // 最多保存多少天
 
-    optional Sanguo.protocol.world.Drop attachment = 7;
+    optional Sanguo.protocol.world.Attachment attachment = 7;
 }
 
 

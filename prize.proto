@@ -23,7 +23,7 @@ message PrizeResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional int32 prize_id = 3;
-    optional Sanguo.protocol.world.Drop drop = 4;
+    optional Sanguo.protocol.world.Attachment drop = 4;
 }
 
 
