@@ -75,6 +75,9 @@
         <protocol name="GetHeroRefreshRequest" type="330" command="/heropanel/refresh/" />
         <protocol name="GetHeroRefreshResponse" type="331" />
 
+        <protocol name="GetHeroStartRequest" type="332" command="/heropanel/start/" >
+        <protocol name="GetHeroStartResponse" type="333" />
+
         <protocol name="MergeHeroRequest" type="322" command="/hero/merge/" />
         <protocol name="MergeHeroResponse" type="323" />
     </namespace>

@@ -58,6 +58,14 @@ message GetHeroResponse {
     required bytes session = 2;
 }
 
+message GetHeroStartRequest {
+    required bytes session = 1;
+}
+
+message GetHeroStartResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
 
 message GetHeroRefreshRequest {
     required bytes session = 1;
