@@ -72,6 +72,9 @@
         <protocol name="GetHeroRequest" type="320" command="/hero/get/" />
         <protocol name="GetHeroResponse" type="321" />
 
+        <protocol name="GetHeroRefreshRequest" type="330" command="/heropanel/refresh/" />
+        <protocol name="GetHeroRefreshResponse" type="331" />
+
         <protocol name="MergeHeroRequest" type="322" command="/hero/merge/" />
         <protocol name="MergeHeroResponse" type="323" />
     </namespace>
