@@ -41,9 +41,10 @@ message GetHeroPanelNotify {
     required bytes session = 1;
     required int32 refresh_seconds = 2;     // 还有多少秒后免费刷新
     required int32 free_times = 3;          // 翻牌免费次数
-    required int32 sycee = 4;               // 元宝翻牌花费
-    repeated PanelSocket sockets = 5;
-    required bool new_start = 6;            // 是否是新的开始
+    required int32 open_sycee = 4;          // 元宝翻牌花费
+    required int32 refresh_sycee = 5;       // 刷新花费
+    repeated PanelSocket sockets = 6;
+    required bool new_start = 7;            // 是否是新的开始
 }
 
 
