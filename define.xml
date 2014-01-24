@@ -159,6 +159,11 @@
         <protocol name="EmbedGemResponse" type="1757" />
         <protocol name="UnEmbedGemRequest" type="1758" command="/equip/unembed/" />
         <protocol name="UnEmbedGemResponse" type="1759" />
+
+        <protocol name="StuffNotify" type="1760" />
+        <protocol name="AddStuffNotify" type="1761" />
+        <protocol name="UpdateStuffNotify" type="1762" />
+        <protocol name="RemoveStuffNotify" type="1763" />
     </namespace>
 
     <namespace name="prize">
