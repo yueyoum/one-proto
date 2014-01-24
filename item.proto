@@ -16,12 +16,38 @@ message Equip {
 }
 
 
-
 // 宝石
 message Gem {
     required int32 id = 1;
     required int32 amount = 2;
 }
+
+// 材料
+message Stuff {
+    required int32 id = 1;
+    required int32 amount = 2;
+}
+
+message StuffNotify {
+    required bytes session = 1;
+    repeated Stuff stuffs = 2;
+}
+
+message AddStuffNotify {
+    required bytes session = 1;
+    repeated Stuff stuffs = 2;
+}
+
+message UpdateStuffNotify {
+    required bytes session = 1;
+    repeated Stuff stuffs = 2;
+}
+
+message RemoveStuffNotify {
+    required bytes session = 1;
+    repeated int32 ids = 2;
+}
+
 
 message GemNotify {
     required bytes session = 1;
@@ -111,7 +137,6 @@ message StrengthEquipResponse {
 message StepUpEquipRequest {
     required bytes session = 1;
     required int32 id = 2;
-    required int32 to_id = 3;
 }
 
 
