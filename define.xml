@@ -78,8 +78,8 @@
         <protocol name="GetHeroStartRequest" type="332" command="/heropanel/start/" />
         <protocol name="GetHeroStartResponse" type="333" />
 
-        <protocol name="MergeHeroRequest" type="322" command="/hero/merge/" />
-        <protocol name="MergeHeroResponse" type="323" />
+        <protocol name="HeroStepUpRequest" type="334" command="/hero/stepup/" />
+        <protocol name="HeroStepUpResponse" type="335" />
     </namespace>
 
     <namespace name="formation">
