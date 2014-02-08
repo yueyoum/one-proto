@@ -1,0 +1,30 @@
+package Sanguo.protocol.task;
+
+message Task {
+    enum TaskStatus {
+        DOING = 1;
+        REWARD = 2;
+        COMPLETE = 3;
+    }
+    required int32 id = 1;
+    required int32 current_times = 2;   // 当前次数
+    required TaskStatus status = 3;
+}
+
+
+message TaskNotify {
+    required bytes session = 1;
+    repeated Task tasks = 2;
+}
+
+message TaskGetRewardRequest {
+    required bytes session = 1;
+    required int32 id = 2;      // 要领取奖励的任务ID
+}
+
+message TaskGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
