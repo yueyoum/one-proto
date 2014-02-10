@@ -2,21 +2,6 @@ package Sanguo.protocol.battle;
 
 import "world.proto";
 
-message HangNotify {
-    message HangInfo {
-        required int32 stage_id = 1;
-        required int32 whole_hours = 2;
-        required int32 start_time = 3;      // UTC 秒
-        required bool finished = 4;         
-    }
-
-    required bytes session = 1;
-    required int32 hours = 2;       // 当天剩余小时数
-    required int32 max_hours = 3;   // 当天最大小时数
-    
-    optional HangInfo hang = 4;
-}
-
 
 message Stage {
     required int32 id = 1;
@@ -111,11 +96,24 @@ message PVEResponse {
 }
 
 
+message HangNotify {
+    message HangInfo {
+        required int32 stage_id = 1;
+        required int32 start_time = 2;      // UTC 秒
+        required bool finished = 3;         
+    }
+
+    required bytes session = 1;
+    required int32 hours = 2;       // 当天剩余小时数
+    required int32 max_hours = 3;   // 当天最大小时数
+    
+    optional HangInfo hang = 4;
+}
+
 
 message HangRequest {
     required bytes session = 1;
     required int32 stage_id = 2;
-    required int32 hours = 3;
 }
 
 message HangResponse {
