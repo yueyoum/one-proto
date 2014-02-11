@@ -101,13 +101,20 @@ message HangNotify {
         required int32 stage_id = 1;
         required int32 start_time = 2;      // UTC 秒
         required bool finished = 3;         
+        required int32 rewared_gold = 4;        // 目前获得金币
+    }
+
+    message PlunderLog {
+        required string attacker = 1;       // 名字
+        required bool win = 2;              // 自己是否防御成功
+        required int32 gold = 3;            // 损失/获得的金币
     }
 
     required bytes session = 1;
-    required int32 hours = 2;       // 当天剩余小时数
-    required int32 max_hours = 3;   // 当天最大小时数
+    required int32 remained_time = 2;       // 当天剩余时间 秒
     
-    optional HangInfo hang = 4;
+    optional HangInfo hang = 3;
+    repeated PlunderLog logs = 4;   // 掠夺日志
 }
 
 
