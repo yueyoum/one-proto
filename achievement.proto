@@ -28,9 +28,9 @@ message Achievement {
 
     required int32 id = 1;
 
-    optional MultiIDAchievement achievement = 2;
-    optional SinglIDAchievement achievement = 3;
-    optional CounterAchievement achievement = 4;
+    optional MultiIDAchievement mach = 2;
+    optional SinglIDAchievement sach = 3;
+    optional CounterAchievement cach = 4;
 
     required AchivementStatus status = 5;
 }
