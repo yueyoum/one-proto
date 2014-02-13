@@ -38,28 +38,31 @@ message BattleHero {
 
 
 
-message Action {
-    message Target {
-        required int32 target_id = 1;
-        required bool is_crit = 2;
-    }
+message Step {
+	message Action {
+		message Target {
+			required int32 target_id = 1;
+			required bool is_crit = 2;
+		}
+		optional int32 skill_id = 1;
+		repeated Target targets = 2;
+	}
 
     message HeroNotify {
+		message Buff{
+			required int32 id = 1;
+			optional int32 value = 2;
+		}
         required int32 target_id = 1;
         required int32 hp = 2;
-        optional int32 eff = 3;
-        repeated int32 buffs = 4;
-        optional int32 value = 5;
+        repeated Buff news = 3;
+        repeated Buff exists = 4;
     }
-
-
-    required int32 from_id = 1;             // 发起行动的英雄ID
-    optional int32 skill_id = 2;
-    repeated Target targets = 3;
-    repeated HeroNotify hero_notify = 4;
+	required int32 id = 1;                  // 发起行动的英雄ID
+    optional Action action = 2;
+    repeated HeroNotify hero_notify = 3;
 
 }
-
 
 message Ground {
     // 一军
@@ -67,7 +70,7 @@ message Ground {
     repeated BattleHero rival_heros = 2;    //
     required bool self_win = 3;             //
 
-    repeated Action actions = 4;            // 每次行动
+    repeated Step steps = 4;            // 每次行动
 }
 
 message Battle {
