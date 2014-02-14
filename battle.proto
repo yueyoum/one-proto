@@ -55,8 +55,9 @@ message Step {
 		}
         required int32 target_id = 1;
         required int32 hp = 2;
-        repeated Buff news = 3;
-        repeated Buff exists = 4;
+        repeated Buff adds = 3;
+        repeated int32 removes = 4;
+        optional int32 value = 5;           // 引起hp变化的value
     }
 	required int32 id = 1;                  // 发起行动的英雄ID
     optional Action action = 2;
