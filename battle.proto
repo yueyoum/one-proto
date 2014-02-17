@@ -185,23 +185,15 @@ message PlunderResponse {
 
 // 战俘
 message Prisoner {
-    enum TrainStatus {
-        NOT = 1;                // 可以养成，但还没养成
-        IN = 2;                 // 正在养成中
-        OUT = 3;                // 无法养成
-        FINISH = 4;             // 已完成
-    }
-    required int32 id = 1;
+    required int32 id = 1;      // 战俘ID
     required int32 oid = 2;     // 原始ID
-    required int32 start_time = 3;
-    required TrainStatus status = 4;
-    optional int32 value = 5;   // 根据养成状态不同，value的含义不同
+
+    required int32 prob = 3;    // 当前劝降几率
     
-    required int32 attack = 6;
-    required int32 defense = 7;
-    required int32 hp = 8;
-    required int32 crit = 9;
-    required int32 dodge = 10;
+    required int32 attack = 4;
+    required int32 defense = 5;
+    required int32 hp = 6;
+    required int32 crit = 7;
 }
 
 
@@ -226,40 +218,41 @@ message RemovePrisonerNotify {
 }
 
 
+message PrisonerAddProbRequest {
+    required bytes session = 1;
+    required int32 id = 2;      // 战俘ID
+}
+
+message PrisonerAddProbResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message PrisonerGetRequest {
+    required bytes session = 1;
+    required int32 id = 2;      // 战俘ID
+}
+
+message PrisonerGetResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional bool success = 3;  // 是否成功
+}
+
+
+
 // 监狱
 message PrisonNotify {
     required bytes session = 1;
-    required int32 slots = 2;                   // 开启的训练位数量
-    required int32 max_slots = 3;               // 最多能有的训练位
-    required int32 max_prisoners_amount = 4;    // 最多能有的战俘数量
-    required int32 open_slot_cost = 5;          // 开启新训练位要花费的元宝
+    required int32 max_prisoners_amount = 2;    // 最多能有的战俘数量
+    required int32 incr_amount_cost = 3;        // 增加战俘上限所需元宝
 }
 
-message OpenTrainSlotRequest {
+message PrisonIncrAmountRequest {
     required bytes session = 1;
 }
 
-message OpenTrainSlotResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-
-message TrainRequest {
-    required bytes session = 1;
-    required int32 hero = 2;
-}
-
-message TrainResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-
-message GetPrisonerRequest {
-    required bytes session = 1;
-    required int32 hero = 2;
-}
-
-message GetPrisonerResponse {
+message PrisonIncrAmountResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }

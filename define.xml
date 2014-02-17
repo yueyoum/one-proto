@@ -118,15 +118,15 @@
         <protocol name="UpdatePrisonerNotify" type="706" />
         <protocol name="NewPrisonerNotify" type="707" />
         <protocol name="RemovePrisonerNotify" type="708" />
+
+        <protocol name="PrisonerAddProbRequest" type="750" command="/prisoner/addprob/" />
+        <protocol name="PrisonerAddProbResponse" type="751" />
+        <protocol name="PrisonerGetRequest" type="752" command="/prisoner/get/" />
+        <protocol name="PrisonerGetResponse" type="753" />
         
         <protocol name="PrisonNotify" type="709" />
-        <protocol name="TrainRequest" type="710" command="/prisoner/train/" />
-        <protocol name="TrainResponse" type="711" />
-        <protocol name="GetPrisonerRequest" type="712" command="/prisoner/get/" />
-        <protocol name="GetPrisonerResponse" type="713" />
-
-        <protocol name="OpenTrainSlotRequest" type="720" command="/prison/open/" />
-        <protocol name="OpenTrainSlotResponse" type="721" />
+        <protocol name="PrisonIncrAmountRequest" type="760" command="/prison/incr/" />
+        <protocol name="PrisonIncrAmountResponse" type="761" />
         
         <protocol name="ArenaNotify" type="800" />
         <protocol name="ArenaRequest" type="801" command="/pvp/" />
