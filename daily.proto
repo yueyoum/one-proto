@@ -1,17 +1,13 @@
 package Sanguo.protocol.daily;
 
+import "world.proto";
+
 
 message CheckInNotify {
-    message CheckInType {
-        required int32 tp = 1;          // 签到几次
-        required bool complete = 2;     // 是否达到
-        required bool finished = 3;     // 是否领取
-
-    }
-
     required bytes session = 1;
-    repeated CheckInType tp = 2;
-    repeated int32 checkin_days = 3;    // 签到日期列表
+    required bool checkin = 2;  // true 为可以签到
+    required int32 days = 3;    // 已签到天数
+    required int32 max_days = 4;    // 一个循环的最大天数
 }
 
 
@@ -22,18 +18,6 @@ message CheckInRequest {
 message CheckInResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Sanguo.protocol.world.Attachment reward = 3;  // 当次签到奖励
 }
-
-message GetCheckInRewardRequest {
-    required bytes session = 1;
-    required int32 tp = 2;
-}
-
-message GetCheckInRewardResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-
-
-
 
