@@ -273,6 +273,8 @@ message ArenaNotify {
     required int32 remained_amount = 6;  // 每日剩余次数
     
     repeated NBCharacter chars = 7;
+
+    required int32 arena_cost = 8; // 超过免费次数后，每次比武需要花费的金币
 }
 
 message ArenaPanelRequest {
