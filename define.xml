@@ -131,6 +131,8 @@
         <protocol name="ArenaNotify" type="800" />
         <protocol name="ArenaRequest" type="801" command="/pvp/" />
         <protocol name="ArenaResponse" type="802" />
+        <protocol name="ArenaPanelRequest" type="803" command="/arena/panel/" />
+        <protocol name="ArenaPanelResponse" type="804" />
     </namespace>
 
     <namespace name="item">

@@ -262,8 +262,7 @@ message PrisonIncrAmountResponse {
 message ArenaNotify {
     message NBCharacter {
         required int32 rank = 1;
-        required int32 id = 2;
-        required string name = 3;
+        required string name = 2;
     }
     
     required bytes session = 1;
@@ -276,6 +275,17 @@ message ArenaNotify {
     repeated NBCharacter chars = 7;
 }
 
+message ArenaPanelRequest {
+    required bytes session = 1;
+}
+
+message ArenaPanelResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional ArenaNotify panel = 3;
+}
+
+
 
 message ArenaRequest {
     required bytes session = 1;
@@ -285,5 +295,4 @@ message ArenaResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional Battle battle = 3;
-    optional int32 score = 4;
 }
