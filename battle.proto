@@ -23,6 +23,42 @@ message NewStageNotify {
     required Stage stage = 2;
 }
 
+// 已经开启的精英关卡
+message EliteStage {
+    required int32 id = 1;
+    required int32 current_times = 2;   // 已经打过的次数
+}
+
+
+message EliteStageNotify {
+    required bytes session = 1;
+    repeated EliteStage stages = 2;
+}
+
+message NewEliteStageNotify {
+    required bytes session = 1;
+    required EliteStage stage = 2;
+}
+
+message UpdateEliteStageNotify {
+    required bytes session = 1;
+    required EliteStage stage = 2;
+}
+
+
+message ElitePVERequest {
+    required bytes session = 1;
+    required int32 stage_id = 2;
+}
+
+message ElitePVEResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional int32 stage_id = 3;
+    optional Battle battle = 4;
+    optional Sanguo.protocol.world.Attachment drop = 5;
+}
+
 
 message BattleHero {
     enum HeroType {
@@ -98,6 +134,7 @@ message PVEResponse {
     optional Battle battle = 4;
     optional Sanguo.protocol.world.Attachment drop = 5;
 }
+
 
 
 message HangNotify {
