@@ -1,0 +1,57 @@
+package Sanguo.protocol.store;
+
+message Goods {
+    enum ITEM_TYPE = {
+        HERO = 1;       // 武将
+        EQUIP = 2;      // 装备
+        GEM = 3;        // 宝石
+        STUFF = 4;      // 材料
+    }
+
+    required int32 id = 1;
+    required int32 tag = 2;                 // 1 促销, 2 抢购, 3 商城, 4 VIP专卖
+    required ITEM_TYPE item_tp = 3;         // 商品类型
+    required int32 item_id = 4;            // 商品ID
+    required int32 original_price = 5;      // 原始价格
+    required int32 sell_price = 6;          // 售价
+    required int32 total_amount = 7;        // 商品总量
+    required int32 limit_amount = 8;        // 每人每天限购
+    required int32 vip_condition = 9;       // VIP等级限制
+}
+
+message GoodsNotify {
+    required bytes session = 1;
+    repeated Goods goods = 2;
+}
+
+
+message UpdateGoodsNotify {
+    required bytes session = 1;
+    required Goods goods = 2;
+}
+
+
+message StorePanelRequest {
+    required bytes session = 1;
+}
+
+
+message StorePanelResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    required GoodsNotify panel = 3;
+}
+
+
+message StoreBuyRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message StoreBuyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+
