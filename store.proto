@@ -10,8 +10,8 @@ message Goods {
     }
 
     enum SELL_TYPE {
-        GOLD = 1;
-        SYCEE = 2;
+        SELL_GOLD = 1;  // 用金币买
+        SELL_SYCEE = 2; // 用元宝买
     }
 
     required int32 id = 1;
