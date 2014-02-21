@@ -42,6 +42,9 @@
 
       <protocol name="VersionCheckRequest" type="51" />
       <protocol name="VersionCheckResponse" type="52" />
+
+      <protocol name="SyncRequest" type="60" command="/sync/" />
+      <protocol name="SyncResponse" type="61" />
     </namespace>
 
     <namespace name="account">
@@ -236,8 +239,7 @@
     </namespace>
 
     <namespace name="store">
-        <protocol name="GoodsNotify" type="3300" />
-        <protocol name="UpdateGoodsNotify" type="3301" />
+        <protocol name="StoreNotify" type="3300" />
         <protocol name="StorePanelRequest" type="3302" command="/store/panel/" />
         <protocol name="StorePanelResponse" type="3303" />
         <protocol name="StoreBuyRequest" type="3304" command="/store/buy/" />
