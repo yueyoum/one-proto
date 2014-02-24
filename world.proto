@@ -24,7 +24,7 @@ message SyncRequest {
 message SyncResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    required int32 utc_timestamp = 3;
+    required int64 utc_timestamp = 3;
 }
 
 
