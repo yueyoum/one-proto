@@ -1,0 +1,30 @@
+package Sanguo.protocol.chat;
+
+message ChatCharacter {
+    required int32 id = 1;
+    required string name = 2;
+    required int32 official = 3;    // 官职
+}
+
+message ChatMessage {
+    required ChatCharacter char = 1;
+    required string msg = 2;
+}
+
+
+message ChatMessageNotify {
+    required bytes session = 1;
+    repeated ChatMessage msgs = 2;
+}
+
+message ChatSendRequest {
+    required bytes session = 1;
+    required string msg = 2;
+}
+
+message ChatSendResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+

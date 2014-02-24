@@ -246,6 +246,12 @@
         <protocol name="StoreBuyResponse" type="3305" />
     </namespace>
 
+    <namespace name="chat">
+        <protocol name="ChatMessageNotify" type="3400" />
+        <protocol name="ChatSendRequest" type="3401" command="/chat/send" />
+        <protocol name="ChatSendResponse" type="3402" />
+    </namespace>
+
   </namespace>
 
 </application>
