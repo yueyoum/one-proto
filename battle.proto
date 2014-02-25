@@ -335,3 +335,61 @@ message ArenaResponse {
     required bytes session = 2;
     optional Battle battle = 3;
 }
+
+
+message TeamBattle {
+    enum TeamBattleStatus {
+        DOING = 1;       // 战斗中
+        REWARD = 2;      // 可以领奖
+    }
+    required int32 id = 1;
+    required int32 boss_id = 2;             // boss id
+    required int32 boss_power = 3;          // boss战斗力
+    repeated int32 self_ids = 4;            // 好友列表
+    required int32 self_power = 5;
+
+    required float current_progress = 6;    // 当前进度
+    required float step_progress = 7;       // 每秒增加百分比
+
+    required int32 remained_time = 8;       // 剩余秒数
+    required TeamBattleStatus status = 9;
+}
+
+
+message TeamBattleNotify {
+    required bytes session = 1;
+    required int32 incr_time_cost = 2;  // 增加一分钟战斗时间所需元宝
+    required TeamBattle team_battle = 3;
+}
+
+message TeamBattleEnterRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message TeamBattleEnterResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+message TeamBattleStartRequest {
+    required bytes session = 1;
+    required int32 friend_ids = 2;
+}
+
+message TeamBattleStartResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message TeamBattleIncrTimeRequest {
+    required bytes session = 1;
+}
+
+message TeamBattleIncrTimeResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
