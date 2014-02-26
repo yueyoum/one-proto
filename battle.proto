@@ -354,13 +354,15 @@ message TeamBattle {
 
     required int32 remained_time = 8;       // 剩余秒数
     required TeamBattleStatus status = 9;
+
+    optional Sanguo.protocol.world.Attachment reward = 10;
 }
 
 
 message TeamBattleNotify {
     required bytes session = 1;
     required int32 incr_time_cost = 2;  // 增加一分钟战斗时间所需元宝
-    required TeamBattle team_battle = 3;
+    optional TeamBattle team_battle = 3;
 }
 
 message TeamBattleEnterRequest {
@@ -393,4 +395,12 @@ message TeamBattleIncrTimeResponse {
     required bytes session = 2;
 }
 
+message TeamBattleGetRewardRequest {
+    required bytes session = 1;
+}
+
+message TeamBattleGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
 
