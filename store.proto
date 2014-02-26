@@ -50,6 +50,7 @@ message StorePanelResponse {
 message StoreBuyRequest {
     required bytes session = 1;
     required int32 id = 2;
+    required int32 amount = 3;
 }
 
 message StoreBuyResponse {
