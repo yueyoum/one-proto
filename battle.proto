@@ -378,7 +378,7 @@ message TeamBattleEnterResponse {
 
 message TeamBattleStartRequest {
     required bytes session = 1;
-    required int32 friend_ids = 2;
+    repeated int32 friend_ids = 2;
 }
 
 message TeamBattleStartResponse {
