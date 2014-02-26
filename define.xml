@@ -155,7 +155,7 @@
         <protocol name="TeamBattleStartResponse" type="904" />
         <protocol name="TeamBattleIncrTimeRequest" type="905" command="/teambattle/incr/" />
         <protocol name="TeamBattleIncrTimeResponse" type="906" />
-        <protocol name="TeamBattleGetRewardRequest" type="907" command="/teambattle/getreward" />
+        <protocol name="TeamBattleGetRewardRequest" type="907" command="/teambattle/getreward/" />
         <protocol name="TeamBattleGetRewardResponse" type="908" />
     </namespace>
 
@@ -263,7 +263,7 @@
 
     <namespace name="chat">
         <protocol name="ChatMessageNotify" type="3400" />
-        <protocol name="ChatSendRequest" type="3401" command="/chat/send" />
+        <protocol name="ChatSendRequest" type="3401" command="/chat/send/" />
         <protocol name="ChatSendResponse" type="3402" />
         <protocol name="BroadcastNotify" type="3500" />
     </namespace>
