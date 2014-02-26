@@ -83,6 +83,11 @@
 
         <protocol name="HeroStepUpRequest" type="334" command="/hero/stepup/" />
         <protocol name="HeroStepUpResponse" type="335" />
+
+        <protocol name="HeroSoulNotify" type="350" />
+        <protocol name="AddHeroSoulNotify" type="351" />
+        <protocol name="UpdateHeroSoulNotify" type="352" />
+        <protocol name="RemoveHeroSoulNotify" type="353" />
     </namespace>
 
     <namespace name="formation">

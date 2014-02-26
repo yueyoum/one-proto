@@ -15,6 +15,35 @@ message Hero {
 }
 
 
+message HeroSoul {
+    required int32 id = 1;
+    required int32 amount = 2;
+}
+
+message HeroSoulNotify {
+    required bytes session = 1;
+    repeated HeroSoul herosouls = 2;
+}
+
+message AddHeroSoulNotify {
+    required bytes session = 1;
+    repeated HeroSoul herosouls = 2;
+}
+
+
+message UpdateHeroSoulNotify {
+    required bytes session = 1;
+    repeated HeroSoul herosouls = 2;
+}
+
+message RemoveHeroSoulNotify {
+    required bytes session = 1;
+    repeated int32 ids = 2;
+}
+
+
+
+
 message HeroNotify {
     required bytes session = 1;
     repeated Hero heros = 2;   
