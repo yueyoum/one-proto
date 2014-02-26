@@ -339,8 +339,9 @@ message ArenaResponse {
 
 message TeamBattle {
     enum TeamBattleStatus {
-        DOING = 1;       // 战斗中
-        REWARD = 2;      // 可以领奖
+        PREPARE = 1;     // 进入还没开始
+        DOING = 2;       // 战斗中
+        REWARD = 3;      // 可以领奖
     }
     required int32 id = 1;
     required int32 boss_id = 2;             // boss id
