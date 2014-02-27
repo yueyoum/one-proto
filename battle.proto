@@ -395,12 +395,3 @@ message TeamBattleIncrTimeResponse {
     required bytes session = 2;
 }
 
-message TeamBattleGetRewardRequest {
-    required bytes session = 1;
-}
-
-message TeamBattleGetRewardResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-

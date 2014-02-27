@@ -8,23 +8,29 @@ import "world.proto";
 // 3 - 比武周奖励
 // 4 - 成就奖励
 // 5 - 任务奖励
+// 6 - 官职每日登录
+// 7 - 团队本
 
 message PrizeNotify {
+    message Prize {
+        required int32 id = 1;
+        optional int32 param = 2;
+    }
     required bytes session = 1;
-    repeated int32 prize_ids = 2;
+    repeated Prize prizes = 2;
 }
 
 
 message PrizeRequest {
     required bytes session = 1;
-    required int32 prize_id = 2;
+    required Prize prize = 2;
 }
 
 
 message PrizeResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional int32 prize_id = 3;
+    optional Prize prize = 3;
     optional Sanguo.protocol.world.Attachment drop = 4;
 }
 
