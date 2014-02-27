@@ -11,11 +11,14 @@ import "world.proto";
 // 6 - 官职每日登录
 // 7 - 团队本
 
+
+message Prize {
+    required int32 id = 1;
+    optional int32 param = 2;
+}
+
+
 message PrizeNotify {
-    message Prize {
-        required int32 id = 1;
-        optional int32 param = 2;
-    }
     required bytes session = 1;
     repeated Prize prizes = 2;
 }
