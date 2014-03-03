@@ -23,9 +23,9 @@
   <param>
     <begintag tag="//generate code begin"/>
     <endtag tag="//generate code end"/>
-    <protocol template="template/p/ProtocolTemplate.txt" path="D:\UnityProject\Sanguo\Assets\MyProject\" postfix=".cs"/>
+    <protocol template="template/p/ProtocolTemplate.txt" path="D:\UnityProject\Client\client\Assets\MyProject\" postfix=".cs"/>
     <!--<bean template="template/p/BeanTemplate.txt" path="D:\U3DProject\Lcj\Assets\MyProject\" postfix=".cs"/>-->
-    <export name="ProtocolExport" template="template/p/ExportTemplate.txt" path="D:\UnityProject\Sanguo\Assets\MyProject\Protocol\" postfix=".cs"/>
+    <export name="ProtocolExport" template="template/p/ExportTemplate.txt" path="D:\UnityProject\Client\client\Assets\MyProject\Protocol\" postfix=".cs"/>
   </param>
   <fix>
     <item key="${separation}" prefix="." postfix=""/>
