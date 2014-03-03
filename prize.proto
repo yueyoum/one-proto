@@ -20,7 +20,7 @@ message Prize {
 
 message PrizeNotify {
     required bytes session = 1;
-    repeated Prize prizes = 2;
+    repeated int32 prize_ids = 2;
 }
 
 
