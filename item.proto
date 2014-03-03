@@ -127,13 +127,14 @@ message UpdateEquipNotify {
 message StrengthEquipRequest {
     required bytes session = 1;
     required int32 id = 2;
+    required bool quick = 3;
 }
 
 message StrengthEquipResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional int32 id = 3;
-    optional int32 level_up = 4;
+    repeated int32 level_up = 4;
 }
 
 message StepUpEquipRequest {
