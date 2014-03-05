@@ -70,7 +70,9 @@ message BattleHero {
     required int32 original_id = 2;
     required int32 hp = 3;
     required int32 anger = 4;
-    required HeroType ht = 5;       // 是玩家的英雄还是关卡的怪物
+    required int32 max_hp = 5;
+    required int32 max_anger = 6;
+    required HeroType ht = 7;       // 是玩家的英雄还是关卡的怪物
 }
 
 
