@@ -133,8 +133,7 @@ message StrengthEquipRequest {
 message StrengthEquipResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional int32 id = 3;
-    repeated int32 level_up = 4;
+    repeated Equip equips = 3;
 }
 
 message StepUpEquipRequest {
