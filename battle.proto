@@ -187,9 +187,9 @@ message HangCancelResponse {
 // 掠夺
 message PlunderNotify {
     required bytes session = 1;
-    required int32 amount = 2;  // 今日掠夺次数
-    required int32 max_amount = 3;  // 每日最大次数
-    required int32 cost_sycee = 4;  // 超过最大次数后每次掠夺要花费的元宝
+    required int32 remained_free_times = 2;     // 免费剩余次数
+    required int32 remained_sycee_times = 3;    // 花费元宝剩余次数
+    required int32 cost_sycee = 4;              // 花费多少元宝
 }
 
 message Plunder {
@@ -311,11 +311,12 @@ message ArenaNotify {
     required int32 day_rank = 3;
     required int32 week_score = 4;
     required int32 day_score = 5;
-    required int32 remained_amount = 6;  // 每日剩余次数
+    required int32 remained_free_times = 6;  // 剩余免费次数
+    required int32 remained_sycee_times = 7; // 剩余的元宝购买次数
     
-    repeated NBCharacter chars = 7;
+    repeated NBCharacter chars = 8;
 
-    required int32 arena_cost = 8; // 超过免费次数后，每次比武需要花费的金币
+    required int32 arena_cost = 9; // 超过免费次数后，每次比武需要花费的金币
 }
 
 message ArenaPanelRequest {
