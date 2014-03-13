@@ -32,6 +32,11 @@ message ResumeRequest {
     required bytes session = 1;
 }
 
+message ResumeResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
 
 message CommandResponse {
     required int32 ret = 1;
