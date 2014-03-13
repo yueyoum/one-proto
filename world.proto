@@ -28,6 +28,10 @@ message SyncResponse {
 }
 
 
+message ResumeRequest {
+    required bytes session = 1;
+}
+
 
 message CommandResponse {
     required int32 ret = 1;

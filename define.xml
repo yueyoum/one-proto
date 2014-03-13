@@ -45,6 +45,8 @@
 
       <protocol name="SyncRequest" type="60" command="/sync/" />
       <protocol name="SyncResponse" type="61" />
+
+      <protocol name="ResumeRequest" type="63" command="/resume/" />
     </namespace>
 
     <namespace name="account">

@@ -145,8 +145,10 @@ message HangNotify {
     message HangInfo {
         required int32 stage_id = 1;
         required int32 start_time = 2;      // UTC 秒
-        required bool finished = 3;         
-        required int32 rewared_gold = 4;        // 目前获得金币
+        required int32 used_time = 3;       // 本次挂机所使用时间
+        required bool finished = 4;         
+        required int32 rewared_gold = 5;        // 目前获得金币
+        required int32 rewared_exp = 6;
     }
 
     message PlunderLog {
