@@ -18,6 +18,7 @@ message AddSocketNotify {
     required bytes session = 1;
 }
 
+
 message SetSocketRequest {
     required bytes session = 1;
     required Socket socket = 2;
@@ -26,7 +27,6 @@ message SetSocketRequest {
 message SetSocketResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional Socket socket = 3;
 }
 
 message SetFormationRequest {

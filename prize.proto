@@ -10,7 +10,6 @@ import "world.proto";
 // 5 - 任务奖励
 // 6 - 官职每日登录
 // 7 - 团队本
-// 8 - 每日登录官职领奖
 
 
 message Prize {
