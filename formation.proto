@@ -18,6 +18,11 @@ message AddSocketNotify {
     required bytes session = 1;
 }
 
+message UpdateSocketNotify {
+    required bytes session = 1;
+    repeated Socket sockets = 2;
+}
+
 
 message SetSocketRequest {
     required bytes session = 1;

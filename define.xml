@@ -97,6 +97,7 @@
         <protocol name="FormationNotify" type="402" />
         <protocol name="AddSocketNotify" type="403" />
         <protocol name="SocketNotify" type="404" />
+        <protocol name="UpdateSocketNotify" type="407" />
 
         <protocol name="SetSocketRequest" type="405" command="/socket/set/"/>
         <protocol name="SetSocketResponse" type="406" />
