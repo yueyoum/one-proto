@@ -253,6 +253,9 @@
         <protocol name="UpdateAchievementNotify" type="3201" />
         <protocol name="AchievementGetRewardRequest" type="3202" command="/achievement/getreward/" />
         <protocol name="AchievementGetRewardResponse" type="3203" />
+
+        <protocol name="AddAchievementNotify" type="3204" />
+        <protocol name="RemoveAchievementNotify" type="3205" />
     </namespace>
 
     <namespace name="store">

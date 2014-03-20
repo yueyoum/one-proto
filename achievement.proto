@@ -45,6 +45,16 @@ message UpdateAchievementNotify {
     required Achievement achievement = 2;
 }
 
+message AddAchievementNotify {
+    required bytes session = 1;
+    required Achievement achievement = 2;
+}
+
+message RemoveAchievementNotify {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
 
 message AchievementGetRewardRequest {
     required bytes session = 1;
