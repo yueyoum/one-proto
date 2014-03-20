@@ -104,6 +104,7 @@
 
         <protocol name="SetSocketRequest" type="405" command="/socket/set/"/>
         <protocol name="SetSocketResponse" type="406" />
+
     </namespace>
 
     <namespace name="battle">
@@ -131,20 +132,24 @@
         <protocol name="PlunderListResponse" type="702" />
         <protocol name="PlunderRequest" type="703" command="/plunder/" />
         <protocol name="PlunderResponse" type="704" />
+
+        <protocol name="PlunderGetRewardRequest" type="850" command="/plunder/getreward/" />
+        <protocol name="PlunderGetRewardResponse" type="851" />
+
+        <protocol name="PrisonerReleaseRequest" type="852" command="/prionser/release/" />
+        <protocol name="PrisonerReleaseResponse" type="853" />
+        <protocol name="PrisonerKillRequest" type="854" command="/prionser/kill/" />
+        <protocol name="PrisonerKillResponse" type="855" />
+
         
         <protocol name="PrisonerListNotify" type="705" />
         <protocol name="UpdatePrisonerNotify" type="706" />
         <protocol name="NewPrisonerNotify" type="707" />
         <protocol name="RemovePrisonerNotify" type="708" />
 
-        <protocol name="PrisonerAddProbRequest" type="750" command="/prisoner/addprob/" />
-        <protocol name="PrisonerAddProbResponse" type="751" />
         <protocol name="PrisonerGetRequest" type="752" command="/prisoner/get/" />
         <protocol name="PrisonerGetResponse" type="753" />
         
-        <protocol name="PrisonNotify" type="709" />
-        <protocol name="PrisonIncrAmountRequest" type="760" command="/prison/incr/" />
-        <protocol name="PrisonIncrAmountResponse" type="761" />
         
         <protocol name="ArenaNotify" type="800" />
         <protocol name="ArenaRequest" type="801" command="/pvp/" />

@@ -190,8 +190,7 @@ message HangCancelResponse {
 message PlunderNotify {
     required bytes session = 1;
     required int32 remained_free_times = 2;     // 免费剩余次数
-    required int32 remained_sycee_times = 3;    // 花费元宝剩余次数
-    required int32 cost_sycee = 4;              // 花费多少元宝
+    required int32 points = 3;                  // 战功
 }
 
 message Plunder {
@@ -199,6 +198,7 @@ message Plunder {
     required string name = 2;
     required int32 gold = 3;   // 掠夺收益
     required int32 power = 4;  // 战力
+    repeated int32 hero_original_ids =5;
 }
 
 
@@ -222,8 +222,28 @@ message PlunderResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional Battle battle = 3;
-    optional Sanguo.protocol.world.Attachment drop = 4;
 }
+
+
+// 掠夺胜利后获得掉落
+enum PlunderRewardType {
+    HERO = 1;
+    STUFF = 2;
+    GOLD = 3;
+}
+
+message PlunderGetRewardRequest {
+    required bytes session = 1;
+    required PlunderRewardType tp = 2;
+}
+
+message PlunderGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional PlunderRewardType tp = 3;
+    optional Sanguo.protocol.world.Attachment reward = 4;
+}
+
 
 
 // 战俘
@@ -232,11 +252,7 @@ message Prisoner {
     required int32 oid = 2;     // 原始ID
 
     required int32 prob = 3;    // 当前劝降几率
-    
-    required int32 attack = 4;
-    required int32 defense = 5;
-    required int32 hp = 6;
-    required int32 crit = 7;
+    required bool active = 4;   // 是否可劝降
 }
 
 
@@ -261,19 +277,10 @@ message RemovePrisonerNotify {
 }
 
 
-message PrisonerAddProbRequest {
-    required bytes session = 1;
-    required int32 id = 2;      // 战俘ID
-}
-
-message PrisonerAddProbResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-
 message PrisonerGetRequest {
     required bytes session = 1;
     required int32 id = 2;      // 战俘ID
+    repeated int32 treasure_ids = 3;    // 宝物ID列表
 }
 
 message PrisonerGetResponse {
@@ -283,22 +290,29 @@ message PrisonerGetResponse {
 }
 
 
-
-// 监狱
-message PrisonNotify {
+message PrisonerReleaseRequest {
     required bytes session = 1;
-    required int32 max_prisoners_amount = 2;    // 最多能有的战俘数量
-    required int32 incr_amount_cost = 3;        // 增加战俘上限所需元宝
+    required int32 id = 2;
 }
 
-message PrisonIncrAmountRequest {
-    required bytes session = 1;
-}
-
-message PrisonIncrAmountResponse {
+message PrisonerReleaseResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Sanguo.protocol.world.Attachment reward = 3;
 }
+
+
+message PrisonerKillRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message PrisonerKillResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Sanguo.protocol.world.Attachment reward = 3;
+}
+
 
 
 
