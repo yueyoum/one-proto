@@ -8,6 +8,7 @@ message Achievement {
         COMPLETE = 3;   // 领完奖完成
     }
 
+
     // 条件为多个ID
     message MultiIDAchievement {
         repeated int32 current = 1;
@@ -33,6 +34,7 @@ message Achievement {
     optional CounterAchievement cach = 4;
 
     required AchivementStatus status = 5;
+    required bool show = 6;
 }
 
 message AchievementNotify {
@@ -45,15 +47,6 @@ message UpdateAchievementNotify {
     required Achievement achievement = 2;
 }
 
-message AddAchievementNotify {
-    required bytes session = 1;
-    required Achievement achievement = 2;
-}
-
-message RemoveAchievementNotify {
-    required bytes session = 1;
-    required int32 id = 2;
-}
 
 
 message AchievementGetRewardRequest {
