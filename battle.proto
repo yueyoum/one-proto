@@ -227,9 +227,9 @@ message PlunderResponse {
 
 // 掠夺胜利后获得掉落
 enum PlunderRewardType {
-    HERO = 1;
-    STUFF = 2;
-    GOLD = 3;
+    PLUNDER_HERO = 1;
+    PLUNDER_STUFF = 2;
+    PLUNDER_GOLD = 3;
 }
 
 message PlunderGetRewardRequest {
