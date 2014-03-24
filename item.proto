@@ -159,3 +159,22 @@ message SellEquipResponse {
     required bytes session = 2;
 }
 
+
+message SpecialEquipmentBuyRequest {
+    enum SocketEquipmentType {
+        SOCKET_WEAPON = 1;
+        SOCKET_ARMOR = 2;
+        SOCKET_JEWELRY = 3;
+    }
+
+    required bytes session = 1;
+    required int32 socket_id = 2;
+    required SocketEquipmentType tp = 3;
+}
+
+message SpecialEquipmentBuyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+

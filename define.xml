@@ -180,6 +180,9 @@
 
         <protocol name="SellEquipRequest" type="1706" command="/equip/sell/" />
         <protocol name="SellEquipResponse" type="1707" />
+
+        <protocol name="SpecialEquipmentBuyRequest" type="1708" command="/equip/specialbuy/" />
+        <protocol name="SpecialEquipmentBuyResponse" type="1709" />
         
         <protocol name="GemNotify" type="1750" />
         <protocol name="AddGemNotify" type="1751" />
