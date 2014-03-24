@@ -48,6 +48,9 @@
 
       <protocol name="ResumeRequest" type="63" command="/resume/" />
       <protocol name="ResumeResponse" type="64" />
+
+      <protocol name="SellRequest" type="65" command="/sell/" />
+      <protocol name="SellResponse" type="66" />
     </namespace>
 
     <namespace name="account">

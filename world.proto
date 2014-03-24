@@ -87,3 +87,31 @@ message Attachment {
 }
 
 
+message SellRequest {
+
+    message SellElement {
+        enum SellType {
+            SELL_HERO = 1;
+            SELL_SOUL = 2;
+            SELL_EQUIPMENT = 3;
+            SELL_GEM = 4;
+            SELL_STUFF = 5;
+        }
+
+        required SellType tp = 1;
+        required int32 id = 2;
+        required int32 amount = 3;
+    }
+
+    repeated SellElement elements = 1;
+}
+
+
+message SellResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+
+
