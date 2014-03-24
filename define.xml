@@ -181,8 +181,6 @@
         <protocol name="StepUpEquipRequest" type="1770" command="/equip/stepup/" />
         <protocol name="StepUpEquipResponse" type="1771" />
 
-        <protocol name="SellEquipRequest" type="1706" command="/equip/sell/" />
-        <protocol name="SellEquipResponse" type="1707" />
 
         <protocol name="SpecialEquipmentBuyRequest" type="1708" command="/equip/specialbuy/" />
         <protocol name="SpecialEquipmentBuyResponse" type="1709" />

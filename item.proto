@@ -148,17 +148,6 @@ message StepUpEquipResponse {
 }
 
 
-message SellEquipRequest {
-    required bytes session = 1;
-    repeated int32 ids = 2;
-}
-
-
-message SellEquipResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-
 
 message SpecialEquipmentBuyRequest {
     enum SocketEquipmentType {
