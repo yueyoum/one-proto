@@ -103,7 +103,8 @@ message SellRequest {
         required int32 amount = 3;
     }
 
-    repeated SellElement elements = 1;
+    required bytes session = 1;
+    repeated SellElement elements = 2;
 }
 
 
