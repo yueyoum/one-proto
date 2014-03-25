@@ -360,7 +360,6 @@ message ArenaResponse {
 
 message TeamBattle {
     enum TeamBattleStatus {
-        PREPARE = 1;     // 进入还没开始
         DOING = 2;       // 战斗中
         REWARD = 3;      // 可以领奖
     }
