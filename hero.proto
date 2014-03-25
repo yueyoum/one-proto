@@ -89,6 +89,8 @@ message GetHeroRequest {
 message GetHeroResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional int32 id = 3;
+    optional int32 hero_oid = 4;
 }
 
 message GetHeroStartRequest {
