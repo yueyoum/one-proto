@@ -26,6 +26,17 @@ message FriendsNotify {
     repeated Friend friends = 2;
 }
 
+
+message FriendRefreshRequest {
+    required bytes session = 1;
+}
+
+message FriendRefreshResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
 // 新好友通知，包括自己加别人，别人加自己
 message NewFriendNotify {
     required bytes session = 1;

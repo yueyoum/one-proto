@@ -367,39 +367,28 @@ message TeamBattle {
     required int32 id = 1;
     required int32 boss_id = 2;             // boss id
     required int32 boss_power = 3;          // boss战斗力
-    repeated int32 self_ids = 4;            // 好友列表
-    required int32 self_power = 5;
+    required int32 self_power = 4;
 
-    required float current_progress = 6;    // 当前进度
-    required float step_progress = 7;       // 每秒增加百分比
+    required float current_progress = 5;    // 当前进度
+    required float step_progress = 6;       // 每秒增加百分比
 
-    required int32 remained_time = 8;       // 剩余秒数
-    required TeamBattleStatus status = 9;
+    required int32 remained_time = 7;       // 剩余秒数
+    required TeamBattleStatus status = 8;
 
-    optional Sanguo.protocol.world.Attachment reward = 10;
+    optional Sanguo.protocol.world.Attachment reward = 9;
 }
 
 
 message TeamBattleNotify {
     required bytes session = 1;
-    required int32 incr_time_cost = 2;  // 增加一分钟战斗时间所需元宝
-    optional TeamBattle team_battle = 3;
-}
-
-message TeamBattleEnterRequest {
-    required bytes session = 1;
-    required int32 id = 2;
-}
-
-message TeamBattleEnterResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
+    optional TeamBattle team_battle = 2;
 }
 
 
 message TeamBattleStartRequest {
     required bytes session = 1;
     repeated int32 friend_ids = 2;
+    repeated int32 npc_ids = 3;
 }
 
 message TeamBattleStartResponse {
@@ -407,12 +396,4 @@ message TeamBattleStartResponse {
     required bytes session = 2;
 }
 
-message TeamBattleIncrTimeRequest {
-    required bytes session = 1;
-}
-
-message TeamBattleIncrTimeResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
 

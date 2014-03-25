@@ -161,12 +161,8 @@
         <protocol name="ArenaPanelResponse" type="804" />
 
         <protocol name="TeamBattleNotify" type="900" />
-        <protocol name="TeamBattleEnterRequest" type="901" command="/teambattle/enter/" />
-        <protocol name="TeamBattleEnterResponse" type="902" />
         <protocol name="TeamBattleStartRequest" type="903" command="/teambattle/start/" />
         <protocol name="TeamBattleStartResponse" type="904" />
-        <protocol name="TeamBattleIncrTimeRequest" type="905" command="/teambattle/incr/" />
-        <protocol name="TeamBattleIncrTimeResponse" type="906" />
     </namespace>
 
     <namespace name="item">
@@ -233,6 +229,9 @@
 
         <protocol name="FriendRefuseRequest" type="2014" command="/friend/refuse/" />
         <protocol name="FriendRefuseResponse" type="2015" />
+
+        <protocol name="FriendRefreshRequest" type="2016" command="/friend/refresh/" />
+        <protocol name="FriendRefreshResponse" type="2017" />
     </namespace>
 
     <namespace name="mail">
