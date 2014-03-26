@@ -1,0 +1,28 @@
+package Sanguo.protocol.guide;
+
+enum GuideStep {
+    GUIDE_FINISH = 0;
+    GUIDE_STORY = 1;
+    GUIDE_SHOW_BATTLE = 2;
+    GUIDE_GETHERO = 3;
+    GUIDE_HERO_IN_FORMATION = 4;
+    GUIDE_EQUIP_IN_FORMATION = 5;
+    GUIDE_FIRST_PVE = 6;
+}
+
+
+message GuideNotify {
+    required bytes session = 1;
+    required GuideStep step = 2;
+}
+
+
+message GuideFinishRequest {
+    required bytes session = 1;
+}
+
+message GuideFinishResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
