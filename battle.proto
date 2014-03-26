@@ -386,8 +386,9 @@ message TeamBattleNotify {
 
 message TeamBattleStartRequest {
     required bytes session = 1;
-    repeated int32 friend_ids = 2;
-    repeated int32 npc_ids = 3;
+    required int32 id = 2;
+    repeated int32 friend_ids = 3;
+    repeated int32 npc_ids = 4;
 }
 
 message TeamBattleStartResponse {
