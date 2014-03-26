@@ -282,7 +282,7 @@
     <namespace name="guide">
         <protocol name="GuideNoitfy" type="4000" />
         <protocol name="GuideFinishRequest" type="4001" command="/guide/finish/" />
-        <protocol name="GuideFinishResponse" type="4002" >
+        <protocol name="GuideFinishResponse" type="4002" />
     </namespace>
 
   </namespace>
