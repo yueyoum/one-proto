@@ -48,16 +48,3 @@ message UpdateAchievementNotify {
 }
 
 
-
-message AchievementGetRewardRequest {
-    required bytes session = 1;
-    required int32 id = 2;
-}
-
-message AchievementGetRewardResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-
-
-

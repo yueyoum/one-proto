@@ -259,8 +259,6 @@
     <namespace name="achievement">
         <protocol name="AchievementNotify" type="3200" />
         <protocol name="UpdateAchievementNotify" type="3201" />
-        <protocol name="AchievementGetRewardRequest" type="3202" command="/achievement/getreward/" />
-        <protocol name="AchievementGetRewardResponse" type="3203" />
 
     </namespace>
 
