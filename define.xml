@@ -252,8 +252,6 @@
 
     <namespace name="task">
         <protocol name="TaskNotify" type="3100" />
-        <protocol name="TaskGetRewardRequest" type="3101" command="/task/getreward/" />
-        <protocol name="TaskGetRewardResponse" type="3102" />
     </namespace>
 
     <namespace name="achievement">
