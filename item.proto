@@ -5,14 +5,15 @@ message Equip {
     required int32 id = 1;
     required int32 oid = 2;     // 原始ID
     required int32 level = 3;   // 当前强化等级
-    required int32 level_up_need_gold = 4;  // 强化到下一级需要多少金币
+    required int32 level_up_need_gold = 4;  // 强化需要多少金币
+    required int32 step_up_need_gold = 5;   // 升阶需要多少金币
 
-    required int32 attack = 5;
-    required int32 defense = 6;
-    required int32 hp = 7;
+    required int32 attack = 6;
+    required int32 defense = 7;
+    required int32 hp = 8;
 
-    repeated int32 gem_ids = 8; // 宝石id列表，对应孔位没有，用0表示
-    required int32 sell_gold = 9; // 卖多少金币
+    repeated int32 gem_ids = 9;    // 宝石id列表，对应孔位没有，用0表示
+    required int32 sell_gold = 10; // 卖多少金币
 }
 
 
