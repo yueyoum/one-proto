@@ -1,13 +1,14 @@
 package Sanguo.protocol.guide;
 
 enum GuideStep {
-    GUIDE_FINISH = 0;
-    GUIDE_STORY = 1;
-    GUIDE_SHOW_BATTLE = 2;
-    GUIDE_GETHERO = 3;
-    GUIDE_HERO_IN_FORMATION = 4;
-    GUIDE_EQUIP_IN_FORMATION = 5;
-    GUIDE_FIRST_PVE = 6;
+    GUIDE_NORMAL = 0;
+    GUIDE_FINISH = 1;
+    GUIDE_STORY = 2;
+    GUIDE_SHOW_BATTLE = 3;
+    GUIDE_GETHERO = 4;
+    GUIDE_HERO_IN_FORMATION = 5;
+    GUIDE_EQUIP_IN_FORMATION = 6;
+    GUIDE_FIRST_PVE = 7;
 }
 
 
