@@ -18,6 +18,7 @@ message Friend {
     required FriendStatus status = 6; 
     repeated int32 formation = 7;   // [1, 2, 3 ... 7, 8, 9] 对应位置是英雄的原始ID
                                     // 只要status不是 FRIEND_OK， 这里就不填充
+    required int32 leader = 8;
 }
 
 // 好友列表/申请列表

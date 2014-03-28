@@ -368,11 +368,10 @@ message TeamBattle {
     required int32 boss_power = 3;          // boss战斗力
     required int32 self_power = 4;
 
-    required float current_progress = 5;    // 当前进度
+    required int32 start_at = 5;            // 开始时间戳
     required float step_progress = 6;       // 每秒增加百分比
 
-    required int32 remained_time = 7;       // 剩余秒数
-    required TeamBattleStatus status = 8;
+    required TeamBattleStatus status = 7;
 
     optional Sanguo.protocol.world.Attachment reward = 9;
 }
@@ -388,7 +387,6 @@ message TeamBattleStartRequest {
     required bytes session = 1;
     required int32 id = 2;
     repeated int32 friend_ids = 3;
-    repeated int32 npc_ids = 4;
 }
 
 message TeamBattleStartResponse {
