@@ -13,8 +13,6 @@ message Server {
     required string name = 2;
     required ServerStatus status = 3;
     required bool have_char = 4;  // 请求服务器列表的用户是否在此服中有角色
-    required string url = 5;
-    required int32 port = 6;
 }
 
 
