@@ -30,12 +30,15 @@ message SyncResponse {
 
 message ResumeRequest {
     required bytes session = 1;
+    required int32 server_id = 2;
 }
 
 message ResumeResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
+
+
 
 
 message CommandResponse {
