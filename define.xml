@@ -51,6 +51,8 @@
 
       <protocol name="SellRequest" type="65" command="/sell/" />
       <protocol name="SellResponse" type="66" />
+
+      <protocol name="FreezeFunctionNotify" type="67" />
     </namespace>
 
     <namespace name="account">

@@ -119,3 +119,26 @@ message SellResponse {
 
 
 
+message FreezeFunctionNotify {
+    // 还未开启的功能
+    enum FunctionType {
+        EQUIPMENT_STRENGTH = 1;     // 装备强化
+        EQUIPMENT_STEP = 2;         // 装备进阶
+        HERO_STEP = 3;              // 武将进阶
+        GEM_EMBED = 4;              // 宝石镶嵌
+        TASK = 5;                   // 日常任务
+        ACHIEVEMENT = 6;            // 成就
+        HANG = 7;                   // 挂机
+        ARENA = 8;                  // 比武
+        PLUNDER = 9;                // 掠夺
+        OFFICIAL = 10;              // 官职
+        STAGE_ELITE = 11;           // 精英副本
+        FRIEND = 12;                // 好友
+        TEAM_BATTLE = 13;           // 猛将挑战
+    }
+
+    required bytes session = 1;
+    repeated FunctionType funcs = 2;
+}
+
+
