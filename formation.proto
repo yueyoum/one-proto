@@ -16,6 +16,7 @@ message Socket {
 
 message AddSocketNotify {
     required bytes session = 1;
+    repeated Socket sockets = 2;
 }
 
 message UpdateSocketNotify {
