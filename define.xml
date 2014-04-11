@@ -283,6 +283,12 @@
         <protocol name="GuideFinishResponse" type="4002" />
     </namespace>
 
+    <namespace name="levy">
+        <protocol name="LevyNotify" type="4100" />
+        <protocol name="LevyRequest" type="4101" command="/levy/" />
+        <protocol name="LevyResponse" type="4102" />
+    </namespace>
+
   </namespace>
 
 </application>

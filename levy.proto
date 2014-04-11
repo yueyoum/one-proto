@@ -1,0 +1,17 @@
+package Sanguo.protocol.levy;
+
+message LevyNotify {
+    required bytes session = 1;
+    required int32 cost_sycee = 2;  // 本次征收要消耗的元宝
+}
+
+message LevyReqeust {
+    required bytes session = 1;
+}
+
+message LevyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
