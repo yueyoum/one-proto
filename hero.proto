@@ -11,8 +11,10 @@ message Hero {
     required int32 cirt = 6;
 
     required int32 step = 7;    // 阶
-    required int32 step_cost = 8;   // 升到下一阶需要多少张同名卡
-    required int32 power = 9;
+    required int32 power = 8;
+
+    required int32 max_socket_amount = 9;  // 当前全部
+    required int32 current_socket_amount = 10; // 已经点亮
 }
 
 
@@ -113,8 +115,13 @@ message GetHeroRefreshResponse {
 }
 
 message HeroStepUpRequest {
+    enum StepMethod {
+        USING_SOUL = 1;
+        USING_FRAGMENT = 2;
+    }
     required bytes session = 1;
     required int32 id = 2;
+    required StepMethod method = 3;
 }
 
 message HeroStepUpResponse {
