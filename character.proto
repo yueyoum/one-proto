@@ -1,5 +1,7 @@
 package Sanguo.protocol.character;
 
+import "world.proto";
+
 message Character {
     required int32 id = 1;
     required string name = 2;
@@ -20,6 +22,7 @@ message Character {
 message CharacterNotify {
     required bytes session = 1;
     required Character char = 2;
+    repeated Sanguo.protocol.world.FunctionType funcs = 3;
 }
 
 

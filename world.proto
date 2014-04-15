@@ -143,9 +143,4 @@ message FreezeFunctionNotify {
     repeated FunctionType funcs = 2;
 }
 
-message OpenFunctionNotify {
-    required bytes session = 1;
-    required FunctionType func = 2;
-}
-    
 

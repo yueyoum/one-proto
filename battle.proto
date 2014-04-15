@@ -16,6 +16,7 @@ message AlreadyStageNotify {
 message CurrentStageNotify {
     required bytes session = 1;
     required Stage stage = 2;
+    repeated Sanguo.protocol.world.FunctionType funcs = 3;
 }
 
 message NewStageNotify {
