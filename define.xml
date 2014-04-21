@@ -292,8 +292,8 @@
     <namespace name="purchase">
         <protocol name="GetProductsRequest" type="4200" command="/purchase/products/" />
         <protocol name="GetProductsResponse" type="4201" />
-        <protocol name="BuyVerityRequest" type="4002" command="/purchase/verity/" />
-        <protocol name="BuyVerityResponse" type="4003" />
+        <protocol name="BuyVerityRequest" type="4202" command="/purchase/verify/" />
+        <protocol name="BuyVerityResponse" type="4203" />
     </namespace>
 
   </namespace>
