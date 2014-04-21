@@ -19,10 +19,8 @@ message GetProductsResponse {
 
 
 message BuyVerityRequest {
-    required bytes session = 1;     // 为空
-    required string email = 2;      // 登录帐号
-    required int32 server_id = 3;   //
-    required string receipt = 4;
+    required bytes session = 1;
+    required string receipt = 2;
 }
 
 message BuyVerityResponse {
