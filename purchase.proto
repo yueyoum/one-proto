@@ -1,0 +1,33 @@
+package Sanguo.protocol.purchase;
+
+
+message GetProductsRequest {
+    required bytes session = 1;
+}
+
+message GetProductsResponse {
+    message Product {
+        required string id = 1;
+        required string name = 2;
+        required string des = 3;
+    }
+
+    required int32 ret = 1;
+    required bytes session = 2;
+    repeated Product products = 3;
+}
+
+
+message BuyVerityRequest {
+    required bytes session = 1;     // 为空
+    required string email = 2;      // 登录帐号
+    required int32 server_id = 3;   //
+    required string receipt = 4;
+}
+
+message BuyVerityResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
