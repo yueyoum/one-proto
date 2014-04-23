@@ -28,6 +28,7 @@ message BuyVerityResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional string name = 3;       // 商品名字
+    optional int32 add_sycee = 4;
 }
 
 
