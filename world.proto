@@ -133,6 +133,7 @@ enum FunctionType {
     FUNC_STAGE_ELITE = 11;           // 精英副本
     FUNC_FRIEND = 12;                // 好友
     FUNC_TEAM_BATTLE = 13;           // 猛将挑战
+    FUNC_GET_HERO = 14;              // 点将
     FUNC_SOCKET = 20;                // 阵法插槽
 }
 
