@@ -131,6 +131,13 @@
         <protocol name="UpdateEliteStageNotify" type="652" />
         <protocol name="ElitePVERequest" type="653" command="/elitepve/" />
         <protocol name="ElitePVEResponse" type="654" />
+        <protocol name="EliteStageRemainedTimesNotify" type="655" />
+
+        <protocol name="ActivityStageRemainedTimesNotify" type="660" />
+        <protocol name="ActivityStageNotify" type="661" />
+        <protocol name="NewActivityStageNotify" type="662" />
+        <protocol name="ActivityStagePVERequest" type="663" command="/activitypve/" />
+        <protocol name="ActivityStagePVEResponse" type="664" />
         
         <protocol name="PlunderNotify" type="700" />
         <protocol name="PlunderListRequest" type="701" command="/plunder/list/" />
