@@ -96,9 +96,9 @@ message Attachment {
     repeated Hero heros = 5;            // 武将
     repeated HeroSoul souls = 6;        // 卡魂
 
-    repeated Equipment equipments = 6;
-    repeated Gem gems = 7;
-    repeated Stuff stuffs = 8;
+    repeated Equipment equipments = 7;
+    repeated Gem gems = 8;
+    repeated Stuff stuffs = 9;
 }
 
 
