@@ -115,13 +115,8 @@ message GetHeroRefreshResponse {
 }
 
 message HeroStepUpRequest {
-    enum StepMethod {
-        USING_SOUL = 1;
-        USING_FRAGMENT = 2;
-    }
     required bytes session = 1;
     required int32 id = 2;
-    required StepMethod method = 3;
 }
 
 message HeroStepUpResponse {
