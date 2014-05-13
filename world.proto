@@ -62,27 +62,39 @@ message Attachment {
     message Equipment {
         required int32 id = 1;
         required int32 level = 2;       // 强化等级
-        required int32 step = 3;        // 升阶阶数
-        required int32 amount = 4;
+        optional int32 amount = 3 [default=1];
     }
 
     // 宝石
     message Gem {
         required int32 id = 1;
-        required int32 amount = 2;
+        optional int32 amount = 2 [default=1];
     }
 
     // 材料
     message Stuff {
         required int32 id = 1;
-        required int32 amount = 2;
+        optional int32 amount = 2 [default=1];
+    }
+
+    // 武将
+    message Hero {
+        required int32 id = 1;
+    }
+
+    // 卡魂
+    message HeroSoul {
+        required int32 id = 1;
+        optional int32 amount = 2 [default=1];
     }
 
     optional int32 gold = 1;            // 金币
     optional int32 sycee = 2;           // 元宝
     optional int32 exp = 3;             // 等级经验
     optional int32 official_exp = 4;    // 官职经验
-    repeated int32 heros = 5;           // 武将
+
+    repeated Hero heros = 5;            // 武将
+    repeated HeroSoul souls = 6;        // 卡魂
 
     repeated Equipment equipments = 6;
     repeated Gem gems = 7;
