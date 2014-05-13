@@ -139,3 +139,10 @@ message MergeHeroResponse {
     required bytes session = 2;
 }
 
+
+message HeroToSoulNotify {
+    required bytes session = 1;
+    required int32 hero_id = 2;
+    required int32 soul_amount = 3;
+}
+
