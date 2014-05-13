@@ -149,7 +149,7 @@ message HeroRecruitRequest {
 
 message HeroRecruitResponse {
     required int32 ret = 1;
-    required bytes session = 1;
+    required bytes session = 2;
 }
 
 
