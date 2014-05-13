@@ -98,6 +98,8 @@
         <protocol name="RemoveHeroSoulNotify" type="353" />
 
         <protocol name="HeroToSoulNotify" type="354" />
+        <protocol name="HeroRecruitRequest" type="355" command="/hero/recruit/" />
+        <protocol name="HeroRecruitResponse" type="356" />
     </namespace>
 
     <namespace name="formation">

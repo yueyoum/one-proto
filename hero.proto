@@ -141,3 +141,15 @@ message HeroToSoulNotify {
     required int32 soul_amount = 3;
 }
 
+
+message HeroRecruitRequest {
+    required bytes session = 1;
+    required int32 id = 2;      // 要招募的武将ID
+}
+
+message HeroRecruitResponse {
+    required int32 ret = 1;
+    required bytes session = 1;
+}
+
+
