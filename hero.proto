@@ -80,7 +80,6 @@ message GetHeroPanelNotify {
     required int32 open_sycee = 4;          // 元宝翻牌花费
     required int32 refresh_sycee = 5;       // 刷新花费
     repeated PanelSocket sockets = 6;
-    required bool new_start = 7;            // 是否是新的开始
 }
 
 
@@ -97,14 +96,6 @@ message GetHeroResponse {
     optional int32 hero_oid = 4;
 }
 
-message GetHeroStartRequest {
-    required bytes session = 1;
-}
-
-message GetHeroStartResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
 
 message GetHeroRefreshRequest {
     required bytes session = 1;

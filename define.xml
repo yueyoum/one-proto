@@ -86,9 +86,6 @@
         <protocol name="GetHeroRefreshRequest" type="330" command="/heropanel/refresh/" />
         <protocol name="GetHeroRefreshResponse" type="331" />
 
-        <protocol name="GetHeroStartRequest" type="332" command="/heropanel/start/" />
-        <protocol name="GetHeroStartResponse" type="333" />
-
         <protocol name="HeroStepUpRequest" type="334" command="/hero/stepup/" />
         <protocol name="HeroStepUpResponse" type="335" />
 
