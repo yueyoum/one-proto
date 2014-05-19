@@ -71,7 +71,8 @@ message UpdateHeroNotify {
 message GetHeroPanelNotify {
     message PanelSocket {
         required int32 id = 1;      // 插槽ID
-        required int32 hero_id = 2; // 武将ID   0 表示没有翻开
+        required int32 hero_id = 2; // 武将ID
+        required bool opened = 3;   // 是否开启
     }
     required bytes session = 1;
     required int32 refresh_seconds = 2;     // 还有多少秒后免费刷新
