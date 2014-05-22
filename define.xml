@@ -64,6 +64,9 @@
 
       <protocol name="RegisterRequest" type="105" command="/player/register/" method="1" />
       <protocol name="RegisterResponse" type="106" />
+
+      <protocol name="BindAccountRequest" type="107" command="/player/bind/" />
+      <protocol name="BindAccountResponse" type="108" />
     </namespace>
 
     <namespace name="character">

@@ -53,7 +53,6 @@ message RegisterRequest {
     required bytes session = 1;                // 填充为空字符串
     required string email = 2;
     required string password = 3;
-    required string device_token = 4;
 }
 
 message RegisterResponse {
@@ -66,4 +65,18 @@ message RegisterResponse {
     repeated Sanguo.protocol.world.Server servers = 6;
 }
 
+// 绑定
+message BindAccountRequest {
+    required bytes session = 1;                // 填充为空字符串
+    required string email = 2;
+    required string password = 3;
+    required string device_token = 4;
+}
+
+message BindAccountResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional string email = 3;
+    optional string password = 4;
+}
 
