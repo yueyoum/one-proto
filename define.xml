@@ -53,6 +53,9 @@
       <protocol name="SellResponse" type="66" />
 
       <protocol name="FreezeFunctionNotify" type="67" />
+
+      <protocol name="ActivateCodeUseRequest" type="70" command="/activatecode/use/" />
+      <protocol name="ActivateCodeUseResponse" type="71" />
     </namespace>
 
     <namespace name="account">

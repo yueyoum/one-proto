@@ -160,3 +160,15 @@ message FreezeFunctionNotify {
 }
 
 
+
+message ActivateCodeUseRequest {
+    required bytes session = 1;
+    required string code_id = 2;
+}
+
+message ActivateCodeUseResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
