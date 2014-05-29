@@ -3,6 +3,8 @@ package Sanguo.protocol.levy;
 message LevyNotify {
     required bytes session = 1;
     required int32 cost_sycee = 2;  // 本次征收要消耗的元宝
+    required int32 cur_times = 3;   // 当前已征收次数
+    required int32 max_times = 4;   // 最大可征收次数
 }
 
 message LevyRequest {

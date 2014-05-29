@@ -16,6 +16,8 @@ message Character {
     required int32 next_official_exp = 10;  // 当前官职升级所需经验
     
     required int32 power = 11;               // 战斗力
+    required int32 vip = 12;
+    required int32 purchase_got = 13;        // 充值所得元宝
 }
 
 

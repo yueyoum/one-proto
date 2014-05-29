@@ -28,13 +28,18 @@ message NewStageNotify {
 // 精英关卡总剩余次数
 message EliteStageRemainedTimesNotify {
     required bytes session = 1;
-    required int32 times = 2;
+    required int32 max_free_times = 2;
+    required int32 cur_free_times = 3;
+    required int32 max_buy_times = 4;
+    required int32 cur_buy_times = 5;
+    required int32 buy_cost = 6;
 }
 
 // 已经开启的精英关卡
 message EliteStage {
     required int32 id = 1;
     required int32 current_times = 2;   // 已经打过的次数
+    required bool active = 3;           // 是否可以打
 }
 
 
