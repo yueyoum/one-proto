@@ -140,6 +140,11 @@
         <protocol name="ElitePVEResponse" type="654" />
         <protocol name="EliteStageRemainedTimesNotify" type="655" />
 
+        <protocol name="EliteStageResetRequest" type="656" commad="/elite/reset/" />
+        <protocol name="EliteStageResetResponse" type="657" />
+        <protocol name="EliteStageResetTotalRequest" type="658" command="/elite/reset/total/" />
+        <protocol name="EliteStageResetTotalResponse" type="659" />
+
         <protocol name="ActivityStageRemainedTimesNotify" type="660" />
         <protocol name="ActivityStageNotify" type="661" />
         <protocol name="NewActivityStageNotify" type="662" />
