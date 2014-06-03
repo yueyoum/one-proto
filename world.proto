@@ -146,6 +146,7 @@ enum FunctionType {
     FUNC_FRIEND = 12;                // 好友
     FUNC_TEAM_BATTLE = 13;           // 猛将挑战
     FUNC_GET_HERO = 14;              // 点将
+    FUNC_BATTLE_SPEED_UP = 20;       // 战斗加速
     FUNC_SOCKET_FIVE = 50;           // 上阵五人
     FUNC_SOCKET_SIX = 51;            // 上阵六人
     FUNC_SOCKET_SEVEN = 52;          // 上阵七人
