@@ -114,8 +114,10 @@
         <protocol name="SocketNotify" type="404" />
         <protocol name="UpdateSocketNotify" type="407" />
 
-        <protocol name="SetSocketRequest" type="405" command="/socket/set/"/>
-        <protocol name="SetSocketResponse" type="406" />
+        <protocol name="SetSocketHeroRequest" type="410" command="/socket/set/hero/" />
+        <protocol name="SetSocketHeroResponse" type="411" />
+        <protocol name="SetSocketEquipmentRequest" type="412" command="/socket/set/equipment/" />
+        <protocol name="SetSocketEquipmentResponse" type="413" />
 
     </namespace>
 

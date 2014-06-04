@@ -25,15 +25,30 @@ message UpdateSocketNotify {
 }
 
 
-message SetSocketRequest {
+message SetSocketHeroRequest {
     required bytes session = 1;
-    required Socket socket = 2;
+    required int32 socket_id = 2;
+    required int32 hero_id = 3;
 }
 
-message SetSocketResponse {
+
+message SetSocketHeroResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
+
+message SetSocketEquipmentRequest {
+    required bytes session = 1;
+    required int32 socket_id = 2;
+    required int32 equipment_id = 3;
+}
+
+message SetSocketEquipmentResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
 
 message SetFormationRequest {
     required bytes session = 1;
