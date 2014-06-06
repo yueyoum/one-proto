@@ -161,11 +161,12 @@ message Step {
         required int32 anger = 3;
         repeated Buff adds = 4;
         repeated int32 removes = 5;
-        optional int32 value = 6;           // 引起hp变化的value
+        optional sint32 value = 6;           // 引起hp变化的value
     }
 	required int32 id = 1;                  // 发起行动的英雄ID
     optional Action action = 2;
     repeated HeroNotify hero_notify = 3;
+    repeated int32 dead_ids = 4;            // 死亡
 
 }
 
