@@ -269,6 +269,7 @@
 
     <namespace name="daily">
         <protocol name="CheckInNotify" type="3000" />
+        <protocol name="CheckInUpdateNotify" type="3003" />
         <protocol name="CheckInRequest" type="3001" command="/daily/checkin/" />
         <protocol name="CheckInResponse" type="3002" />
     </namespace>

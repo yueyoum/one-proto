@@ -2,14 +2,29 @@ package Sanguo.protocol.daily;
 
 import "world.proto";
 
+message CheckInItem {
+    enum CheckInStatus {
+        SIGNED = 1;
+        SIGNABLE = 2;
+        UNSIGNED = 3;
+    }
 
-message CheckInNotify {
-    required bytes session = 1;
-    required bool checkin = 2;  // true 为已经签到过
-    required int32 days = 3;    // 已签到天数
-    required int32 max_days = 4;    // 一个循环的最大天数
+    required int32 id = 1;
+    required CheckInStatus status = 2;
+    repeated Sanguo.protocol.world.ResourceObject objs = 3;
 }
 
+// 登录时发送
+message CheckInNotify {
+    required bytes session = 1;
+    repeated CheckInItem items = 2;
+}
+
+// 签到后发送
+message CheckInUpdateNotify {
+    required bytes session = 1;
+    required CheckInItem item = 2;
+}
 
 message CheckInRequest {
     required bytes session = 1;
