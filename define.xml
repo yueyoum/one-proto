@@ -220,6 +220,9 @@
         <protocol name="AddStuffNotify" type="1761" />
         <protocol name="UpdateStuffNotify" type="1762" />
         <protocol name="RemoveStuffNotify" type="1763" />
+
+        <protocol name="StuffUseRequest" type="1764" command="/stuff/use/" />
+        <protocol name="StuffUseResponse" type="1765" />
     </namespace>
 
     <namespace name="prize">

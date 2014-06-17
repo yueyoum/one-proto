@@ -1,5 +1,7 @@
 package Sanguo.protocol.item;
 
+import "world.proto";
+
 // 装备: 武器，饰品，防具
 message Equip {
     required int32 id = 1;
@@ -167,4 +169,17 @@ message SpecialEquipmentBuyResponse {
     required bytes session = 2;
 }
 
+
+// 材料（道具）使用
+message StuffUseRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+    optional int32 amount = 3 [default=1];
+}
+
+message StuffUseResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Sanguo.protocol.world.Attachment attachment = 3;
+}
 
