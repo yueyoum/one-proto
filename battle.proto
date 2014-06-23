@@ -263,7 +263,8 @@ message Plunder {
     required string name = 2;
     required int32 gold = 3;   // 掠夺收益
     required int32 power = 4;  // 战力
-    repeated int32 hero_original_ids =5;
+    required int32 leader = 5;  // 队长
+    repeated int32 hero_original_ids =6;
 }
 
 
