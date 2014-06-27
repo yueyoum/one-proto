@@ -38,6 +38,9 @@ message ResumeResponse {
     required bytes session = 2;
 }
 
+message ReLoginNotify {
+    required bytes session = 2;
+}
 
 
 

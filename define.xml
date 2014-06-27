@@ -56,6 +56,8 @@
 
       <protocol name="ActivateCodeUseRequest" type="70" command="/activatecode/use/" />
       <protocol name="ActivateCodeUseResponse" type="71" />
+
+      <protocol name="ReLoginNotify" type="72" />
     </namespace>
 
     <namespace name="account">
