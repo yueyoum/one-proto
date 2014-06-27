@@ -38,10 +38,10 @@ message ResumeResponse {
     required bytes session = 2;
 }
 
-message ReLoginNotify {
+message ReLoginResponse {
+    required int32 ret = 1;
     required bytes session = 2;
 }
-
 
 
 message CommandResponse {
