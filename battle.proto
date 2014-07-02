@@ -247,6 +247,7 @@ message HangCancelRequest {
 message HangCancelResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Sanguo.protocol.world.Attachment drop = 3;
 }
 
 
@@ -261,10 +262,11 @@ message PlunderNotify {
 message Plunder {
     required int32 id = 1;
     required string name = 2;
-    required int32 gold = 3;   // 掠夺收益
+    required int32 gold = 3;
     required int32 power = 4;  // 战力
     required int32 leader = 5;  // 队长
-    repeated int32 hero_original_ids =6;
+    repeated int32 hero_original_ids = 6;
+    required bool hang = 7;    // 是否在挂机
 }
 
 
