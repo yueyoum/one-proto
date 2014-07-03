@@ -92,9 +92,13 @@ message EliteStageResetTotalResponse {
 
 // 活动关卡
 message ActivityStageRemainedTimesNotify {
+    message Times {
+        required int32 tp = 1;
+        required int32 times = 2;
+    }
+
     required bytes session = 1;
-    required int32 type_one_times = 2;       // 类型1, 产金币关卡次数
-    required int32 type_two_times = 3;       // 类型2, 产宝石宝物次数
+    repeated Times remained_times = 2;
 }
 
 // 已经开启的活动关卡
