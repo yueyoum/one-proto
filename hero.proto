@@ -114,7 +114,11 @@ message HeroStepUpRequest {
 message HeroStepUpResponse {
     required int32 ret = 1;
     required bytes session = 2;
+
     optional int32 id = 3;
+    optional int32 step = 4;    // 阶
+    optional int32 max_socket_amount = 5;  // 当前全部
+    optional int32 current_socket_amount = 6; // 已经点亮
 }
 
 message MergeHeroRequest {
