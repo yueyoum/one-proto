@@ -30,14 +30,14 @@ message EliteStageRemainedTimesNotify {
     required bytes session = 1;
     required int32 max_free_times = 2;
     required int32 cur_free_times = 3;
-    required int32 reset_cost = 4;
-    required int32 total_reset_cost = 5;
+    required int32 total_reset_cost = 4;    // 重置总次数花费
 }
 
 // 已经开启的精英关卡
 message EliteStage {
     required int32 id = 1;
     required int32 current_times = 2;   // 已经打过的次数
+    required int32 reset_cost = 3;      // 重置花费
 }
 
 
