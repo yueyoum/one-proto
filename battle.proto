@@ -294,6 +294,7 @@ message PlunderResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional Battle battle = 3;
+    optional Sanguo.protocol.world.Attachment drop = 4;
 }
 
 
@@ -393,6 +394,7 @@ message ArenaNotify {
         required int32 rank = 1;
         required string name = 2;
         required int32 leader = 3;  // hero oid
+        required int32 power = 4;
     }
     
     required bytes session = 1;
