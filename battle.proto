@@ -392,19 +392,18 @@ message ArenaNotify {
     message NBCharacter {
         required int32 rank = 1;
         required string name = 2;
+        required int32 leader = 3;  // hero oid
     }
     
     required bytes session = 1;
-    required int32 week_rank = 2;
-    required int32 day_rank = 3;
-    required int32 week_score = 4;
-    required int32 day_score = 5;
-    required int32 remained_free_times = 6;  // 剩余免费次数
-    required int32 remained_sycee_times = 7; // 剩余的元宝购买次数
+    required int32 score = 2;
+    required int32 rank = 3;
+    required int32 remained_free_times = 4;  // 剩余免费次数
+    required int32 remained_sycee_times = 5; // 剩余的元宝购买次数
     
-    repeated NBCharacter chars = 8;
+    repeated NBCharacter chars = 6;
 
-    required int32 arena_cost = 9; // 超过免费次数后，每次比武需要花费的金币
+    required int32 arena_cost = 7; // 超过免费次数后，每次比武需要花费的金币
 }
 
 message ArenaPanelRequest {
