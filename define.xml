@@ -133,6 +133,8 @@
         <protocol name="HangResponse" type="512" />
         <protocol name="HangCancelRequest" type="513" command="/hang/cancel/" />
         <protocol name="HangCancelResponse" type="514" />
+        <protocol name="HangSyncRequest" type="515" command="/hang/sync/" />
+        <protocol name="HangSyncResponse" type="516" />
 
         <protocol name="PVERequest" type="600" command="/pve/" />
         <protocol name="PVEResponse" type="601" />
