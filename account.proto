@@ -34,36 +34,38 @@ message Login {
     optional ThirdLogin third = 4;
 }
 
-// 帐号登录请求
-message LoginReuqest {
-    required bytes session = 1;     // 空
-    required Login login = 2;
-}
-
-message LoginResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-    optional Login login = 3;
-    optional Sanguo.protocol.world.Server top = 4;  // 上次登录或者推荐服
-    repeated Sanguo.protocol.world.Server servers = 5;
-}
 
 
 // 进入游戏
 message StartGameRequest {
     required bytes session = 1;
+    required Login login = 2;
 }
 
 // 进入游戏返回
 message StartGameResponse {
     required int32 ret = 1;
     optional bytes session = 2;
+    optional Login login = 3;
     optional bool need_create_new_char = 3;
 }
 
+// 获取服务器列表
+message GetServerListRequest {
+    required bytes session = 1;     // 空
+    required Login login = 2;
+}
+
+// 获取服务器列表返回
+message GetServerListResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Sanguo.protocol.world.Server top = 3;  // 上次登录或者推荐服
+    repeated Sanguo.protocol.world.Server servers = 4;
+}
 
 
-// 注册和绑定只用于自由帐号
+// 注册和绑定只用于自有帐号
 // 注册
 message RegisterRequest {
     required bytes session = 1;                // 填充为空字符串
