@@ -23,6 +23,7 @@ message ThirdLogin {
 
 message Login {
     enum LoginType {
+        NOACCOUNT = 0;
         ANONYMOUS = 1;
         REGULAR = 2;
         THIRD = 3;
