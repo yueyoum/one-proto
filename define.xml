@@ -61,12 +61,11 @@
     </namespace>
 
     <namespace name="account">
-      <protocol name="StartGameRequest" type="100" command="/start/" method="1"  />
+      <protocol name="StartGameRequest" type="100" command="/player/login/" method="1"  />
       <protocol name="StartGameResponse" type="101" />
 
       <protocol name="GetServerListRequest" type="102" command="/world/server-list/" method="1" />
-      <protocol name="GetServerListResponse" type="104" />
-
+      <protocol name="GetServerListResponse" type="104"  />
 
       <protocol name="RegisterRequest" type="105" command="/player/register/" method="1" />
       <protocol name="RegisterResponse" type="106" />
