@@ -254,6 +254,15 @@ message HangCancelResponse {
     optional Sanguo.protocol.world.Attachment drop = 3;
 }
 
+message HangSyncRequest {
+    required bytes session = 1;
+}
+
+// 带上HangNotify返回
+message HangSyncResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
 
 
 // 掠夺
