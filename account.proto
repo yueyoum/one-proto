@@ -62,7 +62,7 @@ message GetServerListRequest {
 message GetServerListResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    required Sanguo.protocol.world.Server top = 3;  // 上次登录或者推荐服
+    optional Sanguo.protocol.world.Server top = 3;  // 上次登录或者推荐服
     repeated Sanguo.protocol.world.Server servers = 4;
 }
 
