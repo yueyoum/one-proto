@@ -48,7 +48,7 @@ message Purchase91GetOrderIdResponse {
 }
 
 // 订单验证
-message Purchase91ConfirmReuqest {
+message Purchase91ConfirmRequest {
     required bytes session = 1;
 }
 
