@@ -53,8 +53,14 @@ message Purchase91ConfirmRequest {
 }
 
 message Purchase91ConfirmResponse {
+    enum Purchase91FailureReason {
+        WAITING = 1;
+        FAILURE = 2;
+    }
+
     required int32 ret = 1;
     required bytes session = 2;
-    optional int32 goods_id = 3;       // 购买的商品ID
+    optional Purchase91FailureReason reason = 3;
+    optional int32 goods_id = 4;       // 购买的商品ID
 }
 
