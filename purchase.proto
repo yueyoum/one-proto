@@ -32,3 +32,29 @@ message BuyVerityResponse {
 }
 
 
+// 91平台
+// 首先向自己的服务器获取订单ID
+message Purchase91GetOrderIdRequest {
+    required bytes session = 1;
+    required int32 goods_id = 2;        // 要购买的商品ID
+}
+
+// 服务器返回订单号
+// 然后客户端用此订单号去和91服务器通信
+message Purchase91GetOrderIdResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional string order_id = 3;       // 订单ID
+}
+
+// 订单验证
+message Purchase91ConfirmReuqest {
+    required bytes session = 1;
+}
+
+message Purchase91ConfirmResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional int32 goods_id = 3;       // 购买的商品ID
+}
+
