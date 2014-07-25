@@ -1,6 +1,20 @@
 package Sanguo.protocol.purchase;
 
 
+// 商品通知，标识是否首冲
+message PurchaseStatusNotify {
+    message PurchaseStatus {
+        required int32 id = 1;
+        required bool first = 2;    // true 表示此商品首冲
+    }
+
+    required bytes session = 1;
+    repeated PurchaseStatus status = 2;
+}
+
+
+
+
 message GetProductsRequest {
     required bytes session = 1;
 }

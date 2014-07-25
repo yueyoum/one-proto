@@ -328,6 +328,8 @@
         <protocol name="Purchase91GetOrderIdResponse" type="4211" />
         <protocol name="Purchase91ConfirmRequest" type="4212" command="/purchase91/confirm/" />
         <protocol name="Purchase91ConfirmResponse" type="4213" />
+
+        <protocol name="PurchaseStatusNotify" type="4220" />
     </namespace>
 
   </namespace>
