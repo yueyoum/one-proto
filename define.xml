@@ -330,11 +330,7 @@
         <protocol name="Purchase91ConfirmResponse" type="4213" />
 
         <protocol name="PurchaseStatusNotify" type="4220" />
-
-        <protocol name="Purchase91SuccessTo91Request" type="4221" command="/purchase91/success91/" />
-        <protocol name="Purchase91SuccessTo91Response" type="4222" />
     </namespace>
-
   </namespace>
-
 </application>
+

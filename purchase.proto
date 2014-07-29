@@ -61,17 +61,6 @@ message Purchase91GetOrderIdResponse {
     optional string order_id = 3;       // 订单ID
 }
 
-// 客户端向91成功提交订单后，向自己服务器通知一下
-message Purchase91SuccessTo91Request {
-    required bytes session = 1;
-    required string order_id = 2;
-}
-
-message Purchase91SuccessTo91Response {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-
 
 // 订单验证
 message Purchase91ConfirmRequest {
