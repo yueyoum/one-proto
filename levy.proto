@@ -14,6 +14,7 @@ message LevyRequest {
 message LevyResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional int32 gold = 3;
 }
 
 
