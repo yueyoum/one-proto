@@ -323,8 +323,14 @@
         <protocol name="GetProductsResponse" type="4201" />
         <protocol name="BuyVerityRequest" type="4202" command="/purchase/verify/" />
         <protocol name="BuyVerityResponse" type="4203" />
+
+        <protocol name="Purchase91GetOrderIdRequest" type="4210" command="/purchase91/orderid/" />
+        <protocol name="Purchase91GetOrderIdResponse" type="4211" />
+        <protocol name="Purchase91ConfirmRequest" type="4212" command="/purchase91/confirm/" />
+        <protocol name="Purchase91ConfirmResponse" type="4213" />
+
+        <protocol name="PurchaseStatusNotify" type="4220" />
     </namespace>
-
   </namespace>
-
 </application>
+

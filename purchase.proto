@@ -1,6 +1,20 @@
 package Sanguo.protocol.purchase;
 
 
+// 商品通知，标识是否首冲
+message PurchaseStatusNotify {
+    message PurchaseStatus {
+        required int32 id = 1;
+        required bool first = 2;    // true 表示此商品首冲
+    }
+
+    required bytes session = 1;
+    repeated PurchaseStatus status = 2;
+    required int32 yueka_remained_days = 3; // 月卡剩余天数
+}
+
+
+
 message GetProductsRequest {
     required bytes session = 1;
 }
@@ -31,4 +45,37 @@ message BuyVerityResponse {
     optional int32 add_sycee = 4;
 }
 
+
+// 91平台
+// 首先向自己的服务器获取订单ID
+message Purchase91GetOrderIdRequest {
+    required bytes session = 1;
+    required int32 goods_id = 2;        // 要购买的商品ID
+}
+
+// 服务器返回订单号
+// 然后客户端用此订单号去和91服务器通信
+message Purchase91GetOrderIdResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional string order_id = 3;       // 订单ID
+}
+
+
+// 订单验证
+message Purchase91ConfirmRequest {
+    required bytes session = 1;
+}
+
+message Purchase91ConfirmResponse {
+    enum Purchase91FailureReason {
+        WAITING = 1;
+        FAILURE = 2;
+    }
+
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Purchase91FailureReason reason = 3;
+    optional int32 goods_id = 4;       // 购买的商品ID
+}
 
