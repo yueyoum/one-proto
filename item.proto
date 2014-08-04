@@ -81,6 +81,7 @@ message MergeGemRequest {
 message MergeGemResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional int32 new_id = 3;      // 合成到的ID
 }
 
 message EmbedGemRequest {
