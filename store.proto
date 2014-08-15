@@ -87,6 +87,9 @@ message StoreBuyRequest {
 message StoreBuyResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional int32 id = 3;
+    optional int32 amount = 4;
+    optional int32 sycee = 5;
 }
 
 
