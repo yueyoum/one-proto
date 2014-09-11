@@ -128,13 +128,6 @@
         <protocol name="CurrentStageNotify" type="501" />
         <protocol name="NewStageNotify" type="502" />
         
-        <protocol name="HangNotify" type="510" />
-        <protocol name="HangRequest" type="511" command="/hang/" />
-        <protocol name="HangResponse" type="512" />
-        <protocol name="HangCancelRequest" type="513" command="/hang/cancel/" />
-        <protocol name="HangCancelResponse" type="514" />
-        <protocol name="HangSyncRequest" type="515" command="/hang/sync/" />
-        <protocol name="HangSyncResponse" type="516" />
 
         <protocol name="PVERequest" type="600" command="/pve/" />
         <protocol name="PVEResponse" type="601" />
@@ -330,6 +323,15 @@
         <protocol name="Purchase91ConfirmResponse" type="4213" />
 
         <protocol name="PurchaseStatusNotify" type="4220" />
+    </namespace>
+
+    <namespace name="affairs">
+        <protocol name="CityNotify" type="5000" />
+        <protocol name="HangNotify" type="5001" />
+        <protocol name="HangSyncRequest" type="5002" command="/hang/sync/" />
+        <protocol name="HangSyncResponse" type="5003" />
+        <protocol name="HangGetRewardRequest" type="5004" command="/hang/getreward/" />
+        <protocol name="HangGetRewardResponse" type="5005" />
     </namespace>
   </namespace>
 </application>

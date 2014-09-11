@@ -1,0 +1,54 @@
+package Sanguo.protocol.affairs;
+
+import "world.proto";
+
+// 城镇，编辑器中的战役表 (battle)
+message City {
+    enum CityStatus {
+        OPEN = 1;
+        CLOSE = 2;
+    }
+
+    required int32 id = 1;
+    required CityStatus status = 2;
+}
+
+message CityNotify {
+    required bytes session = 1;
+    repeated City cities = 2;
+}
+
+
+
+// 没有挂机，不发
+message HangNotify {
+    required int32 city_id = 1;
+    required int32 start_time = 2; //UTC seconds
+    required int32 gold = 3;       //当前所得金币
+    required bool finished = 4;
+
+    repeated string logs = 5;
+}
+
+
+message HangSyncRequest {
+    required bytes session = 1;
+}
+
+// 带上HangNotify返回
+message HangSyncResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message HangGetRewardRequest {
+    required bytes session = 1;
+}
+
+message HangGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Sanguo.protocol.world.Attachment drop = 3;
+}
+
+
