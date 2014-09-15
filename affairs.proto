@@ -53,3 +53,15 @@ message HangGetRewardResponse {
 }
 
 
+message HangStartRequest {
+    required bytes session = 1;
+    required int32 city_id = 2;
+}
+
+message HangStartResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Sanguo.protocol.world.Attachment drop = 3; // 上次挂机获得
+}
+
+

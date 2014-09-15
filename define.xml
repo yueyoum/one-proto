@@ -332,6 +332,8 @@
         <protocol name="HangSyncResponse" type="5003" />
         <protocol name="HangGetRewardRequest" type="5004" command="/hang/getreward/" />
         <protocol name="HangGetRewardResponse" type="5005" />
+        <protocol name="HangStartRequest" type="5006" command="/hang/start/" />
+        <protocol name="HangStartResponse" type="5007" />
     </namespace>
   </namespace>
 </application>
