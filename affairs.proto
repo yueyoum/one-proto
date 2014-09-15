@@ -22,12 +22,13 @@ message CityNotify {
 
 // 没有挂机，不发
 message HangNotify {
-    required int32 city_id = 1;
-    required int32 start_time = 2; //UTC seconds
-    required int32 gold = 3;       //当前所得金币
-    required bool finished = 4;
+    required bytes session = 1;
+    required int32 city_id = 2;
+    required int32 start_time = 3; //UTC seconds
+    required int32 gold = 4;       //当前所得金币
+    required bool finished = 5;
 
-    repeated string logs = 5;
+    repeated string logs = 6;
 }
 
 
