@@ -2,14 +2,10 @@ package Sanguo.protocol.chat;
 
 // chat 既包含用户聊天，也包含系统公告
 
-message BroadcastMessage {
-    required int32 id = 1;      // 消息模板ID
-    repeated string args = 2;   // 模板参数
-}
 
 message BroadcastNotify {
     required bytes session = 1;
-    repeated BroadcastMessage msgs = 2;
+    required String text = 2;
 }
 
 message ChatCharacter {
