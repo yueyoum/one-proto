@@ -5,7 +5,7 @@ package Sanguo.protocol.chat;
 
 message BroadcastNotify {
     required bytes session = 1;
-    required String text = 2;
+    required string text = 2;
 }
 
 message ChatCharacter {
