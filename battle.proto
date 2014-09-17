@@ -242,7 +242,6 @@ message PlunderRefreshResponse {
 
 message PlunderRequest {
     required bytes session = 1;
-    required int32 id = 2;
 }
 
 message PlunderResponse {
@@ -250,26 +249,6 @@ message PlunderResponse {
     required bytes session = 2;
     optional Battle battle = 3;
     optional Sanguo.protocol.world.Attachment drop = 4;
-}
-
-
-// 掠夺胜利后获得掉落
-enum PlunderRewardType {
-    PLUNDER_HERO = 1;
-    PLUNDER_STUFF = 2;
-    PLUNDER_GOLD = 3;
-}
-
-message PlunderGetRewardRequest {
-    required bytes session = 1;
-    required PlunderRewardType tp = 2;
-}
-
-message PlunderGetRewardResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-    optional PlunderRewardType tp = 3;
-    optional Sanguo.protocol.world.Attachment reward = 4;
 }
 
 

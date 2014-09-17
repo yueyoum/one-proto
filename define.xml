@@ -156,8 +156,6 @@
         <protocol name="PlunderRequest" type="703" command="/plunder/" />
         <protocol name="PlunderResponse" type="704" />
 
-        <protocol name="PlunderGetRewardRequest" type="850" command="/plunder/getreward/" />
-        <protocol name="PlunderGetRewardResponse" type="851" />
 
         <protocol name="PrisonerReleaseRequest" type="852" command="/prionser/release/" />
         <protocol name="PrisonerReleaseResponse" type="853" />
