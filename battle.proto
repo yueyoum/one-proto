@@ -215,7 +215,7 @@ message PlunderNotify {
     required bytes session = 1;
     required int32 current_times = 2;           // 当前剩余次数
     required int32 max_times = 3;               // 最大次数
-    required int32 points = 3;                  // 战功
+    required int32 points = 4;                  // 战功
 }
 
 message Plunder {
