@@ -151,8 +151,8 @@
         <protocol name="ActivityStagePVEResponse" type="664" />
         
         <protocol name="PlunderNotify" type="700" />
-        <protocol name="PlunderListRequest" type="701" command="/plunder/list/" />
-        <protocol name="PlunderListResponse" type="702" />
+        <protocol name="PlunderRefreshRequest" type="701" command="/plunder/refresh/" />
+        <protocol name="PlunderRefreshResponse" type="702" />
         <protocol name="PlunderRequest" type="703" command="/plunder/" />
         <protocol name="PlunderResponse" type="704" />
 

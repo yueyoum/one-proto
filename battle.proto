@@ -213,7 +213,8 @@ message PVEResponse {
 // 掠夺
 message PlunderNotify {
     required bytes session = 1;
-    required int32 remained_free_times = 2;     // 免费剩余次数
+    required int32 current_times = 2;           // 当前剩余次数
+    required int32 max_times = 3;               // 最大次数
     required int32 points = 3;                  // 战功
 }
 
@@ -224,18 +225,18 @@ message Plunder {
     required int32 power = 4;  // 战力
     required int32 leader = 5;  // 队长
     repeated int32 hero_original_ids = 6;
-    required bool hang = 7;    // 是否在挂机
 }
 
 
-message PlunderListRequest {
+message PlunderRefreshRequest {
     required bytes session = 1;
+    required int32 city_id = 2;
 }
 
-message PlunderListResponse {
+message PlunderRefreshResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    repeated Plunder plunders = 3;
+    required Plunder plunders = 3;
 }
 
 
