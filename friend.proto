@@ -8,6 +8,13 @@ enum FriendStatus {
 }
 
 message Friend {
+    enum FriendGotPlunderTimesStatus {
+        CAN_GET = 1;
+        ALREADY_GET = 2;
+        CAN_NOT_GET = 3;
+    }
+
+
     required int32 id = 1;
     required string name = 2;
     required int32 level = 3;
@@ -19,6 +26,9 @@ message Friend {
     repeated int32 formation = 7;   // [1, 2, 3 ... 7, 8, 9] 对应位置是英雄的原始ID
                                     // 只要status不是 FRIEND_OK， 这里就不填充
     required int32 leader = 8;
+
+    required bool can_give_plunder_times = 9;    // 是否能对其赠送行军令
+    required FriendGotPlunderTimesStatus got_plunder_times_status = 10;   // 是否能从其领取
 }
 
 // 好友列表/申请列表
@@ -126,6 +136,31 @@ message FriendRefuseRequest {
 }
 
 message FriendRefuseResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+
+// 赠送行军令（掠夺次数）
+message FriendGivePlunderTimesRequest {
+    required bytes session = 1;
+    required int32 friend_id = 2;
+}
+
+message FriendGivePlunderTimesResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+// 领取
+message GetFriendGivePlunderTimesRequest {
+    required bytes session = 1;
+    required int32 friend_id = 2;
+}
+
+message GetFriendGivePlunderTimesResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }

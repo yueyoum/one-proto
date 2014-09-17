@@ -255,6 +255,11 @@
 
         <protocol name="FriendRefreshRequest" type="2016" command="/friend/refresh/" />
         <protocol name="FriendRefreshResponse" type="2017" />
+
+        <protocol name="FriendGivePlunderTimesRequest" type="2030" command="/friend/giveplundertimes/" />
+        <protocol name="FriendGivePlunderTimesResponse" type="2031" />
+        <protocol name="GetFriendGivePlunderTimesRequest" type="2032" command="/friend/getplundertimes/" />
+        <protocol name="GetFriendGivePlunderTimesResponse" type="2033" />
     </namespace>
 
     <namespace name="mail">
