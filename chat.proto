@@ -4,8 +4,13 @@ package Sanguo.protocol.chat;
 
 
 message BroadcastNotify {
+    message BroadcastMessage {
+        required string text = 1;
+        required int32 repeated_times = 2;  // 0 为循环播放
+    }
+
     required bytes session = 1;
-    required string text = 2;
+    repeated BroadcastMessage msgs = 2;
 }
 
 message ChatCharacter {
