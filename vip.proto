@@ -4,6 +4,7 @@ message VIPNotify {
     required bytes session = 1;
     required int32 vip = 2;     // vip 等级
     repeated int32 reward_vips = 3;     // 可以领取的VIP等级列表
+    required int32 purchase_got = 4;    // 目前充值所得元宝
 }
 
 message VIPGetRewardRequest {
