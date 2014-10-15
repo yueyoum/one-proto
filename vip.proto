@@ -1,5 +1,7 @@
 package Sanguo.protocol.vip;
 
+import "world.proto";
+
 message VIPNotify {
     required bytes session = 1;
     required int32 vip = 2;     // vip 等级
@@ -15,5 +17,6 @@ message VIPGetRewardRequest {
 message VIPGetRewardResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Sanguo.protocol.world.Attachment reward = 3;
 }
 
