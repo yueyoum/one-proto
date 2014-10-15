@@ -338,6 +338,12 @@
         <protocol name="HangStartRequest" type="5006" command="/hang/start/" />
         <protocol name="HangStartResponse" type="5007" />
     </namespace>
+
+    <namespace name="vip">
+        <protocol name="VIPNotify" type="5100" />
+        <protocol name="VIPGetRewardRequest" type="5101" command="/vip/getreward/" />
+        <protocol name="VIPGetRewardResponse" type="5102" />
+    </namespace>
   </namespace>
 </application>
 

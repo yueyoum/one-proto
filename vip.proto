@@ -1,0 +1,18 @@
+package Sanguo.protocol.vip;
+
+message VIPNotify {
+    required bytes session = 1;
+    required int32 vip = 2;     // vip 等级
+    repeated int32 reward_vips = 3;     // 可以领取的VIP等级列表
+}
+
+message VIPGetRewardRequest {
+    required bytes session = 1;
+    required int32 vip = 2;     // 要领取奖励的VIP等级
+}
+
+message VIPGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
