@@ -54,7 +54,7 @@ message CommandResponse {
 
 message VersionCheckRequest {
     required bytes session = 1;
-    required int32 version = 2;
+    required string version = 2;
 }
 
 message VersionCheckResponse {
