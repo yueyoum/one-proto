@@ -315,10 +315,8 @@
     </namespace>
 
     <namespace name="purchase">
-        <protocol name="GetProductsRequest" type="4200" command="/purchase/products/" />
-        <protocol name="GetProductsResponse" type="4201" />
-        <protocol name="BuyVerityRequest" type="4202" command="/purchase/verify/" />
-        <protocol name="BuyVerityResponse" type="4203" />
+        <protocol name="PurchaseIOSVerifyRequest" type="4202" command="/purchase/verify/" />
+        <protocol name="PurchaseIOSVerifyResponse" type="4203" />
 
         <protocol name="Purchase91GetOrderIdRequest" type="4210" command="/purchase91/orderid/" />
         <protocol name="Purchase91GetOrderIdResponse" type="4211" />

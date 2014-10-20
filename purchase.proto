@@ -15,34 +15,16 @@ message PurchaseStatusNotify {
 
 
 
-message GetProductsRequest {
+// IOS
+message PurchaseIOSVerifyRequest {
     required bytes session = 1;
+    required string receipt = 2;
 }
 
-message GetProductsResponse {
-    message Product {
-        required string id = 1;
-        required string name = 2;
-        required string des = 3;
-    }
-
+message PurchaseIOSVerifyResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    repeated Product products = 3;
-}
-
-
-message BuyVerityRequest {
-    required bytes session = 1;         // 不填
-    required int32 char_id = 2;
-    required string receipt = 3;
-}
-
-message BuyVerityResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-    optional string name = 3;       // 商品名字
-    optional int32 add_sycee = 4;
+    optional int32 goods_id = 3;
 }
 
 
