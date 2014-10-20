@@ -60,6 +60,7 @@ message VersionCheckRequest {
 message VersionCheckResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional string version = 3;
 }
 
 
