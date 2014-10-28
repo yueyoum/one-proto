@@ -16,7 +16,7 @@ message BroadcastNotify {
 message ChatCharacter {
     required int32 id = 1;
     required string name = 2;
-    required int32 official = 3;    // 官职
+    required int32 vip = 3;
 }
 
 message ChatMessage {
