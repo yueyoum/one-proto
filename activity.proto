@@ -1,0 +1,52 @@
+package Sanguo.protocol.activity;
+
+import "world.proto";
+
+
+// 一个活动
+message ActivityEntry {
+    message ActivityCondition {
+        enum Status {
+            HAS_GOT = 1;
+            CAN_GET = 2;
+            CAN_NOT = 3;
+        }
+
+        required int32 id = 1;
+        required Status status = 2;
+    }
+
+    required int32 id = 1;
+    required int32 current_value = 2;
+    required int32 left_time = 3;       // 剩余秒数
+    repeated ActivityCondition conditions = 3;
+}
+
+
+message ActivityNotify {
+    required bytes session = 1;
+    repeated ActivityEntry activities = 2;
+}
+
+
+
+message ActivityUpdateNotify {
+    required bytes session = 1;
+    repeated ActivityEntry activities = 2;
+}
+
+
+
+// 领奖
+message ActivityGetRewardRequest {
+    required bytes session = 1;
+    required int32 condition_id = 2;
+}
+
+message ActivityGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Sanguo.protocol.world.Attachment reward = 3;
+}
+
+

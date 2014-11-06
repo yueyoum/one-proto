@@ -342,6 +342,13 @@
         <protocol name="VIPGetRewardRequest" type="5101" command="/vip/getreward/" />
         <protocol name="VIPGetRewardResponse" type="5102" />
     </namespace>
+
+    <namespace name="activity">
+        <protocol name="ActivityNotify" type="5200" />
+        <protocol name="ActivityUpdateNotify" type="5201" />
+        <protocol name="ActivityGetRewardRequest" type="5202" command="/activity/getreward/" />
+        <protocol name="ActivityGetRewardResponse" type="5203" />
+    </namespace>
   </namespace>
 </application>
 
