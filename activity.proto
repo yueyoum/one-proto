@@ -19,7 +19,7 @@ message ActivityEntry {
     required int32 id = 1;
     required int32 current_value = 2;
     required int32 left_time = 3;       // 剩余秒数
-    repeated ActivityCondition conditions = 3;
+    repeated ActivityCondition conditions = 4;
 }
 
 
