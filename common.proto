@@ -1,0 +1,21 @@
+package Sanguo.protocol.common;
+
+
+// 武将信息
+message HeroInfomation {
+    required int32 id = 1;
+    required int32 oid = 2;     // 原始ID
+    required int32 step = 3;    // 阶，几星
+}
+
+// 角色信息
+message CharacterInfomation {
+    required int32 id = 1;
+    required string name = 2;
+    required int32 level = 3;
+    required int32 vip = 4;
+    required int32 power = 5;
+    repeated HeroInfomation formation = 6;
+    required int32 leader = 7;
+}
+

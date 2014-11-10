@@ -1,0 +1,14 @@
+package Sanguo.protocol.plunder;
+
+import "common.proto";
+
+message PlunderLeaderboardWeeklyNotify {
+    message PlunderLeader {
+        required Sanguo.protocol.common.CharacterInfomation char = 1;
+        required int32 times = 2;   // 成功掠夺次数 
+    }
+
+    required bytes session = 1;
+    repeated PlunderLeader leaders = 2; // 列表保证有序
+}
+
