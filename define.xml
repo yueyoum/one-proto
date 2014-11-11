@@ -349,6 +349,12 @@
         <protocol name="ActivityGetRewardRequest" type="5202" command="/activity/getreward/" />
         <protocol name="ActivityGetRewardResponse" type="5203" />
     </namespace>
+
+    <namespace name="plunder">
+        <protocol name="PlunderLeaderboardWeeklyNotify" type="5300" />
+        <protocol name="GetPlunderLeaderboardRequest" type="5301" command="/plunder/leaderboard/" />
+        <protocol name="GetPlunderLeaderboardResponse" type="5302" />
+    </namespace>
   </namespace>
 </application>
 
