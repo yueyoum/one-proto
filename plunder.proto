@@ -2,22 +2,15 @@ package Sanguo.protocol.plunder;
 
 import "common.proto";
 
-message PlunderLeader {
-    required Sanguo.protocol.common.CharacterInfomation char = 1;
-    required int32 times = 2;   // 成功掠夺次数 
-}
-
-
-message PlunderLeaderboardWeeklyNotify {
-    required bytes session = 1;
-    repeated PlunderLeader leaders = 2; // 列表保证有序
-}
-
 message GetPlunderLeaderboardRequest {
     required bytes session = 1;
 }
 
 message GetPlunderLeaderboardResponse {
+    message PlunderLeader {
+        required Sanguo.protocol.common.CharacterInfomation char = 1;
+        required int32 times = 2;   // 成功掠夺次数 
+    }
     required int32 ret = 1;
     required bytes session = 2;
     repeated PlunderLeader leaders = 3;
