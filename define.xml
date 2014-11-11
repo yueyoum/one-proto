@@ -172,7 +172,6 @@
         <protocol name="PrisonerGetResponse" type="753" />
         
         
-        <protocol name="ArenaNotify" type="800" />
         <protocol name="ArenaRequest" type="801" command="/pvp/" />
         <protocol name="ArenaResponse" type="802" />
         <protocol name="ArenaPanelRequest" type="803" command="/arena/panel/" />
