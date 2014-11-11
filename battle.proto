@@ -215,6 +215,7 @@ message PlunderNotify {
     required bytes session = 1;
     required int32 current_times = 2;           // 当前剩余次数
     required int32 max_times = 3;               // 最大次数
+    required int32 success_times_weekly = 4;    // 周成功掠夺次数
 }
 
 message Plunder {
