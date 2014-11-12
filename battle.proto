@@ -324,9 +324,18 @@ message PrisonerKillResponse {
 }
 
 
+message ArenaNotify {
+    required bytes session = 1;
+}
+
 
 message ArenaPanelRequest {
     required bytes session = 1;
+    required int32 score = 2;
+    required int32 rank = 3;
+    required int32 remained_free_times = 4;  // 剩余免费次数
+    required int32 remained_sycee_times = 5; // 剩余的元宝购买次数
+    required int32 arena_cost = 6; // 超过免费次数后，每次比武需要花费的金币
 }
 
 message ArenaPanelResponse {
@@ -339,14 +348,7 @@ message ArenaPanelResponse {
 
     required int32 ret = 1;
     required bytes session = 2;
-
-    optional int32 score = 3;
-    optional int32 rank = 4;
-    optional int32 remained_free_times = 5;  // 剩余免费次数
-    optional int32 remained_sycee_times = 6; // 剩余的元宝购买次数
-    optional int32 arena_cost = 7; // 超过免费次数后，每次比武需要花费的金币
-
-    repeated ArenaBoard boards = 8; // 排行榜
+    repeated ArenaBoard boards = 3; // 排行榜
 }
 
 
