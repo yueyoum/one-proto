@@ -1,5 +1,7 @@
 package Sanguo.protocol.friend;
 
+import "common.proto";
+
 enum FriendStatus {
     FRIEND_NOT = 1;     // 不是好友
     FRIEND_OK = 2;      // 已经是好友了
@@ -14,21 +16,11 @@ message Friend {
         CAN_NOT_GET = 3;
     }
 
+    required Sanguo.protocol.common.CharacterInfomation char = 1;
 
-    required int32 id = 1;
-    required string name = 2;
-    required int32 level = 3;
-    required int32 official = 4;
-
-    optional int32 power = 5;       // 只有好友和添加好友列表才填充
-
-    required FriendStatus status = 6; 
-    repeated int32 formation = 7;   // [1, 2, 3 ... 7, 8, 9] 对应位置是英雄的原始ID
-                                    // 只要status不是 FRIEND_OK， 这里就不填充
-    required int32 leader = 8;
-
-    required bool can_give_plunder_times = 9;    // 是否能对其赠送行军令
-    required FriendGotPlunderTimesStatus got_plunder_times_status = 10;   // 是否能从其领取
+    required FriendStatus status = 2; 
+    required bool can_give_plunder_times = 3;    // 是否能对其赠送行军令
+    required FriendGotPlunderTimesStatus got_plunder_times_status = 4;   // 是否能从其领取
 }
 
 // 好友列表/申请列表
