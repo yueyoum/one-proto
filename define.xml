@@ -137,7 +137,7 @@
         <protocol name="UpdateEliteStageNotify" type="652" />
         <protocol name="ElitePVERequest" type="653" command="/elitepve/" />
         <protocol name="ElitePVEResponse" type="654" />
-        <protocol name="EliteStageRemainedTimesNotify" type="655" />
+        <protocol name="EliteStageTimesNotify" type="655" />
 
         <protocol name="EliteStageResetRequest" type="656" command="/elite/reset/" />
         <protocol name="EliteStageResetResponse" type="657" />

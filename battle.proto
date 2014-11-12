@@ -28,11 +28,13 @@ message NewStageNotify {
 
 
 // 精英关卡总剩余次数
-message EliteStageRemainedTimesNotify {
+message EliteStageTimesNotify {
     required bytes session = 1;
     required int32 max_free_times = 2;
     required int32 cur_free_times = 3;
     required int32 total_reset_cost = 4;    // 重置总次数花费
+    required int32 cicle_max_times = 5;        // 循环最大次数
+    required int32 cicle_current_times = 6;    // 循环当前次数
 }
 
 // 已经开启的精英关卡
