@@ -223,13 +223,8 @@ message PlunderNotify {
 }
 
 message Plunder {
-    required int32 id = 1;
-    required string name = 2;
-    required int32 level = 3;   // 等级
-    required int32 gold = 4;    // 从此人能获得的银币
-    required int32 power = 5;   // 战力
-    required int32 leader = 6;  // 队长
-    repeated int32 hero_original_ids = 7;
+    required Sanguo.protocol.common.CharacterInfomation char = 1;
+    required int32 gold = 2;    // 从此人能获得的银币
 }
 
 
