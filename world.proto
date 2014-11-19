@@ -96,6 +96,12 @@ message Attachment {
         optional int32 amount = 2 [default=1];
     }
 
+    // 坐骑
+    message Horse {
+        required int32 id = 1;
+        optional int32 amount = 2 [default=1];
+    }
+
     optional int32 gold = 1;            // 金币
     optional int32 sycee = 2;           // 元宝
     optional int32 exp = 3;             // 等级经验
@@ -107,6 +113,8 @@ message Attachment {
     repeated Equipment equipments = 7;
     repeated Gem gems = 8;
     repeated Stuff stuffs = 9;
+
+    repeated Horse horses = 10;         // 坐骑
 }
 
 
@@ -119,6 +127,7 @@ message SellRequest {
             SELL_EQUIPMENT = 3;
             SELL_GEM = 4;
             SELL_STUFF = 5;
+            SELL_HORSE = 6;
         }
 
         required SellType tp = 1;

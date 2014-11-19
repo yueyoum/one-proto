@@ -10,6 +10,7 @@ message Socket {
     required int32 weapon_id = 3;
     required int32 armor_id = 4;
     required int32 jewelry_id = 5;
+    required int32 hourse_id = 6;
 }
 
 
@@ -38,9 +39,14 @@ message SetSocketHeroResponse {
 }
 
 message SetSocketEquipmentRequest {
+    enum SocketElementType {
+        EQUIPMENT = 1;
+        HORSE = 2;
+    }
     required bytes session = 1;
     required int32 socket_id = 2;
-    required int32 equipment_id = 3;
+    required SocketElementType tp = 3;
+    required int32 element_id = 4;
 }
 
 message SetSocketEquipmentResponse {

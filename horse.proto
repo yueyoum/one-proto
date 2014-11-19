@@ -1,0 +1,84 @@
+package Sanguo.protocol.horse;
+
+enum HorseStrengthMethod {
+    FREE = 1;       // 免费
+    GOLD = 2;       // 金币
+    SYCEE = 3;      // 元宝
+}
+
+
+message Horse {
+    message HorseStrength {
+        required HorseStrengthMethod method = 1;
+        required int32 value = 2;
+    }
+
+    required int32 id = 1;
+    required int32 oid = 2;
+    required int32 attack = 3;
+    required int32 defense = 4;
+    required int32 hp = 5;
+    required int32 power = 6;
+
+    repeated HorseStrength strengths = 7;    // 强化信息
+}
+
+message HorsesNotify {
+    required bytes session = 1;
+    repeated Horse horses = 2;
+}
+
+message HorsesUpdateNotify {
+    required bytes session = 1;
+    required Horse horse = 2;
+}
+
+message HorsesAddNotify {
+    required bytes session = 1;
+    repeated Horse horses = 2;
+}
+
+message HorsesRemoveNotify {
+    required bytes session = 1;
+    repeated int32 ids = 2;
+}
+
+
+// 培养 - 强化
+message HorseStrengthRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+    required HorseStrengthMethod method = 3;
+}
+
+message HorseStrengthResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Horse new_horse = 3;
+}
+
+message HorseStrengthConfirm {
+    enum ConfirmType {
+        CONFIRM = 1;
+        CANCEL = 2;
+    }
+
+    required bytes session = 1;
+    required ConfirmType tp = 2;
+}
+
+
+// 坐骑进化
+message HorseEvolutionRequest {
+    required bytes session = 1;
+    required int32 horse_id = 2;
+    required int32 horse_soul_id = 3;
+}
+
+message HorseEvolutionResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+

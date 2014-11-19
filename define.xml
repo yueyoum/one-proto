@@ -354,6 +354,17 @@
         <protocol name="GetPlunderLeaderboardRequest" type="5301" command="/plunder/leaderboard/" />
         <protocol name="GetPlunderLeaderboardResponse" type="5302" />
     </namespace>
+
+    <namespace name="horse">
+        <protocol name="HorsesNotify" type="5400" />
+        <protocol name="HorsesUpdateNotify" type="5401" />
+        <protocol name="HorsesAddNotify" type="5402" />
+        <protocol name="HorsesRemoveNotify" type="5403" />
+        <protocol name="HorseStrengthRequest" type="5404" command="/horse/strength/" />
+        <protocol name="HorseStrengthResponse" type="5405" />
+        <protocol name="HorseEvolutionRequest" type="5406" command="/horse/evolution/" />
+        <protocol name="HorseEvolutionResponse" type="5405" />
+    </namespace>
   </namespace>
 </application>
 
