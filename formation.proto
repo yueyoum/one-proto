@@ -30,7 +30,7 @@ message UpdateSocketNotify {
 message SetSocketRequest {
     required bytes session = 1;
     required int32 socket_id = 2;
-    required SocketElementType tp = 3;
+    required Sanguo.protocol.common.SocketElementType tp = 3;
     required int32 element_id = 4;
 }
 
