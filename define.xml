@@ -116,10 +116,8 @@
         <protocol name="SocketNotify" type="404" />
         <protocol name="UpdateSocketNotify" type="407" />
 
-        <protocol name="SetSocketHeroRequest" type="410" command="/socket/set/hero/" />
-        <protocol name="SetSocketHeroResponse" type="411" />
-        <protocol name="SetSocketEquipmentRequest" type="412" command="/socket/set/equipment/" />
-        <protocol name="SetSocketEquipmentResponse" type="413" />
+        <protocol name="SetSocketRequest" type="412" command="/socket/set/" />
+        <protocol name="SetSocketResponse" type="413" />
 
     </namespace>
 
@@ -195,10 +193,6 @@
         <protocol name="StepUpEquipRequest" type="1770" command="/equip/stepup/" />
         <protocol name="StepUpEquipResponse" type="1771" />
 
-
-        <protocol name="SpecialEquipmentBuyRequest" type="1708" command="/equip/specialbuy/" />
-        <protocol name="SpecialEquipmentBuyResponse" type="1709" />
-        
         <protocol name="GemNotify" type="1750" />
         <protocol name="AddGemNotify" type="1751" />
         <protocol name="UpdateGemNotify" type="1752" />

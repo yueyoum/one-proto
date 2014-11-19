@@ -1,5 +1,7 @@
 package Sanguo.protocol.formation;
 
+import "common.proto";
+
 // 0 1 2  前军
 // 3 4 5  中军
 // 6 7 8  后军
@@ -25,31 +27,14 @@ message UpdateSocketNotify {
     repeated Socket sockets = 2;
 }
 
-
-message SetSocketHeroRequest {
-    required bytes session = 1;
-    required int32 socket_id = 2;
-    required int32 hero_id = 3;
-}
-
-
-message SetSocketHeroResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-
-message SetSocketEquipmentRequest {
-    enum SocketElementType {
-        EQUIPMENT = 1;
-        HORSE = 2;
-    }
+message SetSocketRequest {
     required bytes session = 1;
     required int32 socket_id = 2;
     required SocketElementType tp = 3;
     required int32 element_id = 4;
 }
 
-message SetSocketEquipmentResponse {
+message SetSocketResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
