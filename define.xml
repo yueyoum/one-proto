@@ -361,6 +361,8 @@
 
         <protocol name="HorseStrengthConfirmRequest" type="5408" command="/horse/strength/confirm/" />
         <protocol name="HorseStrengthConfirmResponse" type="5409" />
+
+        <protocol name="HorseFreeStrengthTimesNotify" type="5410" />
     </namespace>
   </namespace>
 </application>

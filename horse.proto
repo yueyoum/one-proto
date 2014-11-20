@@ -1,26 +1,17 @@
 package Sanguo.protocol.horse;
 
-enum HorseStrengthMethod {
-    FREE = 1;       // 免费
-    GOLD = 2;       // 金币
-    SYCEE = 3;      // 元宝
+message HorseFreeStrengthTimesNotify {
+    required bytes session = 1;
+    required int32 times = 2;
 }
 
-
 message Horse {
-    message HorseStrength {
-        required HorseStrengthMethod method = 1;
-        required int32 value = 2;
-    }
-
     required int32 id = 1;
     required int32 oid = 2;
     required int32 attack = 3;
     required int32 defense = 4;
     required int32 hp = 5;
     required int32 power = 6;
-
-    repeated HorseStrength strengths = 7;    // 强化信息
 }
 
 message HorsesNotify {
@@ -46,6 +37,12 @@ message HorsesRemoveNotify {
 
 // 培养 - 强化
 message HorseStrengthRequest {
+    enum HorseStrengthMethod {
+        FREE = 1;       // 免费
+        GOLD = 2;       // 金币
+        SYCEE = 3;      // 元宝
+    }
+
     required bytes session = 1;
     required int32 id = 2;
     required HorseStrengthMethod method = 3;
