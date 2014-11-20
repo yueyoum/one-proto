@@ -357,7 +357,10 @@
         <protocol name="HorseStrengthRequest" type="5404" command="/horse/strength/" />
         <protocol name="HorseStrengthResponse" type="5405" />
         <protocol name="HorseEvolutionRequest" type="5406" command="/horse/evolution/" />
-        <protocol name="HorseEvolutionResponse" type="5405" />
+        <protocol name="HorseEvolutionResponse" type="5407" />
+
+        <protocol name="HorseStrengthConfirmRequest" type="5408" command="/horse/strength/confirm/" />
+        <protocol name="HorseStrengthConfirmResponse" type="5409" />
     </namespace>
   </namespace>
 </application>

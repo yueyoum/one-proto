@@ -57,7 +57,7 @@ message HorseStrengthResponse {
     optional Horse new_horse = 3;
 }
 
-message HorseStrengthConfirm {
+message HorseStrengthConfirmRequest {
     enum ConfirmType {
         CONFIRM = 1;
         CANCEL = 2;
@@ -65,6 +65,11 @@ message HorseStrengthConfirm {
 
     required bytes session = 1;
     required ConfirmType tp = 2;
+}
+
+message HorseStrengthConfirmResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
 }
 
 
