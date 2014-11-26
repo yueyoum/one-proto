@@ -364,6 +364,18 @@
 
         <protocol name="HorseFreeStrengthTimesNotify" type="5410" />
     </namespace>
+
+    <namespace name="union">
+        <protocol name="UnionNotify" type="5500" />
+        <protocol name="UnionPersonalInformationNotify" type="5501" />
+        <protocol name="UnionCreateRequest" type="5502" command="/union/create/" />
+        <protocol name="UnionCreateResponse" type="5503" />
+        <protocol name="UnionListNotify" type="5504" />
+        <protocol name="UnionApplyRequest" type="5505" command="/union/apply/" />
+        <protocol name="UnionApplyResponse" type="5506" />
+        <protocol name="UnionModifyRequest" type="5507" command="/union/modify/" />
+        <protocol name="UnionModifyResponse" type="5508" />
+    </namespace>
   </namespace>
 </application>
 
