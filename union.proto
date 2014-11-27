@@ -21,16 +21,18 @@ message UnionNotify {
     }
 
 
-    required UnionBasicInformation union = 1;
-    required int32 leader = 2;
-    repeated UnionMember members = 3; // 会员
+    required bytes session = 1;
+    required UnionBasicInformation union = 2;
+    required int32 leader = 3;
+    repeated UnionMember members = 4; // 会员
 }
 
 // 工会个人信息
 message UnionPersonalInformationNotify {
-    required int32 union_coin = 1;
-    required int32 checkin_total_amount = 2;
-    required int32 checkin_current_amount = 3;
+    required bytes session = 1;
+    required int32 union_coin = 2;
+    required int32 checkin_total_amount = 3;
+    required int32 checkin_current_amount = 4;
 }
 
 
@@ -55,9 +57,8 @@ message UnionListNotify {
         required bool applied = 2;     // 是否申请过
     }
 
-    required int32 ret = 1;
-    required bytes session = 2;
-    repeated UnionApplyStatus unions = 3;
+    required bytes session = 1;
+    repeated UnionApplyStatus unions = 2;
 }
 
 
