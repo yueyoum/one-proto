@@ -380,6 +380,10 @@
         <protocol name="UnionListResponse" type="5510" />
         <protocol name="UnionAgreeRequest" type="5511" command="/union/agree/" />
         <protocol name="UnionAgreeResponse" type="5512" />
+        <protocol name="UnionRefuseRequest" type="5513" command="/union/refuse/" />
+        <protocol name="UnionRefuseResponse" type="5514" />
+
+        <protocol name="UnionApplyListNotify" type="5515" />
     </namespace>
   </namespace>
 </application>
