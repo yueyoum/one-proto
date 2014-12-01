@@ -31,7 +31,7 @@ message UnionNotify {
 // 工会申请者列表
 message UnionApplyListNotify {
     required bytes session = 1;
-    required Sanguo.protocol.common.CharacterInfomation chars = 2;
+    repeated Sanguo.protocol.common.CharacterInfomation chars = 2;
 }
 
 
