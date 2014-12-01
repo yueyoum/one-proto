@@ -6,11 +6,12 @@ import "common.proto";
 message UnionBasicInformation {
     required int32 id = 1;
     required string name = 2;
-    required int32 level = 3;
-    required int32 contribute_points = 4;   // 贡献度
+    required string bulletin = 3;
+    required int32 level = 4;
+    required int32 contribute_points = 5;   // 贡献度
 
-    required int32 current_member_amount = 5;
-    required int32 max_member_amount = 6;
+    required int32 current_member_amount = 6;
+    required int32 max_member_amount = 7;
 }
 
 message UnionNotify {
@@ -61,6 +62,15 @@ message UnionListNotify {
     repeated UnionApplyStatus unions = 2;
 }
 
+message UnionListRequest {
+    required bytes session = 1;
+}
+
+message UnionListResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
 
 // 加入工会
 message UnionApplyRequest {
@@ -69,6 +79,17 @@ message UnionApplyRequest {
 }
 
 message UnionApplyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+// 批准加入
+message UnionAgreeRequest {
+    required bytes session = 1;
+    required int32 char_id = 2;
+}
+
+message UnionAgreeResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }

@@ -375,6 +375,11 @@
         <protocol name="UnionApplyResponse" type="5506" />
         <protocol name="UnionModifyRequest" type="5507" command="/union/modify/" />
         <protocol name="UnionModifyResponse" type="5508" />
+
+        <protocol name="UnionListRequest" type="5509" command="/union/list/" />
+        <protocol name="UnionListResponse" type="5510" />
+        <protocol name="UnionAgreeRequest" type="5511" command="/union/agree/" />
+        <protocol name="UnionAgreeResponse" type="5512" />
     </namespace>
   </namespace>
 </application>
