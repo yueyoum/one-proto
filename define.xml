@@ -384,6 +384,11 @@
         <protocol name="UnionRefuseResponse" type="5514" />
 
         <protocol name="UnionApplyListNotify" type="5515" />
+
+        <protocol name="UnionQuitRequest" type="5516" command="/union/quit/" />
+        <protocol name="UnionQuitResponse" type="5517" />
+        <protocol name="UnionMemberManageRequest" type="5618" command="/union/manage/" />
+        <protocol name="UnionMemberManageResponse" type="5619" />
     </namespace>
   </namespace>
 </application>

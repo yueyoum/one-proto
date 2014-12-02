@@ -126,3 +126,31 @@ message UnionModifyResponse {
 }
 
 
+// 主动退出工会
+message UnionQuitRequest {
+    required bytes session = 1;
+}
+
+message UnionQuitResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+// 会长管理成员
+message UnionMemberManageRequest {
+    enum UnionManageAction {
+        KICKOUT = 1;    // 踢人
+        TRANSFER = 2;   // 转让会长
+    }
+
+    required bytes session = 1;
+    required UnionManageAction action = 2;
+    required int32 member_id = 3;
+}
+
+
+message UnionMemberManageResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
