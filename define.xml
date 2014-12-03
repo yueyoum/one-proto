@@ -393,6 +393,9 @@
         <protocol name="UnionStoreNotify" type="5620" />
         <protocol name="UnionStoreBuyRequest" type="5621" command="/union/buy/" />
         <protocol name="UnionStoreBuyResponse" type="5622" />
+
+        <protocol name="UnionCheckinRequest" type="5623" command="/union/checkin/" />
+        <protocol name="UnionCheckinResponse" type="5624" />
     </namespace>
   </namespace>
 </application>

@@ -155,6 +155,16 @@ message UnionMemberManageResponse {
 }
 
 
+// 工会签到
+message UnionCheckinRequest {
+    required bytes session = 1;
+}
+
+message UnionCheckinResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
 
 // 工会商店
 message UnionStoreNotify {
