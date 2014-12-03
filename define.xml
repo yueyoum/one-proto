@@ -396,6 +396,14 @@
 
         <protocol name="UnionCheckinRequest" type="5623" command="/union/checkin/" />
         <protocol name="UnionCheckinResponse" type="5624" />
+
+        <protocol name="UnionBattleNotify" type="5625" />
+        <protocol name="UnionBattleBoardRequest" type="5626" command="/union/battle/board/" />
+        <protocol name="UnionBattleBoardResponse" type="5627" />
+        <protocol name="UnionBattleStartRequest" type="5628" command="/union/battle/start/" />
+        <protocol name="UnionBattleStartResponse" type="5629" />
+        <protocol name="UnionBattleRecordGetRequest" type="5630" command="/union/battle/record/" />
+        <protocol name="UnionBattleRecordGetResponse" type="5631" />
     </namespace>
   </namespace>
 </application>
