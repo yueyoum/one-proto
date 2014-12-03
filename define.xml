@@ -389,6 +389,10 @@
         <protocol name="UnionQuitResponse" type="5517" />
         <protocol name="UnionMemberManageRequest" type="5618" command="/union/manage/" />
         <protocol name="UnionMemberManageResponse" type="5619" />
+
+        <protocol name="UnionStoreNotify" type="5620" />
+        <protocol name="UnionStoreBuyRequest" type="5621" command="/union/buy/" />
+        <protocol name="UnionStoreBuyResponse" type="5622" />
     </namespace>
   </namespace>
 </application>

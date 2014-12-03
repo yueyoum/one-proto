@@ -154,3 +154,29 @@ message UnionMemberManageResponse {
     required bytes session = 2;
 }
 
+
+
+// 工会商店
+message UnionStoreNotify {
+    message BuyBuffTimes {
+        required int32 id = 1;
+        required int32 max_times = 2;
+        required int32 cur_times = 3;
+        required int32 add_value = 4;
+    }
+
+    required bytes session = 1;
+    repeated BuyBuffTimes buffs = 2;
+}
+
+message UnionStoreBuyRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message UnionStoreBuyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
