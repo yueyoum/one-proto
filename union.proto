@@ -278,7 +278,8 @@ message UnionBossResponse {
             DEAD = 3;
         }
         required int32 id = 1;
-        required int32 hp = 2;
+        required Status status = 2;
+        required int32 hp = 3;
     }
 
     required int32 ret = 1;
