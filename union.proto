@@ -327,7 +327,7 @@ message UnionBossBattleRequest {
 message UnionBossBattleResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional Sanguo.protocol.Battle battle = 3;
+    optional Sanguo.protocol.battle.Battle battle = 3;
     optional Sanguo.protocol.world.Attachment drop = 4;
 }
 
