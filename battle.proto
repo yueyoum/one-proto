@@ -136,6 +136,7 @@ message BattleHero {
     enum HeroType {
         HERO = 1;
         MONSTER = 2;
+        UNION_BOSS = 3;
         }
 
     required int32 id = 1;
