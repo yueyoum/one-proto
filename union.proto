@@ -1,6 +1,8 @@
 package Sanguo.protocol.union;
 
 import "common.proto";
+import "battle.proto";
+import "world.proto";
 
 // 一个工会
 message UnionBasicInformation {
@@ -259,4 +261,75 @@ message UnionBattleRecordGetResponse {
     required bytes session = 2;
     repeated UnionBattleRecord records = 3;
 }
+
+
+
+// BOSS
+message UnionBossRequest {
+    required bytes session = 1;
+}
+
+
+message UnionBossResponse {
+    message Boss {
+        enum Status {
+            INACTIVE = 1;
+            ACTIVE = 2;
+            DEAD = 3;
+        }
+        required int32 id = 1;
+        required int32 hp = 2;
+    }
+
+    required int32 ret = 1;
+    required bytes session = 2;
+    required int32 remained_times = 3;   // 剩余挑战次数
+    repeated Boss bosses = 4;
+}
+
+message UnionBossGetLogRequest {
+    required bytes session = 1;
+    required int32 boss_id = 2;
+}
+
+message UnionBossGetLogResponse {
+    message BossLog {
+        required int32 char_id = 1;
+        required int32 char_name = 2;
+        required int32 damage = 3;
+        required int32 precent = 4;
+    }
+
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional int32 boss_id = 3;
+    optional BossLog killer = 4;  // 最后一击
+    repeated BossLog logs = 5;
+}
+
+message UnionBossStartRequest {
+    required bytes session = 1;
+    required int32 boss_id = 2;
+}
+
+
+message UnionBossStartResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+message UnionBossBattleRequest {
+    required bytes session = 1;
+    required int32 boss_id = 2;
+}
+
+message UnionBossBattleResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Sanguo.protocol.Battle battle = 3;
+    optional Sanguo.protocol.world.Attachment drop = 4;
+}
+
+
 

@@ -404,6 +404,15 @@
         <protocol name="UnionBattleStartResponse" type="5629" />
         <protocol name="UnionBattleRecordGetRequest" type="5630" command="/union/battle/record/" />
         <protocol name="UnionBattleRecordGetResponse" type="5631" />
+
+        <protocol name="UnionBossRequest" type="5632" command="/union/boss/" />
+        <protocol name="UnionBossResponse" type="5633" />
+        <protocol name="UnionBossGetLogRequest" type="5634" command="/union/boss/log/" />
+        <protocol name="UnionBossGetLogResponse" type="5635" />
+        <protocol name="UnionBossStartRequest" type="5636" command="/union/boss/start/" />
+        <protocol name="UnionBossStartResponse" type="5637" />
+        <protocol name="UnionBossBattleRequest" type="5638" command="/union/boss/battle/" />
+        <protocol name="UnionBossBattleResponse" type="5639" />
     </namespace>
   </namespace>
 </application>
