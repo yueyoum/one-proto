@@ -11,9 +11,10 @@ message UnionBasicInformation {
     required string bulletin = 3;
     required int32 level = 4;
     required int32 contribute_points = 5;   // 贡献度
+    required int32 rank = 6;
 
-    required int32 current_member_amount = 6;
-    required int32 max_member_amount = 7;
+    required int32 current_member_amount = 7;
+    required int32 max_member_amount = 8;
 }
 
 message UnionNotify {
@@ -25,9 +26,10 @@ message UnionNotify {
 
 
     required bytes session = 1;
-    required UnionBasicInformation union = 2;
-    required int32 leader = 3;
-    repeated UnionMember members = 4; // 会员
+    required bool in_union = 2;     // 是否在工会中
+    optional UnionBasicInformation union = 3;
+    optional int32 leader = 4;
+    repeated UnionMember members = 5; // 会员
 }
 
 // 工会申请者列表
