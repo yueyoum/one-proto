@@ -12,6 +12,8 @@ message Horse {
     required int32 defense = 4;
     required int32 hp = 5;
     required int32 power = 6;
+    required int32 strength_cost_gold = 7;
+    required int32 strength_cost_sycee = 8;
 }
 
 message HorsesNotify {
