@@ -88,7 +88,6 @@ message UnionListResponse {
 message UnionApplyRequest {
     required bytes session = 1;
     required int32 id = 2;
-    optional Sanguo.protocol.world.Attachment drop = 3;
 }
 
 message UnionApplyResponse {
@@ -169,7 +168,7 @@ message UnionCheckinRequest {
 message UnionCheckinResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional 
+    optional Sanguo.protocol.world.Attachment drop = 3;
 }
 
 
