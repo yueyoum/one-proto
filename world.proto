@@ -168,6 +168,7 @@ enum FunctionType {
     FUNC_SOCKET_SIX = 51;            // 上阵六人
     FUNC_SOCKET_SEVEN = 52;          // 上阵七人
     FUNC_SOCKET_EIGHT = 53;          // 上阵八人
+    FUNC_UNION = 60;                 // 工会功能
 }
 
 
