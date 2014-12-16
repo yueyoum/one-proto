@@ -288,7 +288,7 @@ message UnionBossResponse {
 
     required int32 ret = 1;
     required bytes session = 2;
-    required int32 remained_times = 3;   // 剩余挑战次数
+    optional int32 remained_times = 3;   // 剩余挑战次数
     repeated Boss bosses = 4;
 }
 
