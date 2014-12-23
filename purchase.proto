@@ -45,19 +45,21 @@ message Purchase91GetOrderIdResponse {
 
 
 // 订单验证
-message Purchase91ConfirmRequest {
+// 91, aiyingyong
+message PurchaseConfirmRequest {
     required bytes session = 1;
+    required string platform = 2;   // 91, aiyingyong
 }
 
-message Purchase91ConfirmResponse {
-    enum Purchase91FailureReason {
+message PurchaseConfirmResponse {
+    enum PurchaseFailureReason {
         WAITING = 1;
         FAILURE = 2;
     }
 
     required int32 ret = 1;
     required bytes session = 2;
-    optional Purchase91FailureReason reason = 3;
+    optional PurchaseFailureReason reason = 3;
     optional int32 goods_id = 4;       // 购买的商品ID
 }
 

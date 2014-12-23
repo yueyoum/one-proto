@@ -314,8 +314,8 @@
 
         <protocol name="Purchase91GetOrderIdRequest" type="4210" command="/purchase91/orderid/" />
         <protocol name="Purchase91GetOrderIdResponse" type="4211" />
-        <protocol name="Purchase91ConfirmRequest" type="4212" command="/purchase91/confirm/" />
-        <protocol name="Purchase91ConfirmResponse" type="4213" />
+        <protocol name="PurchaseConfirmRequest" type="4212" command="/purchase/confirm/" />
+        <protocol name="PurchaseConfirmResponse" type="4213" />
 
         <protocol name="PurchaseStatusNotify" type="4220" />
     </namespace>
